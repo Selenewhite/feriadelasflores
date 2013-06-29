@@ -46,6 +46,17 @@ ul,li {list-style-type:none;}
 	
 }
 
+/* fuente */
+
+@font-face{ 
+	font-family: 'Coolvetica';
+	src: url('font/coolvetica_rg-webfont.eot');
+	src: url('font/coolvetica_rg-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('font/coolvetica_rg-webfont.woff') format('woff'),
+	     url('font/coolvetica_rg-webfont.ttf') format('truetype'),
+	     url('font/coolvetica_rg-webfont.svg#webfont') format('svg');
+}
+
 /* layout */
 
 body{
@@ -53,7 +64,7 @@ body{
 	margin:0;
 	background: url(images/bg_flores.png) repeat;
     color: #777;
-  	font-family: 'Open Sans', sans-serif;
+  	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   	font-size: 14px;
   	height: 100%;
 }
@@ -64,11 +75,27 @@ body.admin-bar .navbar-fixed-top{
 	top: 28px; 
 }
 
+#inner-header{
+	width: 100%;
+}
+
+#cabezoteAlcaldia {
+	background-color:#3F0;
+	width:100%;
+	height:180px;
+	background-image:url(images/cabezoteAlcaldia.jpg);
+}
+
 .navbar .brand{
 	background-image:url(images/logoferia.png);
 	background-repeat:no-repeat;
-	width:90px;
+	width:119px;
 	height:116px;
+	float: left;
+	display: block;
+	padding:0;
+	margin-left: 0px;
+	text-shadow: 0 1px 0 #ffffff;
 	
 }
 
@@ -94,36 +121,286 @@ body.admin-bar .navbar-fixed-top{
 .menuholder a {
 	background:url(images/menu.png);
 	display:block; 
-	height:88px;
+	height:85px;
 	text-indent:-9000%;}
 
 /*ESTADO NORMAL*/
 .menu_inicio a {width:60px;}
-.menu_programacion a {width:148px; background-position:-60px 0px; background-repeat:no-repeat;}
-.menu_turistica a {width:116px; background-position:-208px 0px; background-repeat:no-repeat;}
-.menu_historia a {width:105px; background-position:-321px 0px; background-repeat:no-repeat;}
-.menu_saladeprensa a {width:110px; background-position:-426px 0px; background-repeat:no-repeat;}
-.menu_contactenos a {width:121px; background-position:-547px 0px; background-repeat:no-repeat;}
-.menu_envivo a {width:119px; background-position:-668px 0px; background-repeat:no-repeat;}
+.menu_programacion a {width:148px; background-position:-60px 0px;}
+.menu_turistica a {width:116px; background-position:-208px 0px;}
+.menu_historia a {width:105px; background-position:-321px 0px; }
+.menu_saladeprensa a {width:110px; background-position:-426px 0px; margin:0 5px 0 0;}
+.menu_contactenos a {width:121px; background-position:-547px 0px;}
+.menu_envivo a {width:115px; background-position:-668px 0px;}
+
+/*ESTADO ROLLOVER*/
+
+.menu_inicio a:hover {background-position:0px -88px;}
+.menu_programacion a:hover { background-position:-60px -88px;}
+.menu_turistica a:hover {background-position:-208px -88px;}
+.menu_historia a:hover {background-position:-321px -88px;}
+.menu_saladeprensa a:hover {background-position:-426px -88px;}
+.menu_contactenos a:hover {background-position:-547px -88px;}
+.menu_envivo a:hover {background-position:-668px -88px;}
+
+.barraInferiorHeader {
+	max-width:970px;
+	margin: 0 auto;
+	background-color:#FF0;
+
+	}
+	
+/* BOTONES IDIOMA */
+
+.idioma {
+	height:35px;
+	float:left;
+	}
+
+.idioma span {
+	float:left;
+	}
+
+.Off {
+	background-color:#e6e6e5;
+	display:inline-block;
+	height:28px;
+	border-radius:0px 8px 8px 0px;
+	color:#9b9b9b;
+	font-weight:bold;
+	padding:7px 7px 0 7px;
+	box-shadow: #ccc 1px 1px 2px;
+	}
+
+.On {
+	background-color:#6fa0d0;
+	display:inline-block;
+	height:28px;
+	border-radius:8px 0px 0px 8px;
+	color:#fff;
+	font-weight:bold;
+	border-right:2px solid #477ba5;
+	padding:7px 7px 0 7px;
+	box-shadow: #ccc 1px 1px 2px;
+	margin:0;
+	}
+
+.On:hover {
+	background-color:#477ba5;
+	cursor:pointer;
+	}
+
+.Off:hover {
+	background-color:#dedede;
+	cursor:pointer;
+	}
+	
+	
+
+/* BUSCADOR */
+
+.buscador  {
+	height:35px;
+	float:right;
+	}
+	
+input#search  {
+	width:160px;}
+ 
 
 
-#perfiles .perfil span:first-child {
-background: url(../images/areas_thumb.png) no-repeat;
-text-indent: -9999px;
-width: 14px;
-}
+/* SLIDER */
 
-#inner-header{
-	width: 100%;
-}
+#content #main .slider {
+	height:300px;
+	background-color:#e6e6e5;
+	margin:0 0 20px 0;
+	
+	}
+	
+/* HOY EN LA FERIA */
 
-#cabezoteAlcaldia {
-	background-color:#3F0;
+.hoy {
+	width:99.3%;
+	padding:0px 0.7% 0 0%;}
+
+span.hoy {
+	display:inline-block;
+	}
+
+.titHoy {
+	height:45px;
+	
+	background-color:#e6e6e5;
+	border-radius:8px 0px 0px 8px;
+	box-shadow: #ccc 2px 3px 1px;
+	padding:17px 0.7% 0 0.7%;
+	
+	font-family: 'Coolvetica';
+	color:#663109;
+	font-size:26px;
+	}
+
+.galeriaHoy {
+	height:212px;
+	background-color:#e6e6e5;
 	width:100%;
-	height:180px;
-	background-image:url(images/cabezoteAlcaldia.jpg);
+	margin-top:20px;}
+	
+.icono {
+	width:78px; height:55px;
+	background-image:url(images/iconoHoy.png);
+	float:left;
+	margin:-15px 10px 0 0;
+	}
+
+.row-fluid .titManana {
+	margin-left:0;
+	width: 34.18803418773418%;
+	height:45px;
+	padding:17px 0.7% 0 0.7%;
+	}
+
+.titManana {
+	border-radius:0px 8px 8px 0px;
+	
+	background-color:#6fa0d0;
+	box-shadow: #477ba5 2px 2px 1px;
+
+	font-family: 'Coolvetica';
+	color:#FFF;
+	font-size:26px;
+	width:100%;
+	}	
+
+.galeriaManana {
+	height:212px;
+	background-color:#e6e6e5;
+	width:100%;
+	margin-top:20px;}
+	
+	
+/* CONTENIDO */
+
+.tit {
+	margin:20px 0 0 0;
+	height:31px;
+	background-color:#e6e6e5;
+	border-radius:8px;
+	box-shadow: #ccc 2px 3px 1px;
+	padding:17px 0.7% 0 0.7%;
+	
+	font-family: 'Coolvetica';
+	color:#663109;
+	font-size:26px;
+	}
+
+#novedades span  {
+	display:inline-block;
 }
 
+
+#novedades .tit .icono {
+	width:78px; height:55px;
+	background-image:url(images/iconoNovedades.png);
+	float:left;
+	margin:-15px 10px 0 0;
+	}
+
+#novedades .noticiasHome {
+	margin-top:10px;
+	}
+
+.noticiaHome {
+	margin-top:30px;
+	clear:both;
+	}
+
+
+.noticiaHome img {
+	float:left;
+	margin: 0 20px 0 0;
+	}
+	
+	
+.noticiaHome h2 {
+	color:#2e1400;
+	font-weight:bold;
+	font-size:14px;
+	line-height:16px;
+
+	}
+
+.linea {
+	background-image:url(images/linea1_07.jpg);
+	background-position:bottom right;
+	background-repeat:repeat-x;
+	height:6px;
+	width:65.3%;
+	float:right;
+	margin-bottom:10px;
+	}
+	
+.noticiaHome p {
+	color:#666;
+	font-size:12px;
+	line-height:14px;
+	}
+
+.links {
+	overflow:hidden;
+	height:1%;
+	}
+
+.redes {
+	float:left;
+	background-image:url(images/compartir.png);
+	background-repeat:no-repeat;
+	padding:0 0 0 87px;
+	width:90px;
+	height:36px;
+	
+}
+
+	
+.redes .twitter a {
+	background-image:url(images/tw.png);
+	width:31px;
+	height:36px;
+	text-indent:-9000%;
+	display:inline-block; }
+
+.redes .facebook a {
+	background-image:url(images/fb.png);
+	width:35px;
+	height:37px;
+	text-indent:-9000%;
+	display:inline-block; 
+	}
+	
+.vermas {
+	float:right;
+	width:72px;}
+	
+.vermas a {
+	background-image:url(images/vermas.png);
+	width:71px;
+	height:40px;
+	display:block; 
+	text-indent:-9000%;
+	}
+
+.vermas a:hover {
+	background-position:0 -39px;
+	}
+	
+
+
+/* SIDEBAR */
+
+.videoFeria  object {
+	margin:20px 0 0 0;}
+	
 input, textarea, select, .uneditable-input {
 	margin-bottom: 0;
 }
@@ -701,6 +978,13 @@ li.previous a:hover:before{
 blockquote.pull-left{
 	padding-right: 15px;
 }
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+
+
+
+ }
 
 @media only screen and (min-width: 768px) {
 	.carousel-caption p{

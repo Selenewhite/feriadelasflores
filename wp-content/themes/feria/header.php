@@ -45,14 +45,17 @@
      			<div id="cabezoteAlcaldia"></div>
 				
 				<div class="navbar">
-					<div class="navbar-inner">
+					
 						<div class="container-fluid nav-container">
-							<nav role="navigation">
+							
+                            <nav role="navigation">
 								<a id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>">
                                 <div class="brand"></div>
 								</a>
-                                <div class="menu">
-                                <ul class="menuholder">
+                               
+                               <div class="row">
+                                
+                                <ul class="menu menuholder hidden-phone"> 
                                     <li class="menu_inicio"><a href="#" title="Inicio" class="active">Inicio</a></li>
                                     <li class="menu_programacion"><a href="#" title="Programación">Programación</a></li>
                                     <li class="menu_turistica"><a href="#" title="Info Turística">Info Turística</a></li>
@@ -61,13 +64,22 @@
                                     <li class="menu_contactenos"><a href="#" title="Contáctenos">Contáctenos</a></li>
                                     <li class="menu_envivo"><a href="#" title="En Vivo">En Vivo</a></li>
                                 </ul>
-                                </div>
+                              
                                                                 
 								<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 							        <span class="icon-bar"></span>
 							        <span class="icon-bar"></span>
 							        <span class="icon-bar"></span>
 								</a>
+                                
+                                
+                                	<div class="span3 idioma">
+                                    	<span class="On">Español</span>
+                                    	<span class="Off">English</span>   
+                                    </div> 
+                                    
+                                	<div class="span3 offset2 buscador"><?php get_search_form( $echo ); ?></div>
+                                </div>
 								
 								<div class="nav-collapse">
 									<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
@@ -82,7 +94,7 @@
 							<?php } ?>
 							
 						</div> <!-- end .nav-container -->
-					</div> <!-- end .navbar-inner -->
+					
 				</div> <!-- end .navbar -->
 			
 			</div> <!-- end #inner-header -->
