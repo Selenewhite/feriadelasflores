@@ -393,8 +393,75 @@ span.hoy {
 .vermas a:hover {
 	background-position:0 -39px;
 	}
-	
 
+.afterSidebar {
+	margin-top:40px;}
+
+/* ARTISTAS DE LA FERIA */
+
+.artistas {
+	
+	}	
+
+
+.artistas h2{
+	color:#d32037;
+	font-size:20px;
+	font-family: 'Coolvetica';
+	}	
+
+/* GALERIA FERIA */
+
+.galeriaFeria {
+	background-image:url(images/backGaleria.png);
+	width:398px;
+	height:172px;}
+
+.nav-tabs {
+border-bottom: 2px solid #d32037;
+margin:0;
+}
+
+.nav-tabs > li {
+margin-bottom: 0px;
+}
+
+.nav-tabs > li > a {
+padding-top: 8px;
+padding-bottom: 8px;
+line-height: 20px;
+border: 1px solid transparent;
+text-decoration:none;
+color:#888686;
+background-color:#dcdcdc;
+-webkit-border-radius:0;
+-moz-border-radius:0;
+border-radius:0;
+font-weight:bold;
+}
+
+.nav-tabs > li > a:hover {
+padding-top: 8px;
+padding-bottom: 8px;
+line-height: 20px;
+border: 1px solid transparent;
+text-decoration:none;
+color:#fff;
+background-color:#d32037;
+-webkit-border-radius:0;
+-moz-border-radius:0;
+border-radius:0;
+font-weight:bold;
+}
+
+
+
+
+.nav-tabs > li > h2 {
+	padding-right: 12px;
+	padding-left: 12px;
+	margin:-10px 2px 0 0;
+	}
 
 /* SIDEBAR */
 
@@ -404,6 +471,27 @@ span.hoy {
 input, textarea, select, .uneditable-input {
 	margin-bottom: 0;
 }
+
+/* FOOTER */
+
+footer{
+	background-image:url(images/backFooter.jpg);
+	background-repeat:repeat-x;
+	background-color:#FFF;
+	height:137px;
+	width:100%;
+	margin-top:40px;
+	padding:30px 0 0 0;
+	}
+	
+#inner-footer {
+	background-color:#093;
+}
+
+footer li {
+	float:left;
+	padding-right:10px;
+	}
 
 .navbar-form, .navbar-search {
 	margin: 0 0 9px;
@@ -1005,7 +1093,10 @@ blockquote.pull-left{
 	}
 	
 	#inner-footer{
-		padding: 0;
+		max-width: 600px;
+		margin: 0 auto;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 	
 	#content{

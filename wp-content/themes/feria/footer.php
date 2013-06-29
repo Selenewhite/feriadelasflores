@@ -1,29 +1,21 @@
-			<footer role="contentinfo">
-			
-				<div id="inner-footer" class="clearfix">
-		          <hr />
-		          <div id="widget-footer" class="clearfix row-fluid">
-		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer1') ) : ?>
-		            <?php endif; ?>
-		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer2') ) : ?>
-		            <?php endif; ?>
-		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer3') ) : ?>
-		            <?php endif; ?>
-		          </div>
-					
-					<nav class="clearfix">
-						<?php bones_footer_links(); // Adjust using Menus in Wordpress Admin ?>
-					</nav>
-					
-					<p class="pull-right"><a href="http://320press.com" id="credit320" title="By the dudes of 320press">320press</a></p>
-			
-					<p class="attribution">&copy; <?php bloginfo('name'); ?></p>
-				
+			<footer role="contentinfo" >
+            
+
+				<div id="inner-footer">
+		       
+                <ul>
+                <li><img src="<?php bloginfo('template_directory'); ?>/images/buro.jpg" width="117" height="79" /> </li>
+                <li><img src="<?php bloginfo('template_directory'); ?>/images/medellindigital.jpg" width="117" height="79" /></li>
+                <li><img src="<?php bloginfo('template_directory'); ?>/images/telemedellin.jpg" width="124" height="79" /></li>
+                <li><img src="<?php bloginfo('template_directory'); ?>/images/alcaldia.jpg" width="124" height="79" /></li>
+                </ul>
+		
 				</div> <!-- end #inner-footer -->
+
 				
 			</footer> <!-- end footer -->
 		
-		</div> <!-- end #container -->
+		
 				
 		<!--[if lt IE 7 ]>
   			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

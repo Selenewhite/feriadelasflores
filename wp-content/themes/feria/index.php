@@ -175,7 +175,8 @@
                     
                     <!-- SIDEBAR HOME -->
                     <div class="span4">
-                   		<div class="videoFeria">
+                   		
+                        <div class="videoFeria">
                             <div class="tit">
                                   <span class="icono"></span>
                                    <span>Video de la feria</span>         
@@ -185,27 +186,54 @@
                          </div><!-- cierra .videoFeria -->
                         
                     </div>
-                                         
-                </div><!-- cierra row -->
+					
+                      <div class="twitter">
+                    </div><!-- cierra .twitter -->
+                 <!-- CIERRA SIDEBAR HOME --> 
+            </div><!-- cierra row -->  
+           
+           <div class="clearfix row-fluid afterSidebar">
+            <div class="span7">
+            	
+                <ul class="artistas nav-tabs">
+                   <li><h2>Artistas de la feria</h2></li>
+                   
+                   <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Música<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <a href="#">Tropical</a>
+                      <a href="#">Popular Tradicional</a>
+                      <a href="#">Popular Urbana</a>
+                      <a href="#">Clásica</a>
+                      <a href="#">Folclor</a>
+                    </ul>
+                    </li>
+                    
+                    <li><a href="#">Danza</a></li>
+                    <li><a href="#">Teatro</a></li>
+                    
+                    <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Otras Artes<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <a href="#">Magia</a>
+                      <a href="#">Humor</a>
+                      <a href="#">Cuentería</a>
+                    </ul>  
+                  </li>
+                </ul>
                 
-                
-                
-                
-                
-                
-              
+            </div>
+            
+            <div class="span5">
+            	<div class="galeriaFeria">
+                </div>
+           	</div>
+           
+           </div>                           
+                    
 
-					
-					    <footer>
-					    </footer>
-					</article>
-					
-					
-			
-				</div> <!-- end #main -->
-    
-				
-    
-			</div> <!-- end #content -->
+		</div> <!-- end #main -->
+</div> <!-- end #content -->
+</div> <!-- end #container -->
 
 <?php get_footer(); ?>
