@@ -80,11 +80,33 @@ body.admin-bar .navbar-fixed-top{
 }
 
 #cabezoteAlcaldia {
-	background-color:#3F0;
 	width:100%;
-	height:180px;
-	background-image:url(images/cabezoteAlcaldia.jpg);
+	height:120px;
+	background-color:#FFF;
 }
+
+#cabezoteAlcaldia .corazon {
+	background-image:url(images/corazonAlcaldia_01.jpg);
+	width:318px;
+	height:118px;
+	float:left;
+}
+
+#cabezoteAlcaldia .logosAlcaldia {
+	background-image:url(images/logosAlcaldia_03.jpg);
+	width:300px;
+	height:118px;
+	float:right;
+}
+
+.lineaHeader {
+	background-image:url(images/lineaHeader.jpg);
+	background-repeat:repeat-x;
+	width:100%;
+	height:19px;}
+
+.navbar {
+	margin-top:20px;}
 
 .navbar .brand{
 	background-image:url(images/logoferia.png);
@@ -423,7 +445,7 @@ margin:0;
 }
 
 .nav-tabs > li {
-margin-bottom: 0px;
+margin-bottom: -2px;
 }
 
 .nav-tabs > li > a {
@@ -454,14 +476,89 @@ border-radius:0;
 font-weight:bold;
 }
 
-
-
-
 .nav-tabs > li > h2 {
 	padding-right: 12px;
 	padding-left: 12px;
 	margin:-10px 2px 0 0;
+	padding-right:45px !important;
 	}
+
+.dropdown .caret {
+	margin-right:10px;
+}
+
+.caret {
+display: inline-block;
+width: 0;
+height: 0;
+vertical-align: top;
+border-top: 4px solid #888686;;
+border-right: 4px solid transparent;
+border-left: 4px solid transparent;
+content: "";
+}
+
+.dropdown a {
+	margin-right:-11px !important;}
+
+.nav-tabs .dropdown-menu {
+	-webkit-border-radius: 0 0 0px 0px;
+	-moz-border-radius: 0 0 0px 0px;
+	border-radius: 0 0 0px 0px;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	border:0;
+	margin: 12px 0 0 0;
+}
+
+.dropdown-menu > li > a:hover,  .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a {
+	color:#fff;
+	background-color:#d32037 !important;
+	background-image:none;
+	width:75%;
+	}
+
+.galeriaArtistas  {
+	float:left;
+	margin:10px 0px 0px -10px;
+	width:100%;
+
+	}
+
+.galeriaArtistas ul li {
+	float:left;
+	margin:0 2px 0 0px;}
+
+.flechaIzq a {
+	background-image:url(images/flechasIzq.png);
+	width:18px;
+	height:84px;
+	display:block; 
+	text-indent:-9000%;
+	margin-top: 10px;
+	}
+
+.flechaDer a:hover {
+	background-image:url(images/flechasDer.png);
+	background-position:-18px 0px;
+	}
+
+.flechaDer a {
+	background-image:url(images/flechasDer.png);
+	width:18px;
+	height:84px;
+	display:block; 
+	text-indent:-9000%;
+	margin-top: 10px;
+	}
+
+.flechaIzq a:hover {
+	background-image:url(images/flechasIzq.png);
+	background-position:-18px 0px;
+	}
+
+
+
 
 /* SIDEBAR */
 
@@ -483,10 +580,44 @@ footer{
 	margin-top:40px;
 	padding:30px 0 0 0;
 	}
-	
+
+.Decoration {
+	background-image:url(images/adorno.png);
+	background-position:center;
+	height:71px;
+	margin: 0 auto;
+	}	
+
 #inner-footer {
 	background-color:#093;
 }
+
+
+.menuInferior {
+	width:370px;
+	height:50px;
+	margin:90px auto 0 auto;
+	
+	}
+
+
+.menuInferior li {
+	float:left;
+	}
+
+.menuInferior a {
+	display:block; 
+	text-indent:-9000%;}
+
+/*ESTADO NORMAL*/
+.preguntasFrecuentes a {background-image:url(images/preguntasFrecuentes.png); width:178px; height:40px; }
+.directorioArtistas a {background-image:url(images/InscripcionDeArtistas.png); width:177px; height:40px;}
+
+
+/*ESTADO ROLLOVER*/
+
+.preguntasFrecuentes a:hover {background-position:0px -40px;}
+.directorioArtistas a:hover { background-position:0px -41px;}
 
 footer li {
 	float:left;
@@ -1078,11 +1209,22 @@ blockquote.pull-left{
 	.carousel-caption p{
 		display: block;
 	}
+	
+	#inner-footer{
+		max-width: 600px;
+		margin: 0 auto;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	
+
+	
+	
 }
 
 @media only screen and (min-width: 980px) {
 	body{
-		padding-top: 60px;
+		padding-top: 0px;
 	}
 	
 	.container-fluid{

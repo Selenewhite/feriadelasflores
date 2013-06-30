@@ -1,5 +1,4 @@
 			<footer role="contentinfo" >
-            
 
 				<div id="inner-footer">
 		       

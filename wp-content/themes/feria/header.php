@@ -41,9 +41,13 @@
 	<body <?php body_class(); ?>>
 				
 		<header role="banner">
+        	<div id="cabezoteAlcaldia"  class="clearfix">
+                <div class="corazon"></div>
+                <div class="logosAlcaldia"></div>
+            </div>
+            <div class="lineaHeader"></div>
+        
 			<div id="inner-header" class="clearfix">
-     			<div id="cabezoteAlcaldia"></div>
-				
 				<div class="navbar">
 					
 						<div class="container-fluid nav-container">

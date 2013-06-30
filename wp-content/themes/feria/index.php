@@ -194,18 +194,19 @@
            
            <div class="clearfix row-fluid afterSidebar">
             <div class="span7">
-            	
+            
+             <!-- ARTISTAS DE LA FERIA --> 	
                 <ul class="artistas nav-tabs">
                    <li><h2>Artistas de la feria</h2></li>
                    
                    <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Música<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                      <a href="#">Tropical</a>
-                      <a href="#">Popular Tradicional</a>
-                      <a href="#">Popular Urbana</a>
-                      <a href="#">Clásica</a>
-                      <a href="#">Folclor</a>
+                      <li><a href="#">Tropical</a></li>
+                      <li><a href="#">Popular Tradicional</a></li>
+                      <li><a href="#">Popular Urbana</a></li>
+                      <li><a href="#">Clásica</a></li>
+                      <li><a href="#">Folclor</a></li>
                     </ul>
                     </li>
                     
@@ -215,13 +216,24 @@
                     <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Otras Artes<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                      <a href="#">Magia</a>
-                      <a href="#">Humor</a>
-                      <a href="#">Cuentería</a>
+                     <li> <a href="#">Magia</a></li>
+                     <li> <a href="#">Humor</a></li>
+                     <li> <a href="#">Cuentería</a></li>
                     </ul>  
                   </li>
                 </ul>
                 
+                <div class="galeriaArtistas">
+                 <ul>
+                    <li class="flechaIzq"><a href="#">Atrás</a></li> 
+                    <li><img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="160" height="133" /></li>
+                    <li><img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="160" height="133" /></li>
+                    <li><img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="160" height="133" /></li>
+                    <li class="flechaDer"><a href="#">Siguiente</a></li> 
+                  </ul>           
+                </div>
+                
+             <!-- CIERRA ARTISTAS DE LA FERIA --> 	
             </div>
             
             <div class="span5">
@@ -230,9 +242,21 @@
            	</div>
            
            </div>                           
-                    
+          
+         <div class="clearfix row-fluid">
+            <div class="span12 Decoration">
+                       <ul class="menuInferior hidden-phone"> 
+                           <li class="preguntasFrecuentes"><a href="#" title="Preguntas Frecuentes">Preguntas Frecuentes</a></li>
+                           <li class="directorioArtistas"><a href="#" title="Directorio de artistas">Directorio Artistas</a></li>           
+                        </ul>
+                              
+                
+            </div> 
+         </div>         
 
 		</div> <!-- end #main -->
+        
+        
 </div> <!-- end #content -->
 </div> <!-- end #container -->
 
