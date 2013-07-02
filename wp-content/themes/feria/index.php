@@ -174,21 +174,9 @@
                     
                     
                     <!-- SIDEBAR HOME -->
-                    <div class="span4">
-                   		
-                        <div class="videoFeria">
-                            <div class="tit">
-                                  <span class="icono"></span>
-                                   <span>Video de la feria</span>         
-                            </div><!-- cierra .tit -->  
-                            
-                            <iframe width="300" height="169" src="//www.youtube.com/embed/bQ2KKHzR2DA" frameborder="0" allowfullscreen></iframe>
-                         </div><!-- cierra .videoFeria -->
-                        
-                    </div>
-					
-                      <div class="twitter">
-                    </div><!-- cierra .twitter -->
+                    <?php get_sidebar(); // sidebar 2 ?>
+                    
+                   
                  <!-- CIERRA SIDEBAR HOME --> 
             </div><!-- cierra row -->  
            
@@ -255,6 +243,8 @@
          </div>         
 
 		</div> <!-- end #main -->
+        
+ 
         
         
 </div> <!-- end #content -->
