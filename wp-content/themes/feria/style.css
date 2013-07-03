@@ -652,7 +652,59 @@ input, textarea, select, .uneditable-input {
 	margin-bottom: 0;
 }
 
+/* HISTORIA */
+
+.gastronomia {
+	background-image:url(images/gastronomia.png);
+	background-repeat:no-repeat;
+	background-position:center top;
+	height:360px;
+	}
+
+.atuendos {
+	background-image:url(images/atuendos.png);
+	background-repeat:no-repeat;
+	background-position:center top;
+	height:360px;
+	}
+.expresiones {
+	background-image:url(images/expresiones.png);
+	background-repeat:no-repeat;
+	background-position:center top;
+	height:360px;
+	} 
+
+.arrieros {
+	background-image:url(images/arrieros.png);
+	background-repeat:no-repeat;
+	background-position:center top;
+	height:360px;
+	} 
+
+.gastronomia span, .atuendos span, .expresiones span, .arrieros span {
+	display:block;
+	margin:200px 0 0 0;
+	}
 /* SINGLE */
+
+.breadcrumb {
+	font-family: 'Coolvetica', Arial, Tahoma;
+	color:#663109;
+	font-size:16px;
+	}
+
+.breadcrumb .home a {
+	background-image:url(images/home.png);
+	width:50px;
+	height:43px;
+	display:inline-block; 
+	text-indent:-9000%;
+	}
+
+.breadcrumb > .active {
+	color:#663109;
+	font-size:32px;
+	}
 
 .page-header {
 	padding-bottom: 9px;
