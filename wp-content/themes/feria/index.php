@@ -5,13 +5,13 @@
 				if ($blog_hero){
 			?>
 			<div class="clearfix row-fluid">
-				<div class="hero-unit">
+				<!--<div class="hero-unit">
 				
-					<h1><?php bloginfo('title'); ?></h1>
+					<?php /*?><h1><?php bloginfo('title'); ?></h1>
 					
-					<p><?php bloginfo('description'); ?></p>
+					<p><?php bloginfo('description'); ?></p><?php */?>
 				
-				</div>
+				</div>-->
 			</div>
 			<?php
 				}
@@ -41,44 +41,213 @@
 
 			<div id="content" class="clearfix row-fluid">
 			
-				<div id="main" class="span8 clearfix" role="main">
+				<div id="main" class="span12 clearfix" role="main">
+                
+                <div class="slider">
+                
+                </div><!-- cierra .slider -->
+                
+                <div class="hoy">
+                	
+                    <!-- Titulos -->
+                     <div class="clearfix row-fluid">
+                        <div class="titHoy span8">
+                            <span class="icono"></span>
+                            <span>Hoy en la feria</span>         
+                        </div><!-- cierra .titHoy -->  
+          
+                        <div class="span4 titManana hidden-phone">
+                             <span>No te pierdas mañana...</span>  
+                        </div><!-- cierra .titManana --> 
+                       </div>
+                        
+                       
+                    <!-- Galerías -->    
+                      <div class="clearfix row-fluid">
+                            <div class=" span8 galeriaHoy">
+                            
+                            </div><!-- cierra .galeriaHoy -->   
+                            
+                             <div class="span4 galeriaManana">
+                        
+                       		 </div><!-- cierra .galeriaHoy -->   
+   					  </div>
+                                   
+                    </div><!-- cierra .hoy -->
+                
+                <div class="row-fluid">
+                	<div class="span8">
+                         
+                         <div id="novedades">  
+                                <div class="tit">
+                                	<span class="icono"></span>
+                                    <span>Novedades</span>         
+                                </div><!-- cierra .tit --> 
+                                  
+                               <div class="noticiasHome"> 
+                                 
+                                 <div class="noticiaHome">
+                                 <img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="200" height="130" class="img-rounded" />
+                                
+                                <h2> Parque Cultural Nocturno: gran escenario de artistas</h2>
+                                <div class="linea"></div>
+                                 
+                                 <p>Una programación alternativa, cultural e incluyente caracterizó este evento que, durante 6 días, reunió a artistas locales, nacionales e internacionales, convocando cerca de 35 mil espectadores.</p>
+                                 
+                                 
+                                 <div class="links">
+                                      <div class="redes">
+                                        <span class="twitter"><a href="#">Twitter</a></span>
+                                        <span class="facebook"><a href="#">Facebook</a></span>
+                                      </div>
+                                      
+                                      <div class="vermas"><a href="#">Ver más</a></div>
+                                   </div><!-- cierra .links --> 
+                                 
+                                 
+                                 </div><!-- cierra .noticiaHome --> 
+                                 
+                                 <div class="noticiaHome">
+                                 <img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="200" height="130" class="img-rounded" />
+                                
+                                <h2> Parque Cultural Nocturno: gran escenario de artistas</h2>
+                                <div class="linea"></div>
+                                 
+                                 <p>Una programación alternativa, cultural e incluyente caracterizó este evento que, durante 6 días, reunió a artistas locales, nacionales e internacionales, convocando cerca de 35 mil espectadores.</p>
+                                 
+                                  <div class="links">
+                                      <div class="redes">
+                                        <span class="twitter"><a href="#">Twitter</a></span>
+                                        <span class="facebook"><a href="#">Facebook</a></span>
+                                      </div>
+                                      
+                                      <div class="vermas"><a href="#">Ver más</a></div>
+                                   </div><!-- cierra .links --> 
+                                   
+                                 </div><!-- cierra .noticiaHome --> 
+                                
+                              
+                                 
+                                 <div class="noticiaHome">
+                                 <img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="200" height="130" class="img-rounded" />
+                                
+                                <h2> Parque Cultural Nocturno: gran escenario de artistas</h2>
+                                <div class="linea"></div>
+                                 
+                                 <p>Una programación alternativa, cultural e incluyente caracterizó este evento que, durante 6 días, reunió a artistas locales, nacionales e internacionales, convocando cerca de 35 mil espectadores.</p>
+                                 
+                                 
+                                  <div class="links">
+                                      <div class="redes">
+                                        <span class="twitter"><a href="#">Twitter</a></span>
+                                        <span class="facebook"><a href="#">Facebook</a></span>
+                                      </div>
+                                      
+                                      <div class="vermas"><a href="#">Ver más</a></div>
+                                   </div><!-- cierra .links --> 
+                                 
+                                 </div><!-- cierra .noticiaHome --> 
+                                 
+                                 <div class="noticiaHome">
+                                 <img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="200" height="130" class="img-rounded" />
+                                
+                                <h2> Parque Cultural Nocturno: gran escenario de artistas</h2>
+                                <div class="linea"></div>
+                                 
+                                 <p>Una programación alternativa, cultural e incluyente caracterizó este evento que, durante 6 días, reunió a artistas locales, nacionales e internacionales, convocando cerca de 35 mil espectadores.</p>
+                                 
+                                 <div class="links">
+                                      <div class="redes">
+                                        <span class="twitter"><a href="#">Twitter</a></span>
+                                        <span class="facebook"><a href="#">Facebook</a></span>
+                                      </div>
+                                      
+                                      <div class="vermas"><a href="#">Ver más</a></div>
+                                   </div><!-- cierra .links --> 
+                                
+                                 </div><!-- cierra .noticiaHome --> 
+                                 
+                                 
+                               </div><!-- cierra .noticiasHome --> 
+                           </div><!-- cierra .novedades --> 
+                   	</div>
+                    
+                    
+                    <!-- SIDEBAR HOME -->
+                    <?php get_sidebar(); // sidebar 2 ?>
+                    
+                   
+                 <!-- CIERRA SIDEBAR HOME --> 
+            </div><!-- cierra row -->  
+           
+           <div class="clearfix row-fluid afterSidebar">
+            <div class="span7">
+            
+             <!-- ARTISTAS DE LA FERIA --> 	
+                <ul class="artistas nav-tabs">
+                   <li><h2>Artistas de la feria</h2></li>
+                   
+                   <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Música<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Tropical</a></li>
+                      <li><a href="#">Popular Tradicional</a></li>
+                      <li><a href="#">Popular Urbana</a></li>
+                      <li><a href="#">Clásica</a></li>
+                      <li><a href="#">Folclor</a></li>
+                    </ul>
+                    </li>
+                    
+                    <li><a href="#">Danza</a></li>
+                    <li><a href="#">Teatro</a></li>
+                    
+                    <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Otras Artes<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                     <li> <a href="#">Magia</a></li>
+                     <li> <a href="#">Humor</a></li>
+                     <li> <a href="#">Cuentería</a></li>
+                    </ul>  
+                  </li>
+                </ul>
+                
+                <div class="galeriaArtistas">
+                 <ul>
+                    <li class="flechaIzq"><a href="#">Atrás</a></li> 
+                    <li><img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="160" height="133" /></li>
+                    <li><img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="160" height="133" /></li>
+                    <li><img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="160" height="133" /></li>
+                    <li class="flechaDer"><a href="#">Siguiente</a></li> 
+                  </ul>           
+                </div>
+                
+             <!-- CIERRA ARTISTAS DE LA FERIA --> 	
+            </div>
+            
+            <div class="span5">
+            	<div class="galeriaFeria">
+                </div>
+           	</div>
+           
+           </div>                           
+          
+         <div class="clearfix row-fluid">
+            <div class="span12 Decoration">
+                       <ul class="menuInferior hidden-phone"> 
+                           <li class="preguntasFrecuentes"><a href="#" title="Preguntas Frecuentes">Preguntas Frecuentes</a></li>
+                           <li class="directorioArtistas"><a href="#" title="Directorio de artistas">Directorio Artistas</a></li>           
+                        </ul>
+                              
+                
+            </div> 
+         </div>         
 
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-						<?php get_template_part( 'content', get_post_format() ); ?>					
-					<?php endwhile; ?>	
-					
-					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
-						
-						<?php page_navi(); // use the page navi function ?>
-						
-					<?php } else { // if it is disabled, display regular wp prev & next links ?>
-						<nav class="wp-prev-next">
-							<ul class="clearfix">
-								<li class="prev-link"><?php next_posts_link(_e('&laquo; Older Entries', "bonestheme")) ?></li>
-								<li class="next-link"><?php previous_posts_link(_e('Newer Entries &raquo;', "bonestheme")) ?></li>
-							</ul>
-						</nav>
-					<?php } ?>		
-					
-					<?php else : ?>
-					
-					<article id="post-not-found">
-					    <header>
-					    	<h1><?php _e("Not Found", "bonestheme"); ?></h1>
-					    </header>
-					    <section class="post_content">
-					    	<p><?php _e("Sorry, but the requested resource was not found on this site.", "bonestheme"); ?></p>
-					    </section>
-					    <footer>
-					    </footer>
-					</article>
-					
-					<?php endif; ?>
-			
-				</div> <!-- end #main -->
-    
-				<?php get_sidebar(); // sidebar 1 ?>
-    
-			</div> <!-- end #content -->
+		</div> <!-- end #main -->
+        
+ 
+        
+        
+</div> <!-- end #content -->
+</div> <!-- end #container -->
 
 <?php get_footer(); ?>

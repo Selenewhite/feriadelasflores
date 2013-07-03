@@ -9,9 +9,9 @@
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
 						<header>
-							
-							<div class="page-header"><h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1></div>
-						
+                             <div class="tit">
+                                <span><?php the_title(); ?></span>         
+                             </div><!-- cierra .tit --> 
 						</header> <!-- end article header -->
 					
 						<section class="post_content clearfix" itemprop="articleBody">
@@ -51,5 +51,6 @@
 				<?php get_sidebar(); // sidebar 1 ?>
     
 			</div> <!-- end #content -->
+</div> <!-- end #container -->
 
 <?php get_footer(); ?>
