@@ -44,7 +44,7 @@
 				<div id="main" class="span12 clearfix" role="main">
                 
                 <div class="slider">
-                
+                <?php echo get_new_royalslider(1); ?>
                 </div><!-- cierra .slider -->
                 
                 <div class="hoy">
