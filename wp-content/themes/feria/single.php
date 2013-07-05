@@ -9,39 +9,44 @@
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
 						<header>
-						
-							<?php the_post_thumbnail( 'wpbs-featured' ); ?>
-							
-							<div class="page-header">
+                        <?php if ( in_category("historia")) { ?>
+                        
+                        <div class="page-header">
                                 <h1 class="single-title" itemprop="headline">
                                     <?php the_title(); ?>
                                 </h1>
                             </div>
-							
-							
+						
+                        <?php } else { ?>
+                        	 
+							 <?php the_post_thumbnail( 'wpbs-featured' ); ?>
+                             
+                             <div class="page-header">
+                                <h1 class="single-title" itemprop="headline">
+                                    <?php the_title(); ?>
+                                </h1>
+                            </div>
+                        <?php } ?>
 						
 						</header> <!-- end article header -->
 					
 						<section class="post_content clearfix" itemprop="articleBody">
-							<p class="meta"><time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_date(); ?></time> </p>
+							
 							<?php the_content(); ?>
+                            
+                            <p class="meta"><time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_date(); ?></time> </p>
 							
 							<?php wp_link_pages(); ?>
-					
-						</section> <!-- end article section -->
-						
-						<footer>
-			
-							<?php the_tags('<p class="tags"><span class="tags-title">' . __("Tags","bonestheme") . ':</span> ', ' ', '</p>'); ?>
-							
-							<?php 
+                            
+                            <?php 
 							// only show edit button if user has permission to edit posts
 							if( $user_level > 0 ) { 
 							?>
-							<a href="<?php echo get_edit_post_link(); ?>" class="btn btn-success edit-post"><i class="icon-pencil icon-white"></i> <?php _e("Edit post","bonestheme"); ?></a>
+							<a href="<?php echo get_edit_post_link(); ?>" class="btn btn-success edit-post"><i class="icon-pencil icon-white"></i> <?php _e("Editar articulo","bonestheme"); ?></a>
 							<?php } ?>
-							
-						</footer> <!-- end article footer -->
+					
+						</section> <!-- end article section -->
+					
 					
 					</article> <!-- end article -->
 					

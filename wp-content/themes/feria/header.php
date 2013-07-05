@@ -61,12 +61,12 @@
                                 
                                 <ul class="menu menuholder hidden-phone"> 
                                     <li class="menu_inicio"><a href="#" title="Inicio" class="active">Inicio</a></li>
-                                    <li class="menu_programacion"><a href="#" title="Programación">Programación</a></li>
-                                    <li class="menu_turistica"><a href="#" title="Info Turística">Info Turística</a></li>
-                                    <li class="menu_historia"><a href="#" title="Historia">Historia</a></li>
-                                    <li class="menu_saladeprensa"><a href="#" title="Sala de Prensa">Sala de Prensa</a></li>
-                                    <li class="menu_contactenos"><a href="#" title="Contáctenos">Contáctenos</a></li>
-                                    <li class="menu_envivo"><a href="#" title="En Vivo">En Vivo</a></li>
+                                    <li class="menu_programacion"><a href="http://localhost/feriadelasflores/?cat=4" title="Programación">Programación</a></li>
+                                    <li class="menu_turistica"><a href="http://localhost/feriadelasflores/?cat=1" title="Info Turística">Info Turística</a></li>
+                                    <li class="menu_historia"><a href="http://localhost/feriadelasflores/?cat=2" title="Historia">Historia</a></li>
+                                    <li class="menu_saladeprensa"><a href="http://localhost/feriadelasflores/?cat=3" title="Sala de Prensa">Sala de Prensa</a></li>
+                                    <li class="menu_contactenos"><a href="http://localhost/feriadelasflores/?page_id=2" title="Contáctenos">Contáctenos</a></li>
+                                    <li class="menu_envivo"><a href="http://localhost/feriadelasflores/?page_id=6" title="En Vivo">En Vivo</a></li>
                                 </ul>
                               
                                                                 

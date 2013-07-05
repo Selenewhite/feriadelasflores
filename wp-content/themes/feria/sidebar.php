@@ -29,9 +29,9 @@
                          <div class="infoTurismo">
                          <h3>Info turística</h3>
                          <ul>
-                           <li><span class="icono1"></span><a href="·">¿Cómo llegar a Medellín?</a></li>
-                       	   <li><span class="icono2"></span><a href="·">¿Dónde quedarme en Medellín?</a></li>
-                       	   <li><span class="icono3"></span><a href="·">¿Dónde comer en Medellín?</a></li>
+                           <li><span class="icono1"></span><a href="http://localhost/feriadelasflores/?cat=1">¿Cómo llegar a Medellín?</a></li>
+                       	   <li><span class="icono2"></span><a href="http://medellin.travel/que-hacer-en-medellin/reuniones/directorio-turistico/hospedaje" target="_blank">¿Dónde quedarme en Medellín?</a></li>
+                       	   <li><span class="icono3"></span><a href="http://medellin.travel/que-hacer-en-medellin/reuniones/directorio-turistico/restaurantes" target="_blank">¿Dónde comer en Medellín?</a></li>
                          </ul>
                          </div>
                       <?php }?>	

@@ -306,7 +306,7 @@ span.hoy {
 
 .tit {
 	margin:20px 0 10px 0;
-	height:31px;
+	min-height:31px;
 	background-color:#e6e6e5;
 	border-radius:8px;
 	box-shadow: #ccc 2px 3px 1px;
@@ -315,6 +315,32 @@ span.hoy {
 	font-family: 'Coolvetica';
 	color:#663109;
 	font-size:26px;
+	}
+
+.formularioAcreditacion  {
+	margin:20px 0 10px 0;
+	min-height:31px;
+	background-color:#e6e6e5;
+	border-radius:8px;
+	box-shadow: #ccc 2px 3px 1px;
+	padding:17px 0.7% 0 0.7%;
+	
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#663109;
+	font-size:20px;
+	}
+
+.formularioAcreditacion .btn {
+	background-color:#DADADA;
+	display:block;
+	height:28px;
+	border-radius:8px;
+	color:#999;
+	font-weight:bold;
+	padding:7px 7px 0 7px;
+	box-shadow: #ccc 1px 1px 2px;
+	text-align:center;
+	margin:10px 0 0px 0
 	}
 
 #novedades span  {
@@ -410,6 +436,8 @@ span.hoy {
 .vermas {
 	float:right;
 	width:72px;}
+
+
 	
 .vermas a {
 	background-image:url(images/vermas.png);
@@ -417,9 +445,26 @@ span.hoy {
 	height:40px;
 	display:block; 
 	text-indent:-9000%;
+
 	}
 
 .vermas a:hover {
+	background-position:0 -39px;
+	}
+
+.vermasp {
+	width:72px;}
+
+.vermasp a {
+	background-image:url(images/vermas.png);
+	width:71px;
+	height:40px;
+	display:block; 
+	text-indent:-9000%;
+
+	}
+
+.vermasp a:hover {
 	background-position:0 -39px;
 	}
 
@@ -652,58 +697,173 @@ input, textarea, select, .uneditable-input {
 	margin-bottom: 0;
 }
 
-/* HISTORIA */
+/* INTERNAS */
 
-.gastronomia {
-	background-image:url(images/gastronomia.png);
-	background-repeat:no-repeat;
-	background-position:center top;
-	height:360px;
+.category-historia h2 {
+	font-family: 'Coolvetica', Arial, Tahoma;
+	font-size:24px;
+	color:#84aa1f;
+	border-bottom:2px solid;
+	text-align:center;	
 	}
 
-.atuendos {
-	background-image:url(images/atuendos.png);
-	background-repeat:no-repeat;
-	background-position:center top;
-	height:360px;
+.category-historia .post {
+	float:left;
+	width:48%;
+	margin-right:2%;	
 	}
-.expresiones {
-	background-image:url(images/expresiones.png);
-	background-repeat:no-repeat;
-	background-position:center top;
-	height:360px;
-	} 
 
-.arrieros {
-	background-image:url(images/arrieros.png);
-	background-repeat:no-repeat;
-	background-position:center top;
-	height:360px;
-	} 
+.category-historia .post:nth-child(odd) /* Esto es sirve para llamar pares */ {
+	margin-right:0;
+	width:48%;
+	margin-left:2%;
+	float:right;
+	clear:both;
+		
+	}
 
-.gastronomia span, .atuendos span, .expresiones span, .arrieros span {
+.category-infoturistica .post img {
+	float:left;
+	margin:0 10px 0 0;	
+	}
+
+.category-infoturistica h2 {
+	font-family: 'Coolvetica', Arial, Tahoma;
+	font-size:20px;
+	color:#84aa1f;
+	margin:0 0 0px 0;
+
+	}
+.page-header h1 {
+	background-color:#e6e6e5;
+	border-radius:8px;
+	box-shadow: #ccc 2px 3px 1px;
+	padding:5px 5px 5px 10px;
+	font-family: 'Coolvetica';
+	color:#663109;
+	font-size:22px;
+	}
+
+	.lead {
+	margin-bottom: 20px;
+	font-size: 16px;
+	font-weight: 200;
+	line-height: 20px;
+	font-weight:bold;
+	}
+
+	.single-post .post_content  {
+	background-color:#F9F9F9;
+	border-radius:8px;
+	box-shadow: #ccc 2px 3px 1px;
+	padding:15px;
+	margin-top:0px;
+
+	}
+ 
+.post_content h3 {
+	font-family: 'Coolvetica', Arial, Tahoma;
+	font-size:20px;
+	color:#84aa1f;
+	margin:0 0 0px 0;
+
+	}
+
+.post_content img {
+	margin-bottom:10px;
+
+	}
+
+.descarga a {
+	background-color:#DADADA;
 	display:block;
-	margin:200px 0 0 0;
+	height:28px;
+	border-radius:8px;
+	color:#999;
+	font-weight:bold;
+	padding:7px 7px 0 7px;
+	box-shadow: #ccc 1px 1px 2px;
+	text-align:center;
+	margin:10px 0 0px 0
 	}
+
+.descarga a:hover {
+	background-color:#D72D6C;
+	text-decoration:none;
+	color:#FFF;
+	
+	}
+	
+
+
+.logoDescarga, .logosVarios {
+	width:307px;
+	height:250px;
+	padding-top:190px;
+	margin:0 0 20px;
+	}
+
+.galeriaFeriaD,.videoFeria {
+	width:307px;
+	height:250px;
+	margin:0 0 20px;
+	}
+
+.logoDescarga {
+	background-image:url(images/logoferiadownload.png);
+	background-repeat:no-repeat;	
+	}
+
+.logosVarios {
+	background-image:url(images/logosvarios.png);
+	background-repeat:no-repeat;
+	}
+
+
+
+
+
 /* SINGLE */
 
 .breadcrumb {
-	font-family: 'Coolvetica', Arial, Tahoma;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
 	color:#663109;
-	font-size:16px;
+	font-size:14px;
+	font-weight:bold;
+	background-color:transparent;
+	height:43px;
+	background-image:url(images/linea1_07.jpg);
+	background-position:bottom right;
+	background-repeat:repeat-x;
+	padding: 8px 15px 15px 0px;
+	margin: 0 0 20px 0px;
+	}
+.breadcrumb > li {
+	height:43px;
+	padding-left:5px;
+	display:table-cell;
+	vertical-align:middle;
 	}
 
 .breadcrumb .home a {
 	background-image:url(images/home.png);
+	background-repeat:no-repeat;
 	width:50px;
 	height:43px;
 	display:inline-block; 
 	text-indent:-9000%;
 	}
 
+.breadcrumb .home a:hover {
+	background-position:0 -43px;
+	}
+
+
+
 .breadcrumb > .active {
 	color:#663109;
 	font-size:32px;
+	font-family: 'Coolvetica', Arial, Tahoma;
 	}
 
 .page-header {
@@ -712,23 +872,7 @@ input, textarea, select, .uneditable-input {
 	border-bottom: 1px solid #eeeeee;
 	}
 
-.page-header h1 {
-	font-family: 'Coolvetica', Arial, Tahoma;
-	border-bottom:2px dotted;
-	color:#663109;
-	font-size:26px;
-	margin-bottom:0px;
-	}
 
-.lead {
-margin-bottom: 20px;
-font-size: 14px;
-font-weight: 200;
-line-height: 18px;
-}
-
-.post_content {
-	margin-top:20px;}
 
 /* FOOTER */
 
@@ -792,6 +936,12 @@ footer li {
 .navbar-search{
 	padding-left: 0;
 }
+
+/* Acordion */
+
+.accordion-group {
+	background-color:#FFF;
+	}
 
 #s{
 	width: 100px;
@@ -1362,7 +1512,38 @@ blockquote.pull-left{
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) { 
 
+/* header */
 
+#cabezoteAlcaldia .corazon {
+	display:none;
+}
+
+#cabezoteAlcaldia .logosAlcaldia {
+	background-image:url(images/logosAlcaldia_03.jpg);
+	width:300px;
+	height:118px;
+
+	}
+
+/* HISTORIA */
+
+.category-historia .post {
+	width:98%;
+	margin-right:2%;
+	text-align:center;	
+	}
+
+.category-historia .post:nth-child(odd) /* Esto es sirve para llamar pares */ {
+	width:98%;
+	margin-right:2%;
+	text-align:center;
+		
+	}
+
+.category-historia p {
+
+	text-align:left;
+	}
 
  }
 

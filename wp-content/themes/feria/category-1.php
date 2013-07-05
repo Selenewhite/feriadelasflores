@@ -8,50 +8,32 @@
 					<?php if (is_category()) { ?>
                     	 <ul class="breadcrumb">
                               <li class="home"><a href="#">Home</a></li>
-                              <li>Nombre cualquiera /</li>
                               <li class="active"><?php single_cat_title(); ?></li>
                           </ul>
                           
 					<?php } ?>
 					</div>
-
-
-					<?php if (have_posts()) : ?>
-					<?php $post = $posts[0]; $c=0; ?>
-					<?php while (have_posts()) : the_post(); ?>
-                    
-                    <?php $c++; if( $c == 1) : ?>
-                    <article>
-                    	<section>
-                        	
-                            <?php the_post_thumbnail( 'first-historia' ); ?>
-                            <h2><?php the_title(); ?></h2>
-                            <?php the_excerpt(); ?> 
-                            <div class="vermas"><a href="<?php the_permalink(); ?>">Ver más</a></div>
-                           
-                        </section> <!-- end article section -->
-                    </article>
-                    
-                    <?php else : ?>
-                                        
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" >
-						
-
-						<section class="post_content clearfix">
-                        
-                       		<div>
-                            <?php the_post_thumbnail( 'historia' ); ?>
-                            <span><?php the_excerpt(); ?></span>
-                           <!-- <span><?php /*?><?php excerpt('175'); ?><?php */?></span>-->
-                            <div class="vermas"><a href="<?php the_permalink(); ?>">Ver más</a></div>
-                            </div>
- 
-						</section> <!-- end article section -->
-					<?php endif; ?>	
 					
+                  
+                    
+                    <?php query_posts('cat=1&tag=turismo'); ?>
+                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                    
+					
+					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+
+						<section class="post_content">
+                            <?php the_post_thumbnail( 'historia' ); ?>
+                            <h2><?php the_title(); ?></h2>
+							<?php the_excerpt(); ?>
+					
+						</section> <!-- end article section -->
+						
+						
 					</article> <!-- end article -->
 					
-					<?php endwhile; ?>	
+					<?php endwhile; ?>
+                    <?php wp_reset_query(); ?>	
 					
 					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
 						
@@ -70,22 +52,22 @@
 					<?php else : ?>
 					
 					<article id="post-not-found">
-					    <header></header>
-                        
+					   
+ 
 					    <section class="post_content">
                           <div class="clearfix row-fluid">
                           
-	
-							
-                            </div>
-                         </div>
-                            
-                            
+                          Bla 
+ 
+                          </div>
+
 					    </section>
 					   
 					</article>
 					
 					<?php endif; ?>
+			
+
 			
 				</div> <!-- end #main -->
     

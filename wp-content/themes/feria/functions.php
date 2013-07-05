@@ -77,6 +77,8 @@ add_filter( 'wp_title', 'bones_filter_title', 10, 2 );
 add_image_size( 'wpbs-featured', 638, 300, true );
 add_image_size( 'wpbs-featured-home', 970, 311, true);
 add_image_size( 'wpbs-featured-carousel', 970, 400, true);
+add_image_size( 'first-historia', 616, 190, true);
+add_image_size( 'historia', 305, 182, true);
 
 /* 
 to add more sizes, simply copy a line from above 
@@ -232,6 +234,28 @@ function bones_wpsearch( $form ) {
   return $form;
 } // don't remove this bracket!
 
+/* read more */
+
+function wdc_no_more_jumping($post) {
+     return '<a href="'.get_permalink($post->ID).'" class="read-more">'.'...'.'</a>';
+
+	
+}
+add_filter('excerpt_more', 'wdc_no_more_jumping');
+
+
+function excerpt($len){
+	$excerpt = get_the_content();
+	$excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
+	$excerpt = strip_shortcodes($excerpt);
+	$excerpt = strip_tags($excerpt);
+	$excerpt = substr($excerpt, 0, $len);
+	$excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
+	echo $excerpt;
+}
+
+
+
 /****************** password protected post form *****/
 
 add_filter( 'the_password_form', 'custom_password_form' );
@@ -286,7 +310,7 @@ function wp_tag_cloud_filter( $return, $args )
 // Enable shortcodes in widgets
 add_filter( 'widget_text', 'do_shortcode' );
 
-// Disable jump in 'read more' link
+// Disable jump in ' more' link
 function remove_more_jump_link( $link ) {
 	$offset = strpos($link, '#more-');
 	if ( $offset ) {

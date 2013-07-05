@@ -33,6 +33,10 @@ define('DB_CHARSET', 'utf8');
 /** Cotejamiento de la base de datos. No lo modifiques si tienes dudas. */
 define('DB_COLLATE', '');
 
+define('FTP_HOST', 'localhost');
+define('FTP_USER', 'nobody');
+define('FTP_PASS', 'xampp');
+
 /**#@+
  * Claves únicas de autentificación.
  *
