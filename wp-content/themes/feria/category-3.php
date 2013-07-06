@@ -14,17 +14,25 @@
 					<?php } ?>
 					</div>
                     
+                    <div class="tit mensaje">	
+                           <span>Pronto podrás actualizarte con todo lo que pasa en La Feria y además acreditarte como periodista.</span>         
+                      </div><!-- cierra .tit --> 
+                    
                      <div class="tit formularioAcreditacion">
-                                	<span class="icono"></span>
-                                    <span>Si eres periodista y quieres acreditarte, por favor llena el formulario.
-                                    <span class="btn"><a href="#">Quiero acreditarme</a></span> </span>         
-                                </div><!-- cierra .tit --> 
+                                	<!--<span class="icono"></span>-->
+                                    <span>Si eres periodista y quieres acreditarte, por favor llena el formulario.</span>
+                                    
+                                    <a href="#" class="btn">Quiero acreditarme</a>  
+                                    &nbsp;
+                                    &nbsp;       
+                      </div><!-- cierra .tit --> 
 					
                     
                      <div id="novedades">  
                                 <div class="tit">
                                 	<span class="icono"></span>
-                                    <span>Boletines</span>         
+                                    <span>Novedades de la feria</span> 
+                                    <a href="#" class="ver">Ver todas</a>        
                                 </div><!-- cierra .tit --> 
                                   
                                <div class="noticiasHome"> 
@@ -87,6 +95,78 @@
                                  
                             </div><!-- cierra .noticiasHome -->       
                            </div><!-- cierra .novedades --> 
+                    
+                    
+                    
+                     <div id="novedades">  
+                                <div class="tit">
+                                	<span class="icono"></span>
+                                    <span>Boletines</span> 
+                                    <a href="#" class="ver">Ver todos</a>        
+                                </div><!-- cierra .tit --> 
+                                  
+                               <div class="noticiasHome"> 
+                                 
+                                 <!-- NOTICIA -->
+                                 <div class="noticiaHome">
+                                 <img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="200" height="130" class="img-rounded" />
+                                
+                                <h2> Parque Cultural Nocturno: gran escenario de artistas</h2>
+                                <div class="linea"></div>
+                                 <p>Una programación alternativa, cultural e incluyente caracterizó este evento que, durante 6 días, reunió a artistas locales, nacionales e internacionales, convocando cerca de 35 mil espectadores.</p>
+                                 
+                                 <div class="links">
+                                      <div class="redes">
+                                        <span class="twitter"><a href="#">Twitter</a></span>
+                                        <span class="facebook"><a href="#">Facebook</a></span>
+                                      </div>
+                                      
+                                      <div class="vermas"><a href="#">Ver más</a></div>
+                                   </div><!-- cierra .links -->   
+                                 </div><!-- cierra .noticiaHome --> 
+                                 
+                                 <!-- NOTICIA -->
+                                 <div class="noticiaHome">
+                                 <img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="200" height="130" class="img-rounded" />
+                                
+                                <h2> Parque Cultural Nocturno: gran escenario de artistas</h2>
+                                <div class="linea"></div>
+                                 <p>Una programación alternativa, cultural e incluyente caracterizó este evento que, durante 6 días, reunió a artistas locales, nacionales e internacionales, convocando cerca de 35 mil espectadores.</p>
+                                 
+                                 <div class="links">
+                                      <div class="redes">
+                                        <span class="twitter"><a href="#">Twitter</a></span>
+                                        <span class="facebook"><a href="#">Facebook</a></span>
+                                      </div>
+                                      
+                                      <div class="vermas"><a href="#">Ver más</a></div>
+                                   </div><!-- cierra .links -->   
+                                 </div><!-- cierra .noticiaHome --> 
+                                 
+                                 <!-- NOTICIA -->
+                                 <div class="noticiaHome">
+                                 <img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="200" height="130" class="img-rounded" />
+                                
+                                <h2> Parque Cultural Nocturno: gran escenario de artistas</h2>
+                                <div class="linea"></div>
+                                 <p>Una programación alternativa, cultural e incluyente caracterizó este evento que, durante 6 días, reunió a artistas locales, nacionales e internacionales, convocando cerca de 35 mil espectadores.</p>
+                                 
+                                 <div class="links">
+                                      <div class="redes">
+                                        <span class="twitter"><a href="#">Twitter</a></span>
+                                        <span class="facebook"><a href="#">Facebook</a></span>
+                                      </div>
+                                      
+                                      <div class="vermas"><a href="#">Ver más</a></div>
+                                   </div><!-- cierra .links -->   
+                                 </div><!-- cierra .noticiaHome --> 
+                                 
+                               
+                                 
+                            </div><!-- cierra .noticiasHome -->       
+                           </div><!-- cierra .novedades --> 
+                           
+                           
                            <div class="kitdeprensa">
                            		
                                 <div class="tit">

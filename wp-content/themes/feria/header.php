@@ -41,10 +41,23 @@
 	<body <?php body_class(); ?>>
 				
 		<header role="banner">
-        	<div id="cabezoteAlcaldia"  class="clearfix">
+        <div class="blanco">
+        	<div id="cabezoteAlcaldia"  class="clearfix">	
                 <div class="corazon"></div>
-                <div class="logosAlcaldia"></div>
+               
+                <div class="logosAlcaldia">
+                	 <div class="redesAlcaldia">
+                	<ul>
+                    	<li><a href="http://www.facebook.com/alcaldiademed" target="_blank" title="Facebook"><img src="<?php bloginfo('template_directory'); ?>/images/Facebook.png" /></a></li>
+                        <li><a href="http://twitter.com/alcaldiademed" target="_blank" title="Twitter"><img src="<?php bloginfo('template_directory'); ?>/images/Twitter.png" /></a></li>
+                        <li><a href="http://www.youtube.com/alcaldiademed" target="_blank" title="Youtube"><img src="<?php bloginfo('template_directory'); ?>/images/Youtube.png" /></a></li>
+                        <li><a href="http://www.flickr.com/photos/90282908@N03/" target="_blank" title="Flickr"><img src="<?php bloginfo('template_directory'); ?>/images/Flickr.png" /></a></li>
+                        
+                </div>
+                </div>
+                
             </div>
+         </div>
             <div class="lineaHeader"></div>
         
 			<div id="inner-header" class="clearfix">
@@ -61,12 +74,12 @@
                                 
                                 <ul class="menu menuholder hidden-phone"> 
                                     <li class="menu_inicio"><a href="#" title="Inicio" class="active">Inicio</a></li>
-                                    <li class="menu_programacion"><a href="http://localhost/feriadelasflores/?cat=4" title="Programación">Programación</a></li>
-                                    <li class="menu_turistica"><a href="http://localhost/feriadelasflores/?cat=1" title="Info Turística">Info Turística</a></li>
-                                    <li class="menu_historia"><a href="http://localhost/feriadelasflores/?cat=2" title="Historia">Historia</a></li>
-                                    <li class="menu_saladeprensa"><a href="http://localhost/feriadelasflores/?cat=3" title="Sala de Prensa">Sala de Prensa</a></li>
-                                    <li class="menu_contactenos"><a href="http://localhost/feriadelasflores/?page_id=2" title="Contáctenos">Contáctenos</a></li>
-                                    <li class="menu_envivo"><a href="http://localhost/feriadelasflores/?page_id=6" title="En Vivo">En Vivo</a></li>
+                                    <li class="menu_programacion"><a href="<?php echo home_url(); ?>/category/programacion/" title="Programación">Programación</a></li>
+                                    <li class="menu_turistica"><a href="<?php echo home_url(); ?>/category/infoturistica/" title="Info Turística">Info Turística</a></li>
+                                    <li class="menu_historia"><a href="<?php echo home_url(); ?>/category/historia/" title="Historia">Historia</a></li>
+                                    <li class="menu_saladeprensa"><a href="<?php echo home_url(); ?>/category/saladeprensa/" title="Sala de Prensa">Sala de Prensa</a></li>
+                                    <li class="menu_contactenos"><a href="http://medellin.travel/content/formulario-de-contacto" title="Contáctenos" target="_blank">Contáctenos</a></li>
+                                    <li class="menu_envivo"><a href="<?php echo home_url(); ?>/?page_id=6" title="En Vivo">En Vivo</a></li>
                                 </ul>
                               
                                                                 

@@ -75,14 +75,17 @@ body.admin-bar .navbar-fixed-top{
 	top: 28px; 
 }
 
+
+
 #inner-header{
 	width: 100%;
 }
 
 #cabezoteAlcaldia {
-	width:100%;
+	width:80%;
 	height:120px;
 	background-color:#FFF;
+	margin:0 auto;
 }
 
 #cabezoteAlcaldia .corazon {
@@ -97,6 +100,26 @@ body.admin-bar .navbar-fixed-top{
 	width:300px;
 	height:118px;
 	float:right;
+}
+
+#cabezoteAlcaldia .redesAlcaldia {
+	width:170px;
+	height:118px;
+	float:left;
+	padding:10px 0 0 0px;
+
+	}
+
+#cabezoteAlcaldia .redesAlcaldia li {
+	display:inline-block;	
+	float:left;
+	margin-left:5px;
+
+	}
+
+.blanco {
+	background-color:#FFF;
+	width:100%;
 }
 
 .lineaHeader {
@@ -188,6 +211,8 @@ body.admin-bar .navbar-fixed-top{
 	display:inline-block;
 	height:28px;
 	border-radius:0px 8px 8px 0px;
+	-webkit-border-radius: 0px 8px 8px 0px;
+    -moz-border-radius: 0px 8px 8px 0px;
 	color:#9b9b9b;
 	font-weight:bold;
 	padding:7px 7px 0 7px;
@@ -199,6 +224,8 @@ body.admin-bar .navbar-fixed-top{
 	display:inline-block;
 	height:28px;
 	border-radius:8px 0px 0px 8px;
+	-webkit-border-radius: 8px 0px 0px 8px;
+    -moz-border-radius: 8px 0px 0px 8px;
 	color:#fff;
 	font-weight:bold;
 	border-right:2px solid #477ba5;
@@ -255,6 +282,8 @@ span.hoy {
 	
 	background-color:#e6e6e5;
 	border-radius:8px 0px 0px 8px;
+	-webkit-border-radius: 8px 0px 0px 8px;
+    -moz-border-radius: 8px 0px 0px 8px;
 	box-shadow: #ccc 2px 3px 1px;
 	padding:17px 0.7% 0 0.7%;
 	
@@ -285,6 +314,8 @@ span.hoy {
 
 .titManana {
 	border-radius:0px 8px 8px 0px;
+	-webkit-border-radius: 0px 8px 8px 0px;
+    -moz-border-radius: 0px 8px 8px 0px;
 	
 	background-color:#6fa0d0;
 	box-shadow: #477ba5 2px 2px 1px;
@@ -309,6 +340,8 @@ span.hoy {
 	min-height:31px;
 	background-color:#e6e6e5;
 	border-radius:8px;
+	-webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
 	box-shadow: #ccc 2px 3px 1px;
 	padding:17px 0.7% 0 0.7%;
 	
@@ -317,30 +350,52 @@ span.hoy {
 	font-size:26px;
 	}
 
+.mensaje {
+	padding:15px;
+	line-height:30px;
+	text-align:center;
+	}
+
+#novedades .tit .ver {
+	font-size:16px;
+	float:right;
+	display:inline-block;
+	color:#A45200;
+	font-weight:normal;}
+
+#novedades .tit .ver:hover {
+	color:#663109;
+	text-decoration:none;}
+
 .formularioAcreditacion  {
 	margin:20px 0 10px 0;
 	min-height:31px;
 	background-color:#e6e6e5;
 	border-radius:8px;
+	-webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
 	box-shadow: #ccc 2px 3px 1px;
 	padding:17px 0.7% 0 0.7%;
 	
 	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
 	color:#663109;
-	font-size:20px;
+	font-size:16px;
+	text-align:center;
 	}
 
 .formularioAcreditacion .btn {
-	background-color:#DADADA;
-	display:block;
-	height:28px;
-	border-radius:8px;
-	color:#999;
-	font-weight:bold;
-	padding:7px 7px 0 7px;
-	box-shadow: #ccc 1px 1px 2px;
-	text-align:center;
-	margin:10px 0 0px 0
+  background:#dd3b5c;
+  color:#fff;  
+  font-size: 14px;
+  border:none;
+  width:50%;
+  margin:15px auto;
+  text-shadow:none;
+  display:block;
+	}
+
+.formularioAcreditacion .btn:hover  {
+	 background:#bd1839;
 	}
 
 #novedades span  {
@@ -737,6 +792,8 @@ input, textarea, select, .uneditable-input {
 .page-header h1 {
 	background-color:#e6e6e5;
 	border-radius:8px;
+	-webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
 	box-shadow: #ccc 2px 3px 1px;
 	padding:5px 5px 5px 10px;
 	font-family: 'Coolvetica';
@@ -755,6 +812,8 @@ input, textarea, select, .uneditable-input {
 	.single-post .post_content  {
 	background-color:#F9F9F9;
 	border-radius:8px;
+	-webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
 	box-shadow: #ccc 2px 3px 1px;
 	padding:15px;
 	margin-top:0px;
@@ -779,6 +838,8 @@ input, textarea, select, .uneditable-input {
 	display:block;
 	height:28px;
 	border-radius:8px;
+	-webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
 	color:#999;
 	font-weight:bold;
 	padding:7px 7px 0 7px;
@@ -937,6 +998,51 @@ footer li {
 	padding-left: 0;
 }
 
+
+
+/* TWITTER */
+
+#twitter-tracker-2 .widgettitle {
+	background-image:url(images/titletwitter.png);
+	width: 227px;
+	height: 29px;
+	padding: 10px 0px 0 80px;
+	color:#FFF;
+	font-size:14px;
+	}
+
+#twitter-tracker-2 .tweets {
+	background-color:#86b8e2;
+	border-radius:8px;
+	-webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+
+	color:#FFF;
+	font-size:13px;
+	line-height:8px;
+	padding:10px;
+	}
+
+.msgtxt {
+	line-height:8px !important;
+	}
+
+#twitter-tracker-2 .tweets a {
+	color:#E8F3FF;
+	text-decoration:none;
+
+	}
+
+#twitter-tracker-2 .tweets .avatar img {
+	float:left;
+	margin:8px;
+	-webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+	}
+	
+	
+
 /* Acordion */
 
 .accordion-group {
@@ -979,7 +1085,7 @@ footer li {
 
 #main article{
 	margin-bottom: 18px;
-	border-bottom: 1px solid #eeeeee;
+	-bottom: 1px solid #eeeeee;
 	padding: 0 0 9px;
 }
 
@@ -1076,6 +1182,8 @@ article.format-link header {
 	color: #848484;
 	background-color: #ebebeb;
 	border-radius: 3px;
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
 }
 article.format-link .entry-content {
 	max-width: 80%;
@@ -1518,12 +1626,16 @@ blockquote.pull-left{
 	display:none;
 }
 
+#cabezoteAlcaldia .redesAlcaldia {
+	display:none;}
+
 #cabezoteAlcaldia .logosAlcaldia {
 	background-image:url(images/logosAlcaldia_03.jpg);
 	width:300px;
 	height:118px;
 
 	}
+
 
 /* HISTORIA */
 

@@ -44,7 +44,7 @@
 				<div id="main" class="span12 clearfix" role="main">
                 
                 <div class="slider">
-                <?php echo get_new_royalslider(1); ?>
+                <?php /*?><?php echo get_new_royalslider(1); ?><?php */?>
                 </div><!-- cierra .slider -->
                 
                 <div class="hoy">
@@ -231,23 +231,6 @@
            
            </div>                           
           
-         <div class="clearfix row-fluid">
-            <div class="span12 Decoration">
-                       <ul class="menuInferior hidden-phone"> 
-                           <li class="preguntasFrecuentes"><a href="#" title="Preguntas Frecuentes">Preguntas Frecuentes</a></li>
-                           <li class="directorioArtistas"><a href="#" title="Directorio de artistas">Directorio Artistas</a></li>           
-                        </ul>
-                              
-                
-            </div> 
-         </div>         
-
-		</div> <!-- end #main -->
         
- 
-        
-        
-</div> <!-- end #content -->
-</div> <!-- end #container -->
 
 <?php get_footer(); ?>

@@ -1,3 +1,18 @@
+ <div class="clearfix row-fluid">
+            <div class="span12 Decoration">
+                       <ul class="menuInferior hidden-phone"> 
+                           <li class="preguntasFrecuentes"><a href="<?php echo home_url(); ?>/preguntas-frecuentes/" title="Preguntas Frecuentes">Preguntas Frecuentes</a></li>
+                           <li class="directorioArtistas"><a href="http://www.feriadelasfloresmedellin.gov.co/directorio/" title="Directorio de artistas" target="_blank">Directorio Artistas</a></li>           
+                        </ul>
+                              
+                
+            </div> 
+         </div>         
+
+		</div> <!-- end #main -->
+</div> <!-- end #content -->
+</div> <!-- end #container -->
+
 			<footer role="contentinfo" >
 
 				<div id="inner-footer">
