@@ -76,8 +76,16 @@ if ($blog_hero){
                 <p><?php echo substr(strip_tags ($item->get_content()), 0, 200) ?>...</p>
                 <div class="links">
                   <div class="redes">
-                    <span class="twitter"><a href="#">Twitter</a></span>
-                    <span class="facebook"><a href="#">Facebook</a></span>
+                    <span class="twitter">
+                      <a href="https://twitter.com/share?text=<?php echo $item->get_title(); ?>&url=<?php echo $item->get_permalink(); ?>" target="_blank">
+                        Twitter
+                      </a>
+                    </span>
+                    <span class="facebook">
+                      <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<?php echo $item->get_permalink(); ?>&amp;p[title]=<?php echo $item->get_title(); ?>&amp;p[summary]=<?php echo substr(strip_tags ($item->get_content()), 0, 200) ?>">
+                        Facebook
+                      </a>
+                    </span>
                   </div>
                   <div class="vermas">
                     <a target="_BLANK" href="<?php echo $item->get_permalink(); ?>" title="<?php echo $item->get_date('j F Y @ G:i'); ?>">Ver más</a>
