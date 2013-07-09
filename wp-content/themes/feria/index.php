@@ -67,7 +67,7 @@ if ($blog_hero){
                 $limit = $feed->get_item_quantity(2); // especificamos el número de items a mostrar
                 $items = $feed->get_items(0, $limit); // se crea un array con los items
               }
-              if ($limit == 0) echo '<div>El feed está vacío o no disponible.</div>';
+              if ($limit == 0) echo '';
               else foreach ($items as $item) : ?>
               <div class="noticiaHome">
                 <?php
@@ -79,8 +79,14 @@ if ($blog_hero){
 
                 $src = substr($img, strpos($img, "src=") + 5 ) ;                
                 $params = preg_split('[\"|\']', $src, 2);                  
-                ?>                
-                <img src="<?php echo $params[0] ?>" width="200" height="130" class="img-rounded" />
+                if($params[0] == "" || $params[0] == "/" || $params[0] == " "){
+                  $src = get_template_directory_uri() . "/images/genericaFeed.jpg";
+                }
+                else{
+                  $src = $params[0];
+                }
+                ?>         
+                <img src="<?php echo $src ?>" width="200" height="130" class="img-rounded" />
                 <h2><?php echo $item->get_title(); ?></h2>
                 <div class="linea"></div>
                 <p><?php echo substr(strip_tags ($item->get_content()), 0, 200) ?>...</p>
@@ -110,7 +116,7 @@ if ($blog_hero){
                 $limit = $feed->get_item_quantity(2); // especificamos el número de items a mostrar
                 $items = $feed->get_items(0, $limit); // se crea un array con los items
               }
-              if ($limit == 0) echo '<div>El feed está vacío o no disponible.</div>';
+              if ($limit == 0) echo '';
               else foreach ($items as $item) : ?>
               <div class="noticiaHome">
                 <?php
@@ -118,9 +124,15 @@ if ($blog_hero){
                 $second = strpos($img, ">");
                 $img = substr($img, 0, $second);                
                 $src = substr($img, strpos($img, "src=") + 5 ) ;                
-                $params = preg_split('[\"|\']', $src, 2);  
+                $params = preg_split('[\"|\']', $src, 2); 
+                if($params[0] == "" || $params[0] == "/" || $params[0] == " "){
+                  $src = get_template_directory_uri() . "/images/genericaFeed.jpg";
+                }
+                else{
+                  $src = $params[0];
+                }                 
                 ?>
-                <img src="<?php echo $params[0] ?>" width="200" height="130" class="img-rounded" />
+                <img src="<?php echo $src ?>" width="200" height="130" class="img-rounded" />
                 <h2><?php echo $item->get_title(); ?></h2>
                 <div class="linea"></div>
                 <p><?php echo substr(strip_tags ($item->get_content()), 0, 200) ?>...</p>
