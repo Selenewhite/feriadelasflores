@@ -15,7 +15,7 @@
 					
 					<?php } else {?>
 
-                         <div class="hoyFeria">
+                         <div style="display:none" class="hoyFeria">
                             <div class="tit">
                                  <span class="icono"></span>
                                    <span>Hoy en la feria</span>         
