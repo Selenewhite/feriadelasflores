@@ -5,13 +5,19 @@
 				<div id="main" class="span8 clearfix" role="main">
 				
 					<div class="page-header">
-					<?php if (is_category()) { ?>
-                    	 <ul class="breadcrumb">
-                              <li class="home"><a href="#">Home</a></li>
+          <?php if (is_category()) { ?>
+            <?php if(qtrans_getLanguage() == 'es'): ?>
+                       <ul class="breadcrumb">
+                              <li class="home"><a href="<?php echo home_url(); ?>">Home</a></li>
                               <li class="active"><?php single_cat_title(); ?></li>
                           </ul>
-                          
-					<?php } ?>
+                        <?php else: ?>
+                       <ul class="breadcrumb">
+                              <li class="home"><a href="<?php echo home_url(); ?>/en/">Home</a></li>
+                              <li class="active"><?php single_cat_title(); ?></li>
+                          </ul>                        
+                        <?php endif; ?>  
+          <?php } ?>
 					</div>
                     
                     <div class="tit mensaje">	
