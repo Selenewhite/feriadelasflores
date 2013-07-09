@@ -70,6 +70,17 @@ function bones_filter_title( $title, $sep ) {
 }
 add_filter( 'wp_title', 'bones_filter_title', 10, 2 );
 
+// PLUGIN PARA TRADUCCIR
+
+if ( function_exists('register_sidebar') )
+    register_sidebar( array(
+   'name' => __( 'idioma'),
+   'description' => __( 'Descripción', 'feria' ),
+   'before_widget' => '<div id="%1$s" class="widget %2$s">',
+   'after_widget' => "</div>",
+   'before_title' => '<h3 class="widget-title">',
+   'after_title' => '</h3>',
+) );
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 

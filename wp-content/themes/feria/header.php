@@ -120,7 +120,7 @@
                                     <li class="menu_turistica"><a href="<?php echo home_url(); ?>/category/infoturistica/" title="Info Turística">Info Turística</a></li>
                                     <li class="menu_historia"><a href="<?php echo home_url(); ?>/category/historia/" title="Historia">Historia</a></li>
                                     <li class="menu_saladeprensa"><a href="<?php echo home_url(); ?>/category/saladeprensa/" title="Sala de Prensa">Sala de Prensa</a></li>
-                                    <li class="menu_contactenos"><a href="http://medellin.travel/content/formulario-de-contacto" title="Contáctenos" target="_blank">Contáctenos</a></li>
+                                    <li class="menu_contactenos"><a href="<?php echo home_url(); ?>/contacto" title="Contáctenos">Contáctenos</a></li>
                                     <li class="menu_envivo"><a href="<?php echo home_url(); ?>/?page_id=6" title="En Vivo">En Vivo</a></li>
                                 </ul>
                               
@@ -131,10 +131,17 @@
 							        <span class="icon-bar"></span>
 								</a>
                                 
+                            
                                 
                                 	<div class="span3 idioma">
-                                    	<span class="On">Español</span>
-                                    	<span class="Off">English</span>   
+                                    
+                                    	 <!-- Widget de idioma -->   
+											<?php if ( function_exists('dynamic_sidebar')) :
+                                                dynamic_sidebar('idioma');
+                                            ?>
+                                            <?php endif; ?>
+                                         <!-- Widget de idioma --> 
+                                    	
                                     </div> 
                                     
                                 	<div class="span3 offset2 buscador"><?php get_search_form( $echo ); ?></div>

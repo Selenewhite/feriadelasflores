@@ -197,6 +197,51 @@ body.admin-bar .navbar-fixed-top{
 	
 /* BOTONES IDIOMA */
 
+#qtranslate-2 ul li {
+	float:left;
+	height:35px;
+	}
+	
+#qtranslate-2 h3 {
+	display:none;}
+
+#qtranslate-2 ul li .active {
+	background-color:#6fa0d0;
+	}
+
+#qtranslate-2 ul li a:hover {
+	background-color:#CCC;
+	color:#FFF;
+	}
+
+#qtranslate-2 .lang-en a {
+	background-color:#e6e6e5;
+	display:inline-block;
+	height:28px;
+	border-radius:8px 0px 0px 8px;
+	-webkit-border-radius: 8px 0px 0px 8px;
+    -moz-border-radius: 8px 0px 0px 8px;
+	color:#9b9b9b;
+	font-weight:bold;
+	border-right:1px solid #477ba5;
+	padding:7px 7px 0 7px;
+	box-shadow: #ccc 1px 1px 2px;
+	margin:0;}
+
+#qtranslate-2 .lang-es a {
+	background-color:#e6e6e5;
+	display:inline-block;
+	height:28px;
+	border-radius:0px 8px 8px 0px;
+	-webkit-border-radius: 0px 8px 8px 0px;
+    -moz-border-radius: 0px 8px 8px 0px;
+	color:#9b9b9b;
+	font-weight:bold;
+	border-left:1px solid #477ba5;
+	padding:7px 7px 0 7px;
+	box-shadow: #ccc 1px 1px 2px;
+	margin:0;}
+
 .idioma {
 	height:35px;
 	float:left;
