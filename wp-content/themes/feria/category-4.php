@@ -103,7 +103,7 @@
   <div class="element manana">
   
           <h2>Festival Internacional Interclubes Ciudad de Medellín 2012.</h2>  
-          <ul class="infoEvento">
+          <ul>
           <li><i class="icon-time"></i> <strong> Hora:</strong> 8:00 a.m a 5:00 p.m</li>
           <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> Unidad deportiva de Belén, Unidad                                        Deportiva María Luisa Calle, Coliseo Carlos Mauro Hoyos, Pista de Motrocross.</li>
           <li><i class="icon-star"></i> <strong>Teléfono:</strong> 369 90 00 Ext 182 </li>
@@ -113,7 +113,7 @@
   <div class="element manana">
   
             <h2>Festival Internacional Interclubes Ciudad de Medellín 2012.</h2>  
-          <ul class="infoEvento">
+          <ul>
           <li><i class="icon-time"></i> <strong> Hora:</strong> 8:00 a.m a 5:00 p.m</li>
           <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> Unidad deportiva de Belén, Unidad                                        Deportiva María Luisa Calle, Coliseo Carlos Mauro Hoyos, Pista de Motrocross.</li>
           <li><i class="icon-star"></i> <strong>Teléfono:</strong> 369 90 00 Ext 182 </li>
@@ -122,8 +122,7 @@
   
   <div class="element tarde">
   
-            <h2>Festival Internacional Interclubes Ciudad de Medellín 2012.</h2>  
-          <ul class="infoEvento">
+            <h2>Festival Internacional Interclubes Ciudad de Medellín 2012.</h2><ul>
           <li><i class="icon-time"></i> <strong> Hora:</strong> 8:00 a.m a 5:00 p.m</li>
           <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> Unidad deportiva de Belén, Unidad                                        Deportiva María Luisa Calle, Coliseo Carlos Mauro Hoyos, Pista de Motrocross.</li>
           <li><i class="icon-star"></i> <strong>Teléfono:</strong> 369 90 00 Ext 182 </li>
@@ -133,7 +132,7 @@
   <div class="element tarde">
   
            <h2>Festival Internacional Interclubes Ciudad de Medellín 2012.</h2>  
-          <ul class="infoEvento">
+          <ul>
           <li><i class="icon-time"></i> <strong> Hora:</strong> 8:00 a.m a 5:00 p.m</li>
           <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> Unidad deportiva de Belén, Unidad                                        Deportiva María Luisa Calle, Coliseo Carlos Mauro Hoyos, Pista de Motrocross.</li>
           <li><i class="icon-star"></i> <strong>Teléfono:</strong> 369 90 00 Ext 182 </li>
@@ -142,8 +141,7 @@
   
   <div class="element noche">
   
-           <h2>Festival Internacional Interclubes Ciudad de Medellín 2012.</h2>  
-          <ul class="infoEvento">
+           <h2>Festival Internacional Interclubes Ciudad de Medellín 2012.</h2><ul>
           <li><i class="icon-time"></i> <strong> Hora:</strong> 8:00 a.m a 5:00 p.m</li>
           <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> Unidad deportiva de Belén, Unidad                                        Deportiva María Luisa Calle, Coliseo Carlos Mauro Hoyos, Pista de Motrocross.</li>
           <li><i class="icon-star"></i> <strong>Teléfono:</strong> 369 90 00 Ext 182 </li>
@@ -152,8 +150,7 @@
   
   <div class="element noche">
   
-           <h2>Festival Internacional Interclubes Ciudad de Medellín 2012.</h2>  
-          <ul class="infoEvento">
+           <h2>Festival Internacional Interclubes Ciudad de Medellín 2012.</h2><ul>
           <li><i class="icon-time"></i> <strong> Hora:</strong> 8:00 a.m a 5:00 p.m</li>
           <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> Unidad deportiva de Belén, Unidad                                        Deportiva María Luisa Calle, Coliseo Carlos Mauro Hoyos, Pista de Motrocross.</li>
           <li><i class="icon-star"></i> <strong>Teléfono:</strong> 369 90 00 Ext 182 </li>
