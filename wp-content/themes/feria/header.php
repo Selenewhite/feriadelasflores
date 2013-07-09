@@ -25,6 +25,9 @@
 		<![endif]-->
 		
   		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+        <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/bootstrap-datepicker.js" ></script>
+        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/datepicker.css" type="text/css" />
+
 
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
@@ -35,6 +38,45 @@
 
 		<!-- typeahead plugin - if top nav search bar enabled -->
 		<?php require_once('library/typeahead.php'); ?>
+        
+      <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/js/libs/jquery-1.7.1.min.js" ></script>
+      <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/js/bootstrap.calendar.js" ></script>
+
+      <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/css/bootstrap.calendar.css" type="text/css" />
+
+      
+	  <script type="text/javascript">
+        $(document).ready(function(){
+
+          var evnts = function(){
+              return {
+                      "event":
+                          [
+                               {"date":"01/01/2012","title":"1"}
+                              ,{"date":"02/02/2012","title":"2"}
+                              ,{"date":"03/03/2012","title":"34"}
+                              ,{"date":"04/04/2012","title":"123"}
+                              ,{"date":"05/05/2012","title":"223"}
+                              ,{"date":"06/06/2012","title":"4"}
+                              ,{"date":"07/07/2012","title":"5"}
+                              ,{"date":"08/08/2012","title":"14"}
+                              ,{"date":"09/09/2012","title":"10"}
+                              ,{"date":"10/10/2012","title":"10"}
+                              ,{"date":"11/11/2012","title":"10"}
+                              ,{"date":"12/12/2012","title":"10"}
+                          ]
+                      }
+          };
+
+         $('.calendario' ).Calendar({ 'events': evnts, 'weekStart': 1 })
+         .on('changeDay', function(event){ alert(event.day.valueOf() +'-'+ event.month.valueOf() +'-'+ event.year.valueOf() ); })
+         .on('onEvent', function(event){ alert(event.day.valueOf() +'-'+ event.month.valueOf() +'-'+ event.year.valueOf() ); })
+         .on('onNext', function(event){ alert("Next"); })
+         .on('onPrev', function(event){ alert("Prev"); })
+         .on('onCurrent', function(event){ alert("Current"); });
+      });
+
+    </script>
 				
 	</head>
 	
