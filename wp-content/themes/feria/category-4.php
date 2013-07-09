@@ -13,7 +13,14 @@
   
   <?php } ?>
   </div>
+
+  <div class="descargarProgramacion">
+  <a href="<?php bloginfo('template_directory'); ?>/descargables/Programacion.pdf" class="btn" target="_blank">Descarga aquí la programación completa en PDF</a>  
+  &nbsp;
+  &nbsp;       
+  </div><!-- cierra .descargarProgramacion --> 
   
+  <div style="display:none">
   <!-- CARRUSEL EVENTOS DESTACADOS -->  
   
   <div class="EventosDestacados clearfix">
@@ -32,7 +39,7 @@
   <li data-target="#myCarousel" data-slide-to="1"></li>
   <li data-target="#myCarousel" data-slide-to="2"></li>
   </ol>
-  
+
   <!-- Carousel items -->
   <div class="carousel-inner">
   
@@ -73,11 +80,7 @@
   
   
   
-  <div class="descargarProgramacion">
-  <a href="<?php bloginfo('template_directory'); ?>/descargables/Programacion.pdf" class="btn" target="_blank">Descarga aquí la programación completa en PDF</a>  
-  &nbsp;
-  &nbsp;       
-  </div><!-- cierra .descargarProgramacion --> 
+
   
   <div class="clearfix row-fluid">  
   <div class="span6 calendario"></div>	
@@ -157,7 +160,7 @@
           </ul>
   </div>
   
-  
+  </div> <!-- CIERRE OCULTAR PROGRAMACIÓN -->
   
   </div> <!-- #container -->
   
