@@ -106,7 +106,7 @@ if ($blog_hero){
               <?php 
               if(function_exists('fetch_feed')) {
                 include_once(ABSPATH . WPINC . '/feed.php');               // hay que incluir esto
-                $feed = fetch_feed('http://noticias.telemedellin.tv/tag/feriaflores/feed/'); // el feed que queremos mostrar
+                $feed = fetch_feed('http://noticias.telemedellin.tv/tag/feriaflores2013/feed'); // el feed que queremos mostrar
                 $limit = $feed->get_item_quantity(2); // especificamos el número de items a mostrar
                 $items = $feed->get_items(0, $limit); // se crea un array con los items
               }
