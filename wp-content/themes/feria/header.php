@@ -113,7 +113,7 @@
 								</a>
                                
                                <div class="row">
-                                
+                                <?php if(qtrans_getLanguage() == 'es'): ?>
                                 <ul class="menu menuholder hidden-phone"> 
                                     <li class="menu_inicio"><a href="#" title="Inicio" class="active">Inicio</a></li>
                                     <li class="menu_programacion"><a href="<?php echo home_url(); ?>/category/programacion/" title="Programación">Programación</a></li>
@@ -123,7 +123,7 @@
                                     <li class="menu_contactenos"><a href="<?php echo home_url(); ?>/contacto" title="Contáctenos">Contáctenos</a></li>
                                     <li class="menu_envivo"><a href="<?php echo home_url(); ?>/?page_id=6" title="En Vivo">En Vivo</a></li>
                                 </ul>
-                                
+                                <?php else: ?>
                                  <ul class="menuEn menuholderEn hidden-phone"> 
                                     <li class="menu_inicio"><a href="#" title="Inicio" class="active">Inicio</a></li>
                                     <li class="menu_programacion"><a href="<?php echo home_url(); ?>/en/category/programacion/" title="Programación">Programación</a></li>
@@ -133,7 +133,7 @@
                                     <li class="menu_contactenos"><a href="<?php echo home_url(); ?>/en/contacto" title="Contáctenos">Contáctenos</a></li>
                                     <li class="menu_envivo"><a href="<?php echo home_url(); ?>/en/?page_id=6" title="En Vivo">En Vivo</a></li>
                                 </ul>
-                              
+                                <?php endif; ?>
                                                                 
 								<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 							        <span class="icon-bar"></span>
