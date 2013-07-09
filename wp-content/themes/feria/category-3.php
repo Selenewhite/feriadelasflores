@@ -17,7 +17,7 @@
                     <div class="tit mensaje">	
                            <span>Pronto podrás actualizarte con todo lo que pasa en La Feria y además acreditarte como periodista.</span>         
                       </div><!-- cierra .tit --> 
-                    
+<div style="display:none">                    
                      <div class="tit formularioAcreditacion">
                                 	<!--<span class="icono"></span>-->
                                     <span>Si eres periodista y quieres acreditarte, por favor llena el formulario.</span>
@@ -215,7 +215,7 @@
                                 
                                 
                              </div><!-- cierra .kitdeprensa -->
-                    
+</div>
 
 					<?php if (have_posts()) : ?>
 					<?php $post = $posts[0]; $c=0; ?>
@@ -282,7 +282,7 @@
 					<?php endif; ?>
 			
 				</div> <!-- end #main -->
-    
+
 				<?php get_sidebar(); // sidebar 1 ?>
     
 			</div> <!-- end #content -->
