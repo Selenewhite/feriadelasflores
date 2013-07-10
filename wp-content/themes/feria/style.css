@@ -307,6 +307,38 @@ input#search  {
 	width:160px;}
  
 
+/* FORMULARIO */ 
+
+.form-horizontal {
+	text-align:left;
+	padding:20px;
+	background-color:transparent;}
+
+
+.form-actions {
+padding: 19px 20px 20px;
+margin-top: 20px;
+margin-bottom: 20px;
+background-color:transparent;
+border-top: 0;
+}
+
+.form-horizontal .control-label {
+float: left;
+width: 60px;
+padding-top: 5px;
+text-align: right;
+font-family: 'Coolvetica';
+font-size:18px;
+}
+
+.form-horizontal .controls {
+	margin-left:100px;
+}
+
+.form-horizontal .controls input, .form-horizontal .controls select, .form-horizontal .controls textarea {
+	width:96%;
+}
 
 /* SLIDER */
 

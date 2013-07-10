@@ -63,7 +63,7 @@
 					    <section class="post_content">
                           <div class="clearfix row-fluid">
                           
-                          Bla 
+                          bla
  
                           </div>
 

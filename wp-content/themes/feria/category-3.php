@@ -21,7 +21,8 @@
 					</div>
                     
                     <div class="tit mensaje">	
-                           <span>Pronto podrás actualizarte con todo lo que pasa en La Feria y además acreditarte como periodista.</span>         
+                           <span>Pronto podrás actualizarte con todo lo que pasa en La Feria y además acreditarte como periodista.
+                           <br /> <br />Soon you will know everything about Flower Fair 2013.</span>         
                       </div><!-- cierra .tit --> 
 <div style="display:none">                    
                      <div class="tit formularioAcreditacion">
