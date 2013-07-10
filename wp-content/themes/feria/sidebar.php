@@ -18,7 +18,11 @@
                          <div style="display:none" class="hoyFeria">
                             <div class="tit">
                                  <span class="icono"></span>
+                                   <?php if(qtrans_getLanguage() == 'es'): ?>
                                    <span>Hoy en la feria</span>         
+                                    <?php else: ?>
+                                   <span>Today's Events</span> 
+                                    <?php endif; ?>
                             </div><!-- cierra .tit -->  
                             
                             <div class="galeriaHoySidebar"></div>
