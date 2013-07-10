@@ -53,10 +53,17 @@ if ($blog_hero){
         <div class="span8">
 
           <div id="novedades">  
-            <div class="tit">
+           <?php if(qtrans_getLanguage() == 'es'): ?>
+           <div class="tit">
               <span class="icono"></span>
               <span>Novedades</span>         
             </div><!-- cierra .tit --> 
+            <?php else: ?>
+            <div class="tit">
+              <span class="icono"></span>
+              <span>News</span>         
+            </div><!-- cierra .tit --> 
+           <?php endif; ?> 
 
             <div class="noticiasHome"> 
               <!-- FEEDS -->
@@ -103,9 +110,15 @@ if ($blog_hero){
                       </a>
                     </span>
                   </div>
+                  <?php if(qtrans_getLanguage() == 'es'): ?>
                   <div class="vermas">
                     <a target="_BLANK" href="<?php echo $item->get_permalink(); ?>" title="<?php echo $item->get_date('j F Y @ G:i'); ?>">Ver más</a>
                   </div>
+                  <?php else: ?>
+                   <div class="readmore">
+                    <a target="_BLANK" href="<?php echo $item->get_permalink(); ?>" title="<?php echo $item->get_date('j F Y @ G:i'); ?>">Read more</a>
+                  </div>
+                  <?php endif; ?>    
                 </div>              
               </div>
               <?php endforeach; ?>  

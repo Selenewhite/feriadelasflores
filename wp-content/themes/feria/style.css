@@ -590,7 +590,7 @@ span.hoy {
 	display:inline-block; 
 	}
 	
-.vermas {
+.vermas, .readmore {
 	float:right;
 	width:72px;}
 
@@ -605,7 +605,17 @@ span.hoy {
 
 	}
 
-.vermas a:hover {
+	
+.readmore a {
+	background-image:url(images/readmore.png);
+	width:71px;
+	height:40px;
+	display:block; 
+	text-indent:-9000%;
+
+	}
+
+.vermas a:hover, .readmore a:hover {
 	background-position:0 -39px;
 	}
 
@@ -1260,13 +1270,19 @@ footer{
 
 /*ESTADO NORMAL*/
 .preguntasFrecuentes a {background-image:url(images/preguntasFrecuentes.png); width:178px; height:40px; }
-.directorioArtistas a {background-image:url(images/InscripcionDeArtistas.png); width:177px; height:40px;}
+.directorioArtistas a {background-image:url(images/InscripcionDeArtistas.png); width:176px; height:40px; }
+
+.preguntasFrecuentesEn a {background-image:url(images/faqs.png); width:178px; height:40px;}
+.directorioArtistasEn a {background-image:url(images/artisticdirectory.png); width:176px; height:40px;}
 
 
 /*ESTADO ROLLOVER*/
 
-.preguntasFrecuentes a:hover {background-position:0px -40px;}
-.directorioArtistas a:hover { background-position:0px -41px;}
+.preguntasFrecuentes a:hover, .preguntasFrecuentesEn a:hover{background-position:0px -40px;}
+.directorioArtistas a:hover {background-position:0px -41px;}
+.directorioArtistasEn a:hover {background-position:0px -41.5px;}
+
+
 
 footer li {
 	float:left;

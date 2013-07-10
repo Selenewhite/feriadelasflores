@@ -33,7 +33,11 @@
                             <?php the_post_thumbnail( 'first-historia' ); ?>
                             <h2><?php the_title(); ?></h2>
                             <?php the_excerpt(); ?> 
+                              <?php if(qtrans_getLanguage() == 'es'): ?>
                             <div class="vermas"><a href="<?php the_permalink(); ?>">Ver más</a></div>
+                             <?php else: ?>
+                             <div class="readmore"><a href="<?php the_permalink(); ?>">Read More</a></div>
+                              <?php endif; ?>   
                            
                         </section> <!-- end article section -->
                     </article>
@@ -49,7 +53,11 @@
                             <?php the_post_thumbnail( 'historia' ); ?>
                             <span><?php the_excerpt(); ?></span>
                            <!-- <span><?php /*?><?php excerpt('175'); ?><?php */?></span>-->
+                            <?php if(qtrans_getLanguage() == 'es'): ?>
                             <div class="vermas"><a href="<?php the_permalink(); ?>">Ver más</a></div>
+                             <?php else: ?>
+                             <div class="readmore"><a href="<?php the_permalink(); ?>">Read More</a></div>
+                              <?php endif; ?>   
                             </div>
  
 						</section> <!-- end article section -->
