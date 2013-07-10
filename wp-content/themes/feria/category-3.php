@@ -20,90 +20,130 @@
           <?php } ?>
 					</div>
                     
-                    <div class="tit mensaje">	
-                           <span>Pronto podrás actualizarte con todo lo que pasa en La Feria y además acreditarte como periodista.
-                           <br /> <br />Soon you will know everything about Flower Fair 2013.</span>         
-                      </div><!-- cierra .tit --> 
-<div style="display:none">                    
-                     <div class="tit formularioAcreditacion">
-                                	<!--<span class="icono"></span>-->
-                                    <span>Si eres periodista y quieres acreditarte, por favor llena el formulario.</span>
-                                    
-                                    <a href="#" class="btn">Quiero acreditarme</a>  
-                                    &nbsp;
-                                    &nbsp;       
-                      </div><!-- cierra .tit --> 
-					
                     
-                     <div id="novedades">  
-                                <div class="tit">
-                                	<span class="icono"></span>
-                                    <span>Novedades de la feria</span> 
-                                    <a href="#" class="ver">Ver todas</a>        
-                                </div><!-- cierra .tit --> 
-                                  
-                               <div class="noticiasHome"> 
-                                 
-                                 <!-- NOTICIA -->
-                                 <div class="noticiaHome">
-                                 <img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="200" height="130" class="img-rounded" />
-                                
-                                <h2> Parque Cultural Nocturno: gran escenario de artistas</h2>
-                                <div class="linea"></div>
-                                 <p>Una programación alternativa, cultural e incluyente caracterizó este evento que, durante 6 días, reunió a artistas locales, nacionales e internacionales, convocando cerca de 35 mil espectadores.</p>
-                                 
-                                 <div class="links">
-                                      <div class="redes">
-                                        <span class="twitter"><a href="#">Twitter</a></span>
-                                        <span class="facebook"><a href="#">Facebook</a></span>
-                                      </div>
-                                      
-                                      <div class="vermas"><a href="#">Ver más</a></div>
-                                   </div><!-- cierra .links -->   
-                                 </div><!-- cierra .noticiaHome --> 
-                                 
-                                 <!-- NOTICIA -->
-                                 <div class="noticiaHome">
-                                 <img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="200" height="130" class="img-rounded" />
-                                
-                                <h2> Parque Cultural Nocturno: gran escenario de artistas</h2>
-                                <div class="linea"></div>
-                                 <p>Una programación alternativa, cultural e incluyente caracterizó este evento que, durante 6 días, reunió a artistas locales, nacionales e internacionales, convocando cerca de 35 mil espectadores.</p>
-                                 
-                                 <div class="links">
-                                      <div class="redes">
-                                        <span class="twitter"><a href="#">Twitter</a></span>
-                                        <span class="facebook"><a href="#">Facebook</a></span>
-                                      </div>
-                                      
-                                      <div class="vermas"><a href="#">Ver más</a></div>
-                                   </div><!-- cierra .links -->   
-                                 </div><!-- cierra .noticiaHome --> 
-                                 
-                                 <!-- NOTICIA -->
-                                 <div class="noticiaHome">
-                                 <img src="<?php bloginfo('template_directory'); ?>/images/silleteros.jpg" width="200" height="130" class="img-rounded" />
-                                
-                                <h2> Parque Cultural Nocturno: gran escenario de artistas</h2>
-                                <div class="linea"></div>
-                                 <p>Una programación alternativa, cultural e incluyente caracterizó este evento que, durante 6 días, reunió a artistas locales, nacionales e internacionales, convocando cerca de 35 mil espectadores.</p>
-                                 
-                                 <div class="links">
-                                      <div class="redes">
-                                        <span class="twitter"><a href="#">Twitter</a></span>
-                                        <span class="facebook"><a href="#">Facebook</a></span>
-                                      </div>
-                                      
-                                      <div class="vermas"><a href="#">Ver más</a></div>
-                                   </div><!-- cierra .links -->   
-                                 </div><!-- cierra .noticiaHome --> 
-                                 
-                               
-                                 
-                            </div><!-- cierra .noticiasHome -->       
-                           </div><!-- cierra .novedades --> 
+                         <div id="novedades">  
+           <?php if(qtrans_getLanguage() == 'es'): ?>
+           <div class="tit">
+              <span class="icono"></span>
+              <span>Novedades</span>         
+            </div><!-- cierra .tit --> 
+            <?php else: ?>
+            <div class="tit">
+              <span class="icono"></span>
+              <span>News</span>         
+            </div><!-- cierra .tit --> 
+           <?php endif; ?> 
+
+            <div class="noticiasHome"> 
+              <!-- FEEDS -->
+              <?php 
+              if(function_exists('fetch_feed')) {
+                include_once(ABSPATH . WPINC . '/feed.php');               // hay que incluir esto
+                $feed = fetch_feed('http://www.medellin.gov.co/irj/servlet/prt/portal/prtmode/rss/prtroot/pcmrssserver.Nav?rid=/guid/e07c8b01-38b3-2f10-fbb3-df3742e451d7&NavigationTarget=navurl://6c8fe23e4fdbf5a6e014e890b7d959c5'); // el feed que queremos mostrar
+                $limit = $feed->get_item_quantity(2); // especificamos el número de items a mostrar
+                $items = $feed->get_items(0, $limit); // se crea un array con los items
+              }
+              if ($limit == 0) echo '';
+              else foreach ($items as $item) : ?>
+              <div class="noticiaHome">
+                <?php
+                $img =  stristr ( $item->get_content() , "<img"); 
+
+                $second = strpos($img, ">");
+                
+                $img = substr($img, 0, $second);  
+
+                $src = substr($img, strpos($img, "src=") + 5 ) ;                
+                $params = preg_split('[\"|\']', $src, 2);                  
+                if($params[0] == "" || $params[0] == "/" || $params[0] == " "){
+                  $src = get_template_directory_uri() . "/images/genericaFeed.jpg";
+                }
+                else{
+                  $src = $params[0];
+                }
+                ?>         
+                <img src="<?php echo $src ?>" width="200" height="130" class="img-rounded" />
+                <h2><?php echo $item->get_title(); ?></h2>
+                <div class="linea"></div>
+                <p><?php echo substr(strip_tags ($item->get_content()), 0, 200) ?>...</p>
+                <div class="links">
+                  <div class="redes">
+                    <span class="twitter">
+                      <a href="https://twitter.com/share?text=<?php echo $item->get_title(); ?>&url=<?php echo $item->get_permalink(); ?>" target="_blank">
+                        Twitter
+                      </a>
+                    </span>
+                    <span class="facebook">
+                      <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<?php echo $item->get_permalink(); ?>&amp;p[title]=<?php echo $item->get_title(); ?>&amp;p[summary]=<?php echo substr(strip_tags ($item->get_content()), 0, 200) ?>">
+                        Facebook
+                      </a>
+                    </span>
+                  </div>
+                  <?php if(qtrans_getLanguage() == 'es'): ?>
+                  <div class="vermas">
+                    <a target="_BLANK" href="<?php echo $item->get_permalink(); ?>" title="<?php echo $item->get_date('j F Y @ G:i'); ?>">Ver más</a>
+                  </div>
+                  <?php else: ?>
+                   <div class="readmore">
+                    <a target="_BLANK" href="<?php echo $item->get_permalink(); ?>" title="<?php echo $item->get_date('j F Y @ G:i'); ?>">Read more</a>
+                  </div>
+                  <?php endif; ?>    
+                </div>              
+              </div>
+              <?php endforeach; ?>  
+              <?php 
+              if(function_exists('fetch_feed')) {
+                include_once(ABSPATH . WPINC . '/feed.php');               // hay que incluir esto
+                $feed = fetch_feed('http://noticias.telemedellin.tv/tag/feriaflores/feed'); // el feed que queremos mostrar
+                $limit = $feed->get_item_quantity(2); // especificamos el número de items a mostrar
+                $items = $feed->get_items(0, $limit); // se crea un array con los items
+              }
+              if ($limit == 0) echo '';
+              else foreach ($items as $item) : ?>
+              <div class="noticiaHome">
+                <?php
+                $img =  stristr ( $item->get_content() , "<img"); 
+                $second = strpos($img, ">");
+                $img = substr($img, 0, $second);                
+                $src = substr($img, strpos($img, "src=") + 5 ) ;                
+                $params = preg_split('[\"|\']', $src, 2); 
+                if($params[0] == "" || $params[0] == "/" || $params[0] == " "){
+                  $src = get_template_directory_uri() . "/images/genericaFeed.jpg";
+                }
+                else{
+                  $src = $params[0];
+                }                 
+                ?>
+                <img src="<?php echo $src ?>" width="200" height="130" class="img-rounded" />
+                <h2><?php echo $item->get_title(); ?></h2>
+                <div class="linea"></div>
+                <p><?php echo substr(strip_tags ($item->get_content()), 0, 200) ?>...</p>
+                <div class="links">
+                  <div class="redes">
+                    <span class="twitter">
+                      <a href="https://twitter.com/share?text=<?php echo $item->get_title(); ?>&url=<?php echo $item->get_permalink(); ?>" target="_blank">
+                        Twitter
+                      </a>
+                    </span>
+                    <span class="facebook">
+                      <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<?php echo $item->get_permalink(); ?>&amp;p[title]=<?php echo $item->get_title(); ?>&amp;p[summary]=<?php echo substr(strip_tags ($item->get_content()), 0, 200) ?>">
+                        Facebook
+                      </a>
+                    </span>
+                  </div>
+                  <div class="vermas">
+                    <a target="_BLANK" href="<?php echo $item->get_permalink(); ?>" title="<?php echo $item->get_date('j F Y @ G:i'); ?>">Ver más</a>
+                  </div>
+                </div>              
+              </div>
+              <?php endforeach; ?>                
+              <!-- FIN DE LOS FEEDS -->         
+          </div><!-- cierra .novedades --> 
+        
+                     
+                     
                     
-                    
+                  <div style="display:none">  
                     
                      <div id="novedades">  
                                 <div class="tit">
@@ -219,75 +259,11 @@
                                 </div>
                             
                             </div><!-- cierra row -->
-                                
-                                
                              </div><!-- cierra .kitdeprensa -->
-</div>
+					</div>
+                    </div><!-- end display none -->
 
-					<?php if (have_posts()) : ?>
-					<?php $post = $posts[0]; $c=0; ?>
-					<?php while (have_posts()) : the_post(); ?>
-                    
-                    <?php $c++; if( $c == 1) : ?>
-                    <article>
-                    	<section>
-                        	
-                            <?php the_post_thumbnail( 'first-historia' ); ?>
-                            <h2><?php the_title(); ?></h2>
-                            <?php the_excerpt(); ?> 
-                            <div class="vermas"><a href="<?php the_permalink(); ?>">Ver más</a></div>
-                           
-                        </section> <!-- end article section -->
-                    </article>
-                    
-                    <?php else : ?>
-                                        
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" >
-						
 
-						<section class="post_content clearfix">
-                        
-                       		<div>
-                            <?php the_post_thumbnail( 'historia' ); ?>
-                            <span><?php the_excerpt(); ?></span>
-                           <!-- <span><?php /*?><?php excerpt('175'); ?><?php */?></span>-->
-                            <div class="vermas"><a href="<?php the_permalink(); ?>">Ver más</a></div>
-                            </div>
- 
-						</section> <!-- end article section -->
-					<?php endif; ?>	
-					
-					</article> <!-- end article -->
-					
-					<?php endwhile; ?>	
-					
-					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
-						
-						<?php page_navi(); // use the page navi function ?>
-
-					<?php } else { // if it is disabled, display regular wp prev & next links ?>
-						<nav class="wp-prev-next">
-							<ul class="clearfix">
-								<li class="prev-link"><?php next_posts_link(_e('&laquo; Older Entries', "bonestheme")) ?></li>
-								<li class="next-link"><?php previous_posts_link(_e('Newer Entries &raquo;', "bonestheme")) ?></li>
-							</ul>
-						</nav>
-					<?php } ?>
-								
-					
-					<?php else : ?>
-					
-					<article id="post-not-found">
-					    <header></header>
-                        
-					    <section class="post_content">
-                          <div class="clearfix row-fluid">
-                           </div>      
-					    </section>   
-					</article>
-					
-					<?php endif; ?>
-			
 				</div> <!-- end #main -->
 
 				<?php get_sidebar(); // sidebar 1 ?>

@@ -122,7 +122,7 @@ if ($blog_hero){
                 </div>              
               </div>
               <?php endforeach; ?>  
-           <!--<?php /*?>   <?php 
+              <?php 
               if(function_exists('fetch_feed')) {
                 include_once(ABSPATH . WPINC . '/feed.php');               // hay que incluir esto
                 $feed = fetch_feed('http://noticias.telemedellin.tv/tag/feriaflores/feed'); // el feed que queremos mostrar
@@ -167,7 +167,7 @@ if ($blog_hero){
                   </div>
                 </div>              
               </div>
-              <?php endforeach; ?>    <?php */?>-->            
+              <?php endforeach; ?>                
               <!-- FIN DE LOS FEEDS --> 
             </div>         
           </div><!-- cierra .novedades --> 
