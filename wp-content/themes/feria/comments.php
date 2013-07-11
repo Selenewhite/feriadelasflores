@@ -77,12 +77,22 @@ The comments page for Bones
 <?php if ( comments_open() ) : ?>
 
 <section id="respond" class="respond-form">
-
-	<h3 id="comment-form-title"><?php comment_form_title( __("Leave a Reply","bonestheme"), __("Leave a Reply to","bonestheme") . ' %s' ); ?></h3>
-
-	<div id="cancel-comment-reply">
+ 	<?php if(qtrans_getLanguage() == 'es'): ?>
+    <h3 id="comment-form-title"><?php comment_form_title( __("Deja un comentario","bonestheme"), __("Deja una respuesta a","bonestheme") . ' %s' ); ?></h3>
+    <?php else: ?>
+    <h3 id="comment-form-title"><?php comment_form_title( __("Leave a Reply","bonestheme"), __("Leave a Reply to","bonestheme") . ' %s' ); ?></h3>
+    <?php endif; ?>  
+	
+	<?php if(qtrans_getLanguage() == 'es'): ?>
+    <div id="cancel-comment-reply">
+		<p class="small"><?php cancel_comment_reply_link( __("Cancelar","bonestheme") ); ?></p>
+	</div>
+     <?php else: ?>
+     <div id="cancel-comment-reply">
 		<p class="small"><?php cancel_comment_reply_link( __("Cancel","bonestheme") ); ?></p>
 	</div>
+      <?php endif; ?>  
+	
 
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
   	<div class="help">
@@ -93,13 +103,18 @@ The comments page for Bones
 	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" class="form-vertical" id="commentform">
 
 	<?php if ( is_user_logged_in() ) : ?>
-
-	<p class="comments-logged-in-as"><?php _e("Logged in as","bonestheme"); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php _e("Log out of this account","bonestheme"); ?>"><?php _e("Log out","bonestheme"); ?> &raquo;</a></p>
+	
+    <?php if(qtrans_getLanguage() == 'es'): ?>
+    <p class="comments-logged-in-as"><?php _e("Logged in as","bonestheme"); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php _e("Log out of this account","bonestheme"); ?>"><?php _e("Log out","bonestheme"); ?> &raquo;</a></p>
+	<?php else: ?>
+    <p class="comments-logged-in-as"><?php _e("Usted está loggeado como","bonestheme"); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php _e("Salir","bonestheme"); ?>"><?php _e("Log out","bonestheme"); ?> &raquo;</a></p>
+	<?php endif; ?>  
+	
 
 	<?php else : ?>
 	
 	<ul id="comment-form-elements" class="clearfix">
-		
+	<?php if ( is_user_logged_in() ) : ?>	
 		<li>
 			<div class="control-group">
 			  <label for="author"><?php _e("Name","bonestheme"); ?> <?php if ($req) echo "(required)"; ?></label>
@@ -127,16 +142,60 @@ The comments page for Bones
 			  </div>
 		  	</div>
 		</li>
+<?php else: ?>	
+
+<li>
+			<div class="control-group">
+			  <label for="author"><?php _e("Nombre","bonestheme"); ?> <?php if ($req) echo "(required)"; ?></label>
+			  <div class="input-prepend">
+			  	<span class="add-on"><i class="icon-user"></i></span><input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" placeholder="<?php _e("Your Name","bonestheme"); ?>" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+			  </div>
+		  	</div>
+		</li>
 		
+		<li>
+			<div class="control-group">
+			  <label for="email"><?php _e("E-mail","bonestheme"); ?> <?php if ($req) echo "(required)"; ?></label>
+			  <div class="input-prepend">
+			  	<span class="add-on"><i class="icon-envelope"></i></span><input type="email" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" placeholder="<?php _e("Your Email","bonestheme"); ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+			  	<span class="help-inline">(<?php _e("will not be published","bonestheme"); ?>)</span>
+			  </div>
+		  	</div>
+		</li>
+		
+		<li>
+			<div class="control-group">
+			  <label for="url"><?php _e("Sitio web","bonestheme"); ?></label>
+			  <div class="input-prepend">
+			  <span class="add-on"><i class="icon-home"></i></span><input type="url" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" placeholder="<?php _e("Your Website","bonestheme"); ?>" tabindex="3" />
+			  </div>
+		  	</div>
+		</li>
+
+
+<?php endif; ?>  	
 	</ul>
 
+
+
+
+
 	<?php endif; ?>
-	
-	<div class="clearfix">
+	 <?php if(qtrans_getLanguage() == 'es'): ?>
+     <div class="clearfix">
+		<div class="input">
+			<textarea name="comment" id="comment" placeholder="<?php _e("Escribe tu comentario aquí…","bonestheme"); ?>" tabindex="4"></textarea>
+		</div>
+	</div>
+	 <?php else: ?>
+     <div class="clearfix">
 		<div class="input">
 			<textarea name="comment" id="comment" placeholder="<?php _e("Your Comment Here…","bonestheme"); ?>" tabindex="4"></textarea>
 		</div>
 	</div>
+     
+	 <?php endif; ?> 
+	
 	
 	<div class="form-actions">
 	  <input class="btn btn-primary" name="submit" type="submit" id="submit" tabindex="5" value="<?php _e("Submit Comment","bonestheme"); ?>" />
