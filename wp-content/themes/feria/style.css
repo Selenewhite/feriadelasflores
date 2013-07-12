@@ -379,10 +379,14 @@ border-radius:8px;
 
 #content #main .slider {
 	height:300px;
-	background-color:#e6e6e5;
 	margin:0 0 20px 0;
 	
 	}
+
+.rsUni, .rsUni .rsOverflow, .rsUni .rsSlide, .rsUni .rsVideoFrameHolder, .rsUni .rsThumbs {
+background-color:transparent !important;
+color: #FFF;
+}
 	
 /* HOY EN LA FERIA */
 
