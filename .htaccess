@@ -1,9 +1,9 @@
 ﻿# Sitio en Producción
 
 <IfModule mod_rewrite.c>
-ErrorDocument 404 /index.php?error=404
 RewriteEngine On
 RewriteBase /
+RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
