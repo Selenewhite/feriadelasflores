@@ -33,8 +33,7 @@
 						<section class="post_content clearfix" itemprop="articleBody">
 							
 							<?php the_content(); ?>
-                            
-                            <p class="meta"><time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_date(); ?></time> </p>
+                                                       
 							
 							<?php wp_link_pages(); ?>
                             
@@ -48,9 +47,11 @@
 						</section> <!-- end article section -->
 					
 					
-					</article> <!-- end article -->
-					
-					<?php comments_template('',true); ?>
+					</article> <!-- end article -->					
+					<?php $category = get_the_category(); ?>
+					<?php if($category[0]->cat_name === "Historia"): ?>
+						<?php comments_template('',true); ?>
+					<?php endif; ?>
 					
 					<?php endwhile; ?>			
 					
