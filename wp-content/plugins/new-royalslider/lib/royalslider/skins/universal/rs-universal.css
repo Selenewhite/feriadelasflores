@@ -55,8 +55,8 @@
 .rsUni.rsHor .rsArrowRight { right: 0; top:0; }
 
 .rsUni .rsArrowIcn {		
-	width: 32px;
-	height: 32px;
+	width: 34px;
+	height: 38px;
 	top: 50%;
 	left: 50%;
 	margin-top:-16px;	
@@ -72,7 +72,7 @@
 	opacity: 1;
 }
 
-.rsUni.rsHor .rsArrowLeft .rsArrowIcn { background-position: -64px -32px; }
+.rsUni.rsHor .rsArrowLeft .rsArrowIcn { background-position: -62px -26px; }
 .rsUni.rsHor .rsArrowRight .rsArrowIcn { background-position: -64px -64px; }
 
 .rsUni.rsVer .rsArrowLeft .rsArrowIcn { background-position: -96px -32px; }
