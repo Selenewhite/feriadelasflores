@@ -6,8 +6,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 
-Read more: http://www.shoutmeloud.com/how-to-create-htaccess-file-for-wordpress-blog.html#ixzz2YriYNuEH 
-Under Creative Commons License: Attribution No Derivatives
 # END WordPress
 
 # END
