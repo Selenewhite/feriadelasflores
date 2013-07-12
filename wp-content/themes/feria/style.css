@@ -619,14 +619,16 @@ span.hoy {
 	width:31px;
 	height:36px;
 	text-indent:-9000%;
-	display:inline-block; }
+	display:block;
+	float:left; }
 
 .redes .facebook a {
 	background-image:url(images/fb.png);
 	width:35px;
 	height:37px;
 	text-indent:-9000%;
-	display:inline-block; 
+	display:block;
+	float:left;
 	}
 	
 .vermas, .readmore {
