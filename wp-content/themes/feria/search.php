@@ -4,7 +4,7 @@
 			
 				<div id="main" class="span8 clearfix" role="main">
 				
-					<div class="page-header"><h1><span><?php _e("Search Results for","bonestheme"); ?>:</span> <?php echo esc_attr(get_search_query()); ?></h1></div>
+					<div class="page-header"><h1><span><?php _e("Resultados para","bonestheme"); ?>:</span> <?php echo esc_attr(get_search_query()); ?></h1></div>
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
@@ -14,7 +14,7 @@
 							
 							<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 							
-							<p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_date(); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "bonestheme"); ?> <?php the_category(', '); ?>.</p>
+							<p class="meta"></p>
 						
 						</header> <!-- end article header -->
 					
