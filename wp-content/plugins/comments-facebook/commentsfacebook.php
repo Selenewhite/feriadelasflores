@@ -69,7 +69,13 @@ function commentsfacebook() {
   		fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 	
-   <div style="margin-top: 30px;"><h3><?php echo $web_app_title ?></h3></div>
+   <div style="margin-top: 30px;">
+    <?php if(qtrans_getLanguage() == 'es'): ?>
+    <h3>Comentarios</h3>
+    <?php else: ?>
+    <h3><?php echo $web_app_title ?></h3>
+    <?php endif; ?>
+  </div>
              
    <center><div class="fb-comments" data-href="<?php the_permalink() ?>" data-num-posts="<?php echo $app_post ?>" data-width="<?php echo $app_width ?>"></div></center>
     
