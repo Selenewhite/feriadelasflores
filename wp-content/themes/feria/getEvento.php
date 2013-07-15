@@ -25,8 +25,8 @@ $horaFin = get_post_meta($post->ID,'hora_fin',true);
 $jornada = get_post_meta($post->ID,'jornada',true);
 
 $jornadas = explode(',', $jornada);
-$humanHoraInicio = DATE("g:i a", STRTOTIME($horaInicio));
-$humanHoraFin = DATE("g:i a", STRTOTIME($horaFin));
+$humanHoraInicio = date("g:i a", strtotime($horaInicio));
+$humanHoraFin = date("g:i a", strtotime($horaFin));
 
 $class = "";
 foreach ($jornadas as $j) {
