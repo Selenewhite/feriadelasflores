@@ -43,7 +43,49 @@
       <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/js/bootstrap.calendar.js" ></script>
 
       <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/css/bootstrap.calendar.css" type="text/css" />
-
+  <script src="<?php bloginfo('template_directory'); ?>/jquery.isotope.min.js"></script>
+  <script>
+  $(function(){
+    
+    var $container = $('#container');
+    
+    $container.isotope({
+      itemSelector : '.element'
+    });
+    
+    
+    var $optionSets = $('#options .option-set'),
+    $optionLinks = $optionSets.find('a');
+    
+    $optionLinks.click(function(){
+      var $this = $(this);
+      // don't proceed if already selected
+      if ( $this.hasClass('selected') ) {
+        return false;
+      }
+      var $optionSet = $this.parents('.option-set');
+      $optionSet.find('.selected').removeClass('selected');
+      $this.addClass('selected');
+      
+      // make option object dynamically, i.e. { filter: '.my-filter-class' }
+      var options = {},
+      key = $optionSet.attr('data-option-key'),
+      value = $this.attr('data-option-value');
+      // parse 'false' as false boolean
+      value = value === 'false' ? false : value;
+      options[ key ] = value;
+      if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+        // changes in layout modes need extra logic
+        changeLayoutMode( $this, options )
+      } else {
+        // otherwise, apply new options
+        $container.isotope( options );
+      }
+      
+      return false;
+    });
+  });
+  </script>  
       
 	  <script type="text/javascript">
         $(document).ready(function(){
@@ -52,30 +94,35 @@
               return {
                       "event":
                           [
-                               {"date":"01/01/2012","title":"1"}
-                              ,{"date":"02/02/2012","title":"2"}
-                              ,{"date":"03/03/2012","title":"34"}
-                              ,{"date":"04/04/2012","title":"123"}
-                              ,{"date":"05/05/2012","title":"223"}
-                              ,{"date":"06/06/2012","title":"4"}
-                              ,{"date":"07/07/2012","title":"5"}
-                              ,{"date":"08/08/2012","title":"14"}
-                              ,{"date":"09/09/2012","title":"10"}
-                              ,{"date":"10/10/2012","title":"10"}
-                              ,{"date":"11/11/2012","title":"10"}
-                              ,{"date":"12/12/2012","title":"10"}
+
                           ]
                       }
           };
 
          $('.calendario' ).Calendar({ 'events': evnts, 'weekStart': 1 })
-         .on('changeDay', function(event){ alert(event.day.valueOf() +'-'+ event.month.valueOf() +'-'+ event.year.valueOf() ); })
+         .on('changeDay', function(event){
+            $("#loading").css("display","block");
+            $.ajax({
+              type: "POST",
+              data: "fecha=" + event.day.valueOf() +'/'+ event.month.valueOf() +'/'+ event.year.valueOf(),
+              url: "<?php bloginfo('template_directory'); ?>/getEvento.php",
+              success: function(data){     
+                $("#container").isotope('remove', $(".element"));          
+                $("#container").isotope('insert', $(data)); 
+                $("#loading").css("display","none");
+                //$("#container").html(data); 
+              }
+            });
+            
+            //alert(event.day.valueOf() +'/'+ event.month.valueOf() +'/'+ event.year.valueOf() ); 
+          })
          .on('onEvent', function(event){ alert(event.day.valueOf() +'-'+ event.month.valueOf() +'-'+ event.year.valueOf() ); })
-         .on('onNext', function(event){ alert("Next"); })
-         .on('onPrev', function(event){ alert("Prev"); })
-         .on('onCurrent', function(event){ alert("Current"); });
+         .on('onNext', function(event){  })
+         .on('onPrev', function(event){  })
+         .on('onCurrent', function(event){ 
+            $("#container").html(event.day.valueOf() +'/'+ event.month.valueOf() +'/'+ event.year.valueOf());
+          });
       });
-
     </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

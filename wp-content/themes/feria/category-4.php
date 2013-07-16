@@ -25,7 +25,7 @@
   &nbsp;
   &nbsp;       
   </div><!-- cierra .descargarProgramacion --> 
-  
+
   <div style="display:none">
   <!-- CARRUSEL EVENTOS DESTACADOS -->  
   
@@ -83,16 +83,15 @@
   </div><!-- cierra .EventosDestacados --> 
   
   <!-- CIERRA CARRUSEL EVENTOS DESTACADOS -->   
-  
+  </div> <!-- CIERRE OCULTAR PROGRAMACIÓN -->
   
   
 
   
   <div class="clearfix row-fluid">  
   <div class="span6 calendario"></div>	
-  <div class="span6 calendario"></div>
   </div><!-- cierra .row-fluid --> 
-  
+
   <div>
   <section id="options" class="clearfix">
   
@@ -106,114 +105,58 @@
   
   
   </section> <!-- #options -->
-  
+  <center id="loading" style="display:none;"><img src="<?php bloginfo('template_directory'); ?>/images/ajax-loader.gif"/></center>
   <div id="container" class="clearfix">
+  <?php
+  $fechaHoy = date("j/n/Y");
   
-  <div class="element manana">
-  
-          <h2>Festival Internacional Interclubes Ciudad de Medellín 2012.</h2>  
-          <ul>
-          <li><i class="icon-time"></i> <strong> Hora:</strong> 8:00 a.m a 5:00 p.m</li>
-          <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> Unidad deportiva de Belén, Unidad                                        Deportiva María Luisa Calle, Coliseo Carlos Mauro Hoyos, Pista de Motrocross.</li>
-          <li><i class="icon-star"></i> <strong>Teléfono:</strong> 369 90 00 Ext 182 </li>
-          </ul>
-  </div>
-  
-  <div class="element manana">
-  
-            <h2>Festival Internacional Interclubes Ciudad de Medellín 2012.</h2>  
-          <ul>
-          <li><i class="icon-time"></i> <strong> Hora:</strong> 8:00 a.m a 5:00 p.m</li>
-          <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> Unidad deportiva de Belén, Unidad                                        Deportiva María Luisa Calle, Coliseo Carlos Mauro Hoyos, Pista de Motrocross.</li>
-          <li><i class="icon-star"></i> <strong>Teléfono:</strong> 369 90 00 Ext 182 </li>
-          </ul>
-  </div>
-  
-  <div class="element tarde">
-  
-            <h2>Festival Internacional Interclubes Ciudad de Medellín 2012.</h2><ul>
-          <li><i class="icon-time"></i> <strong> Hora:</strong> 8:00 a.m a 5:00 p.m</li>
-          <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> Unidad deportiva de Belén, Unidad                                        Deportiva María Luisa Calle, Coliseo Carlos Mauro Hoyos, Pista de Motrocross.</li>
-          <li><i class="icon-star"></i> <strong>Teléfono:</strong> 369 90 00 Ext 182 </li>
-          </ul>
-  </div>
-  
-  <div class="element tarde">
-  
-           <h2>Festival Internacional Interclubes Ciudad de Medellín 2012.</h2>  
-          <ul>
-          <li><i class="icon-time"></i> <strong> Hora:</strong> 8:00 a.m a 5:00 p.m</li>
-          <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> Unidad deportiva de Belén, Unidad                                        Deportiva María Luisa Calle, Coliseo Carlos Mauro Hoyos, Pista de Motrocross.</li>
-          <li><i class="icon-star"></i> <strong>Teléfono:</strong> 369 90 00 Ext 182 </li>
-          </ul>
-  </div>
-  
-  <div class="element noche">
-  
-           <h2>Festival Internacional Interclubes Ciudad de Medellín 2012.</h2><ul>
-          <li><i class="icon-time"></i> <strong> Hora:</strong> 8:00 a.m a 5:00 p.m</li>
-          <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> Unidad deportiva de Belén, Unidad                                        Deportiva María Luisa Calle, Coliseo Carlos Mauro Hoyos, Pista de Motrocross.</li>
-          <li><i class="icon-star"></i> <strong>Teléfono:</strong> 369 90 00 Ext 182 </li>
-          </ul>
-  </div>
-  
-  <div class="element noche">
-  
-           <h2>Festival Internacional Interclubes Ciudad de Medellín 2012.</h2><ul>
-          <li><i class="icon-time"></i> <strong> Hora:</strong> 8:00 a.m a 5:00 p.m</li>
-          <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> Unidad deportiva de Belén, Unidad                                        Deportiva María Luisa Calle, Coliseo Carlos Mauro Hoyos, Pista de Motrocross.</li>
-          <li><i class="icon-star"></i> <strong>Teléfono:</strong> 369 90 00 Ext 182 </li>
-          </ul>
-  </div>
-  
-  </div> <!-- CIERRE OCULTAR PROGRAMACIÓN -->
-  
-  </div> <!-- #container -->
-  
-  <script src="<?php bloginfo('template_directory'); ?>/jquery.isotope.min.js"></script>
-  <script>
-  $(function(){
-  
-  var $container = $('#container');
-  
-  $container.isotope({
-  itemSelector : '.element'
-  });
-  
-  
-  var $optionSets = $('#options .option-set'),
-  $optionLinks = $optionSets.find('a');
-  
-  $optionLinks.click(function(){
-  var $this = $(this);
-  // don't proceed if already selected
-  if ( $this.hasClass('selected') ) {
-  return false;
+  $myQuery = new WP_Query(array(
+       'cat' => 10
+  ));
+  // The Loop
+  if ( $myQuery->have_posts() ):
+  while ( $myQuery->have_posts() ) : $myQuery->the_post();
+  $fechaSeleccionada = str_replace('/', '-', $fechaHoy);
+  $fechaSeleccionada = strtotime($fechaSeleccionada);
+  $fechaInicio = str_replace('/', '-', get_post_meta($post->ID,'fecha_inicio',true));
+  $fechaInicio = strtotime($fechaInicio);
+  $fechaFin = str_replace('/', '-', get_post_meta($post->ID,'fecha_fin',true));
+  $fechaFin = strtotime($fechaFin);
+
+  $horaInicio = get_post_meta($post->ID,'hora_inicio',true);
+  $horaFin = get_post_meta($post->ID,'hora_fin',true);
+  $jornada = get_post_meta($post->ID,'jornada',true);
+
+  $jornadas = explode(',', $jornada);
+  $humanHoraInicio = date("g:i a", strtotime($horaInicio));
+  $humanHoraFin = date("g:i a", strtotime($horaFin));
+
+  $class = "";
+
+  foreach ($jornadas as $j) {
+    $class .= trim($j) . " ";
   }
-  var $optionSet = $this.parents('.option-set');
-  $optionSet.find('.selected').removeClass('selected');
-  $this.addClass('selected');
+  ?>
+    <?php if($fechaSeleccionada >= $fechaInicio AND $fechaSeleccionada <= $fechaFin): ?>  
+    <div class="element <?php echo $class ?>">
+    
+            <h2><?php the_title(); ?></h2>  
+            <ul>
+              <li><i class="icon-time"></i> <strong> Hora:</strong> <?php echo $humanHoraInicio ?> a <?php echo $humanHoraFin ?></li>
+              <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> Unidad deportiva de Belén, Unidad Deportiva María Luisa Calle, Coliseo Carlos Mauro Hoyos, Pista de Motrocross.</li>
+              <li><i class="icon-star"></i> <strong>Teléfono:</strong> 369 90 00 Ext 182 </li>
+            </ul>
+    </div>
+    <?php endif; ?>
+  <?php 
+  endwhile;
+  endif;
+
+  // Reset Query
+  wp_reset_query();
+  ?>  
   
-  // make option object dynamically, i.e. { filter: '.my-filter-class' }
-  var options = {},
-  key = $optionSet.attr('data-option-key'),
-  value = $this.attr('data-option-value');
-  // parse 'false' as false boolean
-  value = value === 'false' ? false : value;
-  options[ key ] = value;
-  if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
-  // changes in layout modes need extra logic
-  changeLayoutMode( $this, options )
-  } else {
-  // otherwise, apply new options
-  $container.isotope( options );
-  }
-  
-  return false;
-  });
-  });
-  </script>
-  
+  </div> <!-- #container -->  
   
   </div>
 
@@ -223,5 +166,5 @@
   
   </div> <!-- end #content -->
   </div> <!-- end #container -->
-  
+
   <?php get_footer(); ?>
