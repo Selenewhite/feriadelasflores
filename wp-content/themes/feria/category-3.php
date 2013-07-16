@@ -212,7 +212,7 @@
                                  
                             </div><!-- cierra .noticiasHome -->       
                            </div><!-- cierra .novedades --> 
-                           
+                    </div><!-- end display none --> 
                            
                            <div class="kitdeprensa">
                            		
@@ -224,44 +224,47 @@
                             <div class="clearfix row-fluid">
                             
                                 <div class="span6 logoDescarga">
-                                  <span class="descarga"><a href="#">Descargar logo</a></span>   
+                                  <span class="descarga"><a href="<?php bloginfo('template_directory'); ?>/descargables/LogoFeria2013.zip">Descargar logo</a></span>   
                                 </div>
                                 
                                 <div class="span6 logosVarios">
-                                <span class="descarga"><a href="#">Descargar logos eventos</a></span> 
+                                <span class="descarga"><a href="<?php bloginfo('template_directory'); ?>/descargables/sellosCRV.zip">Descargar logos eventos</a></span> 
                                 </div>
                             
                             </div><!-- cierra row -->
                             
                             <div class="clearfix row-fluid">
                             
-                                <div class="span6 videoFeria">
-                                <iframe width="307" height="182" src="//www.youtube.com/embed/bQ2KKHzR2DA" frameborder="0" allowfullscreen></iframe>
-                                 <span class="descarga"><a href="#">Descargar video</a></span> 
-                                </div>
+                               
                                 
                                 <div class="span6 galeriaFeriaD">
-                                <object height="182" width="307"> 
-                                <param name="flashvars" value="offsite=true&amp;lang=es-us&amp;page_show_url=%2Fphotos%2F54818270%40N05%2Fsets%2F72157629642562430%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2F54818270%40N05%2Fsets%2F72157629642562430%2F&amp;set_id=72157629642562430&amp;jump_to="> <param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=109615"> <param name="allowFullScreen" value="true"><embed allowfullscreen="true" flashvars="offsite=true&amp;lang=es-us&amp;page_show_url=%2Fphotos%2F54818270%40N05%2Fsets%2F72157629642562430%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2F54818270%40N05%2Fsets%2F72157629642562430%2F&amp;set_id=72157629642562430&amp;jump_to=" height="182" src="http://www.flickr.com/apps/slideshow/show.swf?v=109615" type="application/x-shockwave-flash" width="307"></object>
-                                <span class="descarga"><a href="#">Ver galería</a></span>
+                               <iframe align="center" src="http://www.flickr.com/slideShow/index.gne?group_id=2056371@N23" width="307" height="182" frameBorder="0" scrolling="no"></iframe>
+                                <span class="descarga"><a href="http://www.flickr.com/groups/2056371@N23/" target="_blank">Ver galería</a></span>
+                                </div>
+                                
+                                <div class="span6 logoDescarga">
+                                <span class="descarga"><a href="<?php bloginfo('template_directory'); ?>/descargables/Programacion.pdf">Descargar programación</a></span>
                                 </div>
                             
                             </div><!-- cierra row -->
                             
-                             <div class="clearfix row-fluid">
+                             <div class="clearfix row-fluid" style="display:none;">
+                                 <div class="span6 videoFeria">
+                                    <iframe width="307" height="182" src="//www.youtube.com/embed/bQ2KKHzR2DA" frameborder="0" allowfullscreen></iframe>
+                                     <span class="descarga"><a href="#">Descargar video</a></span> 
+                                    </div>
+                            
                             
                                 <div class="span6 logoDescarga">
                                 <span class="descarga"><a href="#">Descargar cuña</a></span>
                                 </div>
                                 
-                                <div class="span6 logoDescarga">
-                                <span class="descarga"><a href="#">Descargar programación</a></span>
-                                </div>
+                                
                             
                             </div><!-- cierra row -->
                              </div><!-- cierra .kitdeprensa -->
 					</div>
-                    </div><!-- end display none -->
+                
 
 
 				</div> <!-- end #main -->
