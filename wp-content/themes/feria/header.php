@@ -101,6 +101,7 @@
 
          $('.calendario' ).Calendar({ 'events': evnts, 'weekStart': 1 })
          .on('changeDay', function(event){
+            $("#loading").css("display","block");
             $.ajax({
               type: "POST",
               data: "fecha=" + event.day.valueOf() +'/'+ event.month.valueOf() +'/'+ event.year.valueOf(),
@@ -108,6 +109,7 @@
               success: function(data){     
                 $("#container").isotope('remove', $(".element"));          
                 $("#container").isotope('insert', $(data)); 
+                $("#loading").css("display","none");
                 //$("#container").html(data); 
               }
             });

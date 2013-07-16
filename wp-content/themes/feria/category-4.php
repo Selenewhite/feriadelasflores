@@ -105,7 +105,7 @@
   
   
   </section> <!-- #options -->
-  
+  <center id="loading" style="display:none;"><img src="<?php bloginfo('template_directory'); ?>/images/ajax-loader.gif"/></center>
   <div id="container" class="clearfix">
   <?php
   $fechaHoy = date("j/n/Y");
