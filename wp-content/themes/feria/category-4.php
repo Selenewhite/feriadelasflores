@@ -111,7 +111,8 @@
   $fechaHoy = date("j/n/Y");
   
   $myQuery = new WP_Query(array(
-       'cat' => 10
+       'cat' => 10,
+        'posts_per_page' => -1
   ));
   // The Loop
   if ( $myQuery->have_posts() ):

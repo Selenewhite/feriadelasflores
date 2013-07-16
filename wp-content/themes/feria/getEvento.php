@@ -10,7 +10,8 @@ $myQuery = new WP_Query(array(
      'meta_value' => $_POST['fecha']
 ));*/
 $myQuery = new WP_Query(array(
-     'cat' => 10
+     'cat' => 10,
+     'posts_per_page' => -1
 ));
 // The Loop
 if ( $myQuery->have_posts() ):

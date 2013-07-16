@@ -110,7 +110,7 @@
                 $("#container").isotope('remove', $(".element"));          
                 $("#container").isotope('insert', $(data)); 
                 $("#loading").css("display","none");
-                //$("#container").html(data); 
+                //alert(data); 
               }
             });
             
