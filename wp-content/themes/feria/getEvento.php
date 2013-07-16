@@ -27,10 +27,20 @@ $fechaFin = strtotime($fechaFin);
 $horaInicio = get_post_meta($post->ID,'hora_inicio',true);
 $horaFin = get_post_meta($post->ID,'hora_fin',true);
 $jornada = get_post_meta($post->ID,'jornada',true);
+$lugar = get_post_meta($post->ID,'lugar',true);
+$telefono = get_post_meta($post->ID,'telefono',true);
 
 $jornadas = explode(',', $jornada);
 $humanHoraInicio = date("g:i a", strtotime($horaInicio));
-$humanHoraFin = date("g:i a", strtotime($horaFin));
+
+if(trim($horaFin) === ""){
+  $tieneHoraFin = false;
+}
+else{
+  $tieneHoraFin = true;
+  $humanHoraFin = date("g:i a", strtotime($horaFin));
+}
+
 
 $class = "";
 
@@ -39,15 +49,17 @@ foreach ($jornadas as $j) {
 }
 ?>
   <?php if($fechaSeleccionada >= $fechaInicio AND $fechaSeleccionada <= $fechaFin): ?>  
+  <a href="<?php the_permalink(); ?>">
   <div class="element <?php echo $class ?>">
   
           <h2><?php the_title(); ?></h2>  
           <ul>
-	          <li><i class="icon-time"></i> <strong> Hora:</strong> <?php echo $humanHoraInicio ?> a <?php echo $humanHoraFin ?></li>
-	          <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> Unidad deportiva de Belén, Unidad Deportiva María Luisa Calle, Coliseo Carlos Mauro Hoyos, Pista de Motrocross.</li>
-	          <li><i class="icon-star"></i> <strong>Teléfono:</strong> 369 90 00 Ext 182 </li>
+	          <li><i class="icon-time"></i> <strong> Hora:</strong> <?php echo $humanHoraInicio ?> <?php echo ($tieneHoraFin) ? " a $humanHoraFin" : "" ?></li>
+              <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> <?php echo $lugar ?></li>
+              <li><i class="icon-star"></i> <strong>Teléfono:</strong> <?php echo $telefono ?></li>
           </ul>
   </div>
+  </a>
   <?php endif; ?>
 <?php 
 endwhile;
