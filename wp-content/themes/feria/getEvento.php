@@ -12,7 +12,9 @@ $myQuery = new WP_Query(array(
      'cat' => 10
 ));
 // The Loop
+if ( $myQuery->have_posts() ):
 while ( $myQuery->have_posts() ) : $myQuery->the_post();
+
 $fechaSeleccionada = str_replace('/', '-', $_POST['fecha']);
 $fechaSeleccionada = strtotime($fechaSeleccionada);
 $fechaInicio = str_replace('/', '-', get_post_meta($post->ID,'fecha_inicio',true));
@@ -29,12 +31,12 @@ $humanHoraInicio = date("g:i a", strtotime($horaInicio));
 $humanHoraFin = date("g:i a", strtotime($horaFin));
 
 $class = "";
+
 foreach ($jornadas as $j) {
 	$class .= trim($j) . " ";
 }
-
 ?>
-  <?php if($fechaSeleccionada >= $fechaInicio AND $fechaSeleccionada <= $fechaFin): ?>
+  <?php if($fechaSeleccionada >= $fechaInicio AND $fechaSeleccionada <= $fechaFin): ?>  
   <div class="element <?php echo $class ?>">
   
           <h2><?php the_title(); ?></h2>  
@@ -47,6 +49,7 @@ foreach ($jornadas as $j) {
   <?php endif; ?>
 <?php 
 endwhile;
+endif;
 
 // Reset Query
 wp_reset_query();
