@@ -22,10 +22,9 @@
 
             <div class="tit">
               <span class="icono"></span>
-                <span>Acreditación de Prensa.</span> 
-                <a href="<?php echo home_url(); ?>/acreditacion-de-prensa-para-la-feria-de-las-flores-2013/" class="ver">Acreditarme</a>        
+                <span>Acreditación de Prensa.</span>         
             </div><!-- cierra .tit -->             
-
+            <a class="btn btn-large" href="<?php echo home_url(); ?>/acreditacion-de-prensa-para-la-feria-de-las-flores-2013/">Acreditarme</a>
 
                          <div id="novedades">  
            <?php if(qtrans_getLanguage() == 'es'): ?>
