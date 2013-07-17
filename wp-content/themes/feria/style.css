@@ -645,6 +645,16 @@ span.hoy {
 	
 }
 
+.redesEn {
+	float:left;
+	background-image:url(images/compartirEn.png);
+	background-repeat:no-repeat;
+	padding:0 0 0 87px;
+	width:90px;
+	height:36px;
+	
+}
+
 	
 .redes .twitter a {
 	background-image:url(images/tw.png);
