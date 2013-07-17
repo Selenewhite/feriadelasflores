@@ -244,8 +244,27 @@
                                 
                                 <div class="span6 galeriaFeriaD">
                                <iframe align="center" src="http://www.flickr.com/slideShow/index.gne?group_id=2056371@N23" width="307" height="182" frameBorder="0" scrolling="no"></iframe>
-                                <span class="descarga"><a href="http://www.flickr.com/groups/2056371@N23/" target="_blank">Ver galería</a></span>
+                                <span class="descarga"><a href="http://www.flickr.com/groups/2056371@N23/" target="_blank">Ver galería: Feria de las flores 2011</a></span>
                                 </div>
+                                
+                                <div class="span6 galeriaFeriaD">
+                              <iframe align="center" src="http://www.flickr.com/slideShow/index.gne?set_id=72157630977675876" width="307" height="182" frameBorder="0" scrolling="no"></iframe><br />
+                                <span class="descarga"><a href="http://www.flickr.com/groups/2056371@N23/" target="_blank">Ver galería: Desfile de silleteritos 2012</a></span>
+                                </div>
+                            
+                            </div><!-- cierra row -->
+                            
+                              <div class="clearfix row-fluid">
+                            
+                               
+                               
+                                 
+                                <div class="span6 galeriaFeriaD">
+                              <iframe align="center" src="http://www.flickr.com/slideShow/index.gne?" width="307" height="182" frameBorder="0" scrolling="no"></iframe>
+                                <span class="descarga"><a href="http://www.flickr.com/groups/2056371@N23/" target="_blank">Ver galería: Imágenes de Medellín</a></span>
+                                </div>
+                                
+                                
                                 
                                 <div class="span6 logoDescarga">
                                 <span class="descarga"><a href="<?php bloginfo('template_directory'); ?>/descargables/Programacion.pdf">Descargar programación</a></span>
