@@ -19,8 +19,14 @@
                         <?php endif; ?>  
           <?php } ?>
 					</div>
-                    
-                    
+
+            <div class="tit">
+              <span class="icono"></span>
+                <span>Acreditación de Prensa.</span> 
+                <a href="<?php echo home_url(); ?>/acreditacion-de-prensa-para-la-feria-de-las-flores-2013/" class="ver">Acreditarme</a>        
+            </div><!-- cierra .tit -->             
+
+
                          <div id="novedades">  
            <?php if(qtrans_getLanguage() == 'es'): ?>
            <div class="tit">
