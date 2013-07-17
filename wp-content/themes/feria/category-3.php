@@ -221,19 +221,25 @@
                            
                            <div class="kitdeprensa">
                            		
+                                
                                 <div class="tit">
                                 	<span class="icono"></span>
-                                    <span>Kit de prensa</span>         
+                                    <?php if(qtrans_getLanguage() == 'es'): ?>
+                                    <span>Kit de prensa</span>
+                                     <?php else: ?>
+                                     <span>Press kit</span>
+                                      <?php endif; ?>         
                                 </div><!-- cierra .tit --> 
                             
                             <div class="clearfix row-fluid">
                             
-                                <div class="span6 logoDescarga">
-                                  <span class="descarga"><a href="<?php bloginfo('template_directory'); ?>/descargables/LogoFeria2013.zip">Descargar logo</a></span>   
+                                <div class="span6 logoDescarga"
+                                <span class="descarga">
+<a href="<?php bloginfo('template_directory'); ?>/descargables/LogoFeria2013.zip"><?php if(qtrans_getLanguage() == 'es'): ?>Descargar logo<?php else: ?>Download logo <?php endif; ?> </a></span>   
                                 </div>
                                 
                                 <div class="span6 logosVarios">
-                                <span class="descarga"><a href="<?php bloginfo('template_directory'); ?>/descargables/sellosCRV.zip">Descargar logos eventos</a></span> 
+                                <span class="descarga"><a href="<?php bloginfo('template_directory'); ?>/descargables/sellosCRV.zip"><?php if(qtrans_getLanguage() == 'es'): ?>Descargar logos de eventos<?php else: ?>Download event logos<?php endif; ?></a></span> 
                                 </div>
                             
                             </div><!-- cierra row -->
@@ -244,12 +250,12 @@
                                 
                                 <div class="span6 galeriaFeriaD">
                                <iframe align="center" src="http://www.flickr.com/slideShow/index.gne?group_id=2056371@N23" width="307" height="182" frameBorder="0" scrolling="no"></iframe>
-                                <span class="descarga"><a href="http://www.flickr.com/groups/2056371@N23/" target="_blank">Ver galería: Feria de las flores 2011</a></span>
+                                <span class="descarga"><a href="http://www.flickr.com/groups/2056371@N23/" target="_blank"><?php if(qtrans_getLanguage() == 'es'): ?>Ver galería: Feria de las flores 2011<?php else: ?>Gallery: Feria de las Flores 2011<?php endif; ?></a></span>
                                 </div>
                                 
                                 <div class="span6 galeriaFeriaD">
                               <iframe align="center" src="http://www.flickr.com/slideShow/index.gne?set_id=72157630977675876" width="307" height="182" frameBorder="0" scrolling="no"></iframe><br />
-                                <span class="descarga"><a href="http://www.flickr.com/groups/2056371@N23/" target="_blank">Ver galería: Desfile de silleteritos 2012</a></span>
+                                <span class="descarga"><a href="http://www.flickr.com/groups/2056371@N23/" target="_blank"><?php if(qtrans_getLanguage() == 'es'): ?>Ver galería: Desfile de silleteritos 2012<?php else: ?>Gallery: Desfile de silleteritos 2012<?php endif; ?></a></span>
                                 </div>
                             
                             </div><!-- cierra row -->
@@ -261,13 +267,13 @@
                                  
                                 <div class="span6 galeriaFeriaD">
                               <iframe align="center" src="http://www.flickr.com/slideShow/index.gne?" width="307" height="182" frameBorder="0" scrolling="no"></iframe>
-                                <span class="descarga"><a href="http://www.flickr.com/groups/2056371@N23/" target="_blank">Ver galería: Imágenes de Medellín</a></span>
+                                <span class="descarga"><a href="http://www.flickr.com/groups/2056371@N23/" target="_blank"><?php if(qtrans_getLanguage() == 'es'): ?>Ver galería: Imágenes de Medellín<?php else: ?>Gallery: Pictures of Medellín<?php endif; ?></a></span>
                                 </div>
                                 
                                 
                                 
                                 <div class="span6 logoDescarga">
-                                <span class="descarga"><a href="<?php bloginfo('template_directory'); ?>/descargables/Programacion.pdf">Descargar programación</a></span>
+                                <span class="descarga"><a href="<?php bloginfo('template_directory'); ?>/descargables/Programacion.pdf"><?php if(qtrans_getLanguage() == 'es'): ?>Descargar programación<?php else: ?>Download Schedule<?php endif; ?></a></span>
                                 </div>
                             
                             </div><!-- cierra row -->
