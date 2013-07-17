@@ -61,10 +61,11 @@ if ($blog_hero){
             <?php else: ?>
             <div class="tit">
               <span class="icono"></span>
-              <span>News</span>         
+              <span>For tourists</span>         
             </div><!-- cierra .tit --> 
            <?php endif; ?> 
-
+            
+            <?php if(qtrans_getLanguage() == 'es'): ?>
             <div class="noticiasHome"> 
               <!-- FEEDS -->
               <?php 
@@ -169,7 +170,28 @@ if ($blog_hero){
               </div>
               <?php endforeach; ?>                
               <!-- FIN DE LOS FEEDS --> 
-            </div>         
+            </div>       
+            <?php else: ?>
+                    <?php query_posts('cat=1&tag=turismo'); ?>
+                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                    
+          
+          <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+
+            <section class="post_content">
+                            <?php the_post_thumbnail( 'historia' ); ?>
+                            <h2><?php the_title(); ?></h2>
+              <?php the_excerpt(); ?>
+          
+            </section> <!-- end article section -->
+            
+            
+          </article> <!-- end article -->
+          
+          <?php endwhile; ?>
+          <?php endif; ?>
+
+            <?php endif; ?>                            
           </div><!-- cierra .novedades --> 
         </div>
 <!-- SIDEBAR HOME -->

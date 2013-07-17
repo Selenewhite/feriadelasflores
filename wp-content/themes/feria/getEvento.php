@@ -11,7 +11,9 @@ $myQuery = new WP_Query(array(
 ));*/
 $myQuery = new WP_Query(array(
      'cat' => 10,
-     'posts_per_page' => -1
+     'posts_per_page' => -1,
+     'orderby' => 'meta_value', 
+     'meta_key' => 'hora_inicio'
 ));
 // The Loop
 if ( $myQuery->have_posts() ):
