@@ -40,8 +40,11 @@
               if(function_exists('fetch_feed')) {
                 include_once(ABSPATH . WPINC . '/feed.php');               // hay que incluir esto
                 $feed = fetch_feed('http://www.medellin.gov.co/irj/servlet/prt/portal/prtmode/rss/prtroot/pcmrssserver.Nav?rid=/guid/e07c8b01-38b3-2f10-fbb3-df3742e451d7&NavigationTarget=navurl://6c8fe23e4fdbf5a6e014e890b7d959c5'); // el feed que queremos mostrar
-                $limit = $feed->get_item_quantity(2); // especificamos el número de items a mostrar
-                $items = $feed->get_items(0, $limit); // se crea un array con los items
+					
+				if(!isset($feed->errors)){
+					$limit = $feed->get_item_quantity(2); // especificamos el número de items a mostrar
+					$items = $feed->get_items(0, $limit); // se crea un array con los items
+				}
               }
               if ($limit == 0) echo '';
               else foreach ($items as $item) : ?>
@@ -95,8 +98,10 @@
               if(function_exists('fetch_feed')) {
                 include_once(ABSPATH . WPINC . '/feed.php');               // hay que incluir esto
                 $feed = fetch_feed('http://noticias.telemedellin.tv/tag/feriaflores/feed'); // el feed que queremos mostrar
-                $limit = $feed->get_item_quantity(2); // especificamos el número de items a mostrar
-                $items = $feed->get_items(0, $limit); // se crea un array con los items
+				if(!isset($feed->errors)){
+					$limit = $feed->get_item_quantity(2); // especificamos el número de items a mostrar
+					$items = $feed->get_items(0, $limit); // se crea un array con los items
+				}
               }
               if ($limit == 0) echo '';
               else foreach ($items as $item) : ?>
@@ -212,56 +217,84 @@
                                  
                             </div><!-- cierra .noticiasHome -->       
                            </div><!-- cierra .novedades --> 
-                           
+                    </div><!-- end display none --> 
                            
                            <div class="kitdeprensa">
                            		
+                                
                                 <div class="tit">
                                 	<span class="icono"></span>
-                                    <span>Kit de prensa</span>         
+                                    <?php if(qtrans_getLanguage() == 'es'): ?>
+                                    <span>Kit de prensa</span>
+                                     <?php else: ?>
+                                     <span>Press kit</span>
+                                      <?php endif; ?>         
                                 </div><!-- cierra .tit --> 
                             
                             <div class="clearfix row-fluid">
                             
-                                <div class="span6 logoDescarga">
-                                  <span class="descarga"><a href="#">Descargar logo</a></span>   
+                                <div class="span6 logoDescarga"
+                                <span class="descarga">
+<a href="<?php bloginfo('template_directory'); ?>/descargables/LogoFeria2013.zip"><?php if(qtrans_getLanguage() == 'es'): ?>Descargar logo<?php else: ?>Download logo <?php endif; ?> </a></span>   
                                 </div>
                                 
                                 <div class="span6 logosVarios">
-                                <span class="descarga"><a href="#">Descargar logos eventos</a></span> 
+                                <span class="descarga"><a href="<?php bloginfo('template_directory'); ?>/descargables/sellosCRV.zip"><?php if(qtrans_getLanguage() == 'es'): ?>Descargar logos de eventos<?php else: ?>Download event logos<?php endif; ?></a></span> 
                                 </div>
                             
                             </div><!-- cierra row -->
                             
                             <div class="clearfix row-fluid">
                             
-                                <div class="span6 videoFeria">
-                                <iframe width="307" height="182" src="//www.youtube.com/embed/bQ2KKHzR2DA" frameborder="0" allowfullscreen></iframe>
-                                 <span class="descarga"><a href="#">Descargar video</a></span> 
+                               
+                                
+                                <div class="span6 galeriaFeriaD">
+                               <iframe align="center" src="http://www.flickr.com/slideShow/index.gne?group_id=2056371@N23" width="307" height="182" frameBorder="0" scrolling="no"></iframe>
+                                <span class="descarga"><a href="http://www.flickr.com/groups/2056371@N23/" target="_blank"><?php if(qtrans_getLanguage() == 'es'): ?>Ver galería: Feria de las flores 2011<?php else: ?>Gallery: Feria de las Flores 2011<?php endif; ?></a></span>
                                 </div>
                                 
                                 <div class="span6 galeriaFeriaD">
-                                <object height="182" width="307"> 
-                                <param name="flashvars" value="offsite=true&amp;lang=es-us&amp;page_show_url=%2Fphotos%2F54818270%40N05%2Fsets%2F72157629642562430%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2F54818270%40N05%2Fsets%2F72157629642562430%2F&amp;set_id=72157629642562430&amp;jump_to="> <param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=109615"> <param name="allowFullScreen" value="true"><embed allowfullscreen="true" flashvars="offsite=true&amp;lang=es-us&amp;page_show_url=%2Fphotos%2F54818270%40N05%2Fsets%2F72157629642562430%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2F54818270%40N05%2Fsets%2F72157629642562430%2F&amp;set_id=72157629642562430&amp;jump_to=" height="182" src="http://www.flickr.com/apps/slideshow/show.swf?v=109615" type="application/x-shockwave-flash" width="307"></object>
-                                <span class="descarga"><a href="#">Ver galería</a></span>
+                              <iframe align="center" src="http://www.flickr.com/slideShow/index.gne?set_id=72157630977675876" width="307" height="182" frameBorder="0" scrolling="no"></iframe><br />
+                                <span class="descarga"><a href="http://www.flickr.com/groups/2056371@N23/" target="_blank"><?php if(qtrans_getLanguage() == 'es'): ?>Ver galería: Desfile de silleteritos 2012<?php else: ?>Gallery: Desfile de silleteritos 2012<?php endif; ?></a></span>
                                 </div>
                             
                             </div><!-- cierra row -->
                             
-                             <div class="clearfix row-fluid">
+                              <div class="clearfix row-fluid">
+                            
+                               
+                               
+                                 
+                                <div class="span6 galeriaFeriaD">
+                              <iframe align="center" src="http://www.flickr.com/slideShow/index.gne?" width="307" height="182" frameBorder="0" scrolling="no"></iframe>
+                                <span class="descarga"><a href="http://www.flickr.com/groups/2056371@N23/" target="_blank"><?php if(qtrans_getLanguage() == 'es'): ?>Ver galería: Imágenes de Medellín<?php else: ?>Gallery: Pictures of Medellín<?php endif; ?></a></span>
+                                </div>
+                                
+                                
+                                
+                                <div class="span6 logoDescarga">
+                                <span class="descarga"><a href="<?php bloginfo('template_directory'); ?>/descargables/Programacion.pdf"><?php if(qtrans_getLanguage() == 'es'): ?>Descargar programación<?php else: ?>Download Schedule<?php endif; ?></a></span>
+                                </div>
+                            
+                            </div><!-- cierra row -->
+                            
+                             <div class="clearfix row-fluid" style="display:none;">
+                                 <div class="span6 videoFeria">
+                                    <iframe width="307" height="182" src="//www.youtube.com/embed/bQ2KKHzR2DA" frameborder="0" allowfullscreen></iframe>
+                                     <span class="descarga"><a href="#">Descargar video</a></span> 
+                                    </div>
+                            
                             
                                 <div class="span6 logoDescarga">
                                 <span class="descarga"><a href="#">Descargar cuña</a></span>
                                 </div>
                                 
-                                <div class="span6 logoDescarga">
-                                <span class="descarga"><a href="#">Descargar programación</a></span>
-                                </div>
+                                
                             
                             </div><!-- cierra row -->
                              </div><!-- cierra .kitdeprensa -->
 					</div>
-                    </div><!-- end display none -->
+                
 
 
 				</div> <!-- end #main -->
