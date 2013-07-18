@@ -1209,6 +1209,26 @@ input, textarea, select, .uneditable-input {
 
 	}
 
+.prensa a {
+	background-color:#D72D6C;
+	display:block;
+	height:28px;
+	border-radius:8px;
+	-webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+	color:#FFF;
+	font-weight:bold;
+	padding:7px 7px 0 7px;
+	box-shadow: #ccc 1px 1px 2px;
+	text-align:center;
+	margin:10px 0 10px 0
+	}
+
+.prensa a:hover {
+	background-color:#C4063F;
+	text-decoration:none;
+	}
+
 .descarga a {
 	background-color:#DADADA;
 	display:block;
