@@ -1158,6 +1158,11 @@ input, textarea, select, .uneditable-input {
 	margin:0 10px 0 0;	
 	}
 
+.tag-turismo img {
+	float:left !important;
+	margin:0 10px 0 0;	
+	}
+
 .category-infoturistica h2 {
 	font-family: 'Coolvetica', Arial, Tahoma;
 	font-size:20px;
