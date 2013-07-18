@@ -79,7 +79,7 @@
                 <div class="linea"></div>
                 <p><?php echo substr(strip_tags ($item->get_content()), 0, 200) ?>...</p>
                 <div class="links">
-                  <div class="redes">
+                 <?php if(qtrans_getLanguage() == 'es'): ?><div class="redes"><?php else: ?><div class="redesEn"><?php endif; ?> 
                     <span class="twitter">
                       <a href="https://twitter.com/share?text=<?php echo $item->get_title(); ?>&url=<?php echo $item->get_permalink(); ?>" target="_blank">
                         Twitter
