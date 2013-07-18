@@ -656,7 +656,7 @@ span.hoy {
 }
 
 	
-.redes .twitter a {
+.redes .twitter a, .redesEn .twitter a {
 	background-image:url(images/tw.png);
 	width:31px;
 	height:36px;
@@ -664,7 +664,7 @@ span.hoy {
 	display:block;
 	float:left; }
 
-.redes .facebook a {
+.redes .facebook a, .redesEn .facebook a  {
 	background-image:url(images/fb.png);
 	width:35px;
 	height:37px;
