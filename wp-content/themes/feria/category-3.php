@@ -20,11 +20,15 @@
           <?php } ?>
 					</div>
 
-            <div class="tit">
-              <span class="icono"></span>
-                <span>Acreditación de Prensa.</span>         
-            </div><!-- cierra .tit -->             
-            <a class="btn btn-large" href="<?php echo home_url(); ?>/acreditacion-de-prensa-para-la-feria-de-las-flores-2013/">Acreditarme</a>
+           <span class="prensa">
+           <?php if(qtrans_getLanguage() == 'es'): ?>
+          <a href="<?php echo home_url(); ?>/acreditacion-de-prensa-para-la-feria-de-las-flores-2013/">Si quieres acreditarte como periodista, haz clic aquí</a>
+           <?php else: ?>
+          <a href="<?php echo home_url(); ?>/acreditacion-de-prensa-para-la-feria-de-las-flores-2013/">
+          If you are a journalist, please click here.
+          </a>
+           <?php endif; ?> 
+          </span>
 
                          <div id="novedades">  
            <?php if(qtrans_getLanguage() == 'es'): ?>
@@ -75,7 +79,7 @@
                 <div class="linea"></div>
                 <p><?php echo substr(strip_tags ($item->get_content()), 0, 200) ?>...</p>
                 <div class="links">
-                  <div class="redes">
+                 <?php if(qtrans_getLanguage() == 'es'): ?><div class="redes"><?php else: ?><div class="redesEn"><?php endif; ?> 
                     <span class="twitter">
                       <a href="https://twitter.com/share?text=<?php echo $item->get_title(); ?>&url=<?php echo $item->get_permalink(); ?>" target="_blank">
                         Twitter

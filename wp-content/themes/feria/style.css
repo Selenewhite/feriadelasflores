@@ -656,7 +656,7 @@ span.hoy {
 }
 
 	
-.redes .twitter a {
+.redes .twitter a, .redesEn .twitter a {
 	background-image:url(images/tw.png);
 	width:31px;
 	height:36px;
@@ -664,7 +664,7 @@ span.hoy {
 	display:block;
 	float:left; }
 
-.redes .facebook a {
+.redes .facebook a, .redesEn .facebook a  {
 	background-image:url(images/fb.png);
 	width:35px;
 	height:37px;
@@ -1158,6 +1158,18 @@ input, textarea, select, .uneditable-input {
 	margin:0 10px 0 0;	
 	}
 
+.tag-turismo img {
+	float:left !important;
+	margin:0 10px 0 0;	
+	}
+
+.tag-turismo a,.tag-turismo li {
+	line-height:5px;
+	}
+
+
+
+
 .category-infoturistica h2 {
 	font-family: 'Coolvetica', Arial, Tahoma;
 	font-size:20px;
@@ -1207,6 +1219,26 @@ input, textarea, select, .uneditable-input {
 .post_content img {
 	margin-bottom:10px;
 
+	}
+
+.prensa a {
+	background-color:#D72D6C;
+	display:block;
+	height:28px;
+	border-radius:8px;
+	-webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+	color:#FFF;
+	font-weight:bold;
+	padding:7px 7px 0 7px;
+	box-shadow: #ccc 1px 1px 2px;
+	text-align:center;
+	margin:10px 0 10px 0
+	}
+
+.prensa a:hover {
+	background-color:#C4063F;
+	text-decoration:none;
 	}
 
 .descarga a {
@@ -1663,6 +1695,7 @@ div[id*='attachment_']{
 #main article img{
 	height: auto;
 	max-width: 100%;
+	margin-bottom:0;
 }
 
 img.alignleft{

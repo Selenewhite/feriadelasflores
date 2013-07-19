@@ -3,7 +3,18 @@
 					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
                     
                     <?php if ( is_home() ) {?>
-    
+    						
+                             <span class="prensa">
+					   <?php if(qtrans_getLanguage() == 'es'): ?>
+                      <a href="<?php echo home_url(); ?>/acreditacion-de-prensa-para-la-feria-de-las-flores-2013/">Clic aquí para acreditación de prensa</a>
+                       <?php else: ?>
+                      <a href="<?php echo home_url(); ?>/acreditacion-de-prensa-para-la-feria-de-las-flores-2013/">
+                      If you are a journalist, please click here.
+                      </a>
+                       <?php endif; ?> 
+                      </span>
+
+                            
 							<div class="videoFeria">
                             <div class="tit">
                                  <span class="icono"></span>
@@ -18,6 +29,16 @@
                          </div><!-- cierra .videoFeria -->	
 					
 					<?php } else {?>
+                    
+                       <span class="prensa">
+					   <?php if(qtrans_getLanguage() == 'es'): ?>
+                      <a href="<?php echo home_url(); ?>/acreditacion-de-prensa-para-la-feria-de-las-flores-2013/">Clic aquí para acreditación de prensa</a>
+                       <?php else: ?>
+                      <a href="<?php echo home_url(); ?>/acreditacion-de-prensa-para-la-feria-de-las-flores-2013/">
+                      If you are a journalist, please click here.
+                      </a>
+                       <?php endif; ?> 
+                      </span>
 
                          <div style="display:none" class="hoyFeria">
                             <div class="tit">
