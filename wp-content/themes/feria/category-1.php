@@ -29,7 +29,7 @@
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
 						<section class="post_content">
-                        
+
 							<?php if(qtrans_getLanguage() == 'es'): ?>
                             <?php the_post_thumbnail( 'historia' ); ?>
                         	<?php else: ?>
