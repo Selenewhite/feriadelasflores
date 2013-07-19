@@ -29,7 +29,27 @@
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
 						<section class="post_content">
+							<?php if(qtrans_getLanguage() == 'es'): ?>
                             <?php the_post_thumbnail( 'historia' ); ?>
+                        	<?php else: ?>
+                        	
+                        	<?php if (the_ID() == 33): ?>
+                        	<!-- Arrieros y Trovadores -->
+                        	<?php endif; ?>
+                        	<?php if (the_ID() == 29): ?>
+                        	<!-- Expresiones Paisas -->
+                        	<?php endif; ?>
+                        	<?php if (the_ID() == 25): ?>
+                        	<!-- Los Atuendos de la Feria -->
+                        	<?php endif; ?>
+                        	<?php if (the_ID() == 20): ?>
+                        	<!-- Gastronomía Antioqueña -->
+                        	<?php endif; ?>
+                        	<?php if (the_ID() == 15): ?>
+                        	<!-- Las Flores que Engalanan la Feria -->
+                        	<?php endif; ?>                          	                        	                        	                      
+
+                        	<?php endif; ?>
                             <h2><?php the_title(); ?></h2>
 							<?php the_excerpt(); ?>
 					
