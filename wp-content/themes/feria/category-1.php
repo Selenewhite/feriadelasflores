@@ -29,7 +29,20 @@
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
 						<section class="post_content">
-                            <?php the_post_thumbnail( 'historia' ); ?>
+                           <?php if(qtrans_getLanguage() == 'es'): ?>
+                           
+                           <?php the_post_thumbnail( 'historia' ); ?>
+                            
+                           <?php else: ?>
+                           
+                           <img src="images/arrierosEn.png" />
+                           <img src="images/atuendosEn.png" />
+                           <img src="images/expresionesEn.png" />
+                           <img src="images/gastronomiaEn.png" />
+                           
+                           <?php endif; ?>
+						   
+                            <img src
                             <h2><?php the_title(); ?></h2>
 							<?php the_excerpt(); ?>
 					
