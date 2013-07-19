@@ -30,27 +30,12 @@
 
 						<section class="post_content">
 
-							<?php if(qtrans_getLanguage() == 'es'): ?>
+							
                             <?php the_post_thumbnail( 'historia' ); ?>
-                        	<?php else: ?>
-                        	
-                        	<?php if (the_ID() == 33): ?>
-                        	<!-- Arrieros y Trovadores -->
-                            <img src="images/arrierosEn.png" />
-                        	<?php endif; ?>
-                        	<?php if (the_ID() == 29): ?>
-                        	<!-- Expresiones Paisas -->
-                            <img src="images/expresionesEn.png" />
-                        	<?php endif; ?>
-                        	<?php if (the_ID() == 25): ?>
-                        	<!-- Los Atuendos de la Feria -->
-                            <img src="images/atuendosEn.png" />
-                        	<?php endif; ?>
-                        	<?php if (the_ID() == 20): ?>
-                        	<!-- Gastronomía Antioqueña -->
-                            <img src="images/gastronomiaEn.png" />
-                        	<?php endif; ?>                     	                        	                        	
                             
+                        	
+                        	
+                         
                             <h2><?php the_title(); ?></h2>
 							<?php the_excerpt(); ?>
 					
