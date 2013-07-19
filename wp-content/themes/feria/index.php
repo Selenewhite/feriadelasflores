@@ -21,7 +21,7 @@ if ($blog_hero){
 
     <div id="main" class="span12 clearfix" role="main">
 
-      <div class="slider">
+      <div class="slider visible-desktop">
         <?php echo get_new_royalslider(1); ?>
       </div><!-- cierra .slider -->
 
@@ -29,7 +29,7 @@ if ($blog_hero){
         <!-- Titulos -->
         <div class="clearfix row-fluid">
           <div class="titHoy span8">
-            <span class="icono"></span>
+            <span class="icono hidden-phone"></span>
             <span>Hoy en la feria</span>         
           </div><!-- cierra .titHoy -->  
 
@@ -55,12 +55,12 @@ if ($blog_hero){
           <div id="novedades">  
            <?php if(qtrans_getLanguage() == 'es'): ?>
            <div class="tit">
-              <span class="icono"></span>
+              <span class="icono hidden-phone"></span>
               <span>Novedades</span>         
             </div><!-- cierra .tit --> 
             <?php else: ?>
             <div class="tit">
-              <span class="icono"></span>
+              <span class="icono hidden-phone"></span>
               <span>For tourists</span>         
             </div><!-- cierra .tit --> 
            <?php endif; ?> 
@@ -96,7 +96,7 @@ if ($blog_hero){
                 ?>         
                 <img src="<?php echo $src ?>" width="200" height="130" class="img-rounded" />
                 <h2><?php echo $item->get_title(); ?></h2>
-                <div class="linea"></div>
+                <div class="linea hidden-phone"></div>
                 <p><?php echo substr(strip_tags ($item->get_content()), 0, 200) ?>...</p>
                 <div class="links">
                   <div class="redes">
@@ -148,7 +148,7 @@ if ($blog_hero){
                 ?>
                 <img src="<?php echo $src ?>" width="200" height="130" class="img-rounded" />
                 <h2><?php echo $item->get_title(); ?></h2>
-                <div class="linea"></div>
+                <div class="linea hidden-phone"></div>
                 <p><?php echo substr(strip_tags ($item->get_content()), 0, 200) ?>...</p>
                 <div class="links">
                   <div class="redes">
