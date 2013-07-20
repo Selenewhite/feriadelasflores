@@ -26,7 +26,6 @@
   &nbsp;       
   </div><!-- cierra .descargarProgramacion --> 
 
-  <div style="display:none">
   <!-- CARRUSEL EVENTOS DESTACADOS -->  
   
   <div class="EventosDestacados clearfix">
@@ -39,54 +38,70 @@
   <div class="well">
   
   <div id="myCarousel" class="carousel slide">
-  
+  <?php
+    $myQuery = new WP_Query(array(
+       'cat' => 10,
+        'posts_per_page' => -1
+  ));
+  $numPost = count($myQuery->posts);
+  $p = $numPost / 3;  
+  $j = 1;
+  ?>
   <ol class="carousel-indicators">
-  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-  <li data-target="#myCarousel" data-slide-to="1"></li>
-  <li data-target="#myCarousel" data-slide-to="2"></li>
+    <?php for($i = 1; $i < $p; $i++): ?>
+    <li data-target="#myCarousel" data-slide-to="<?php echo $i-1 ?>" class="<?php if($j==1): echo "active"; unset($j); endif; ?>"></li>
+    <?php endfor; ?>
   </ol>
 
   <!-- Carousel items -->
   <div class="carousel-inner">
-  
-  <div class="item active">
+  <?php
+    $myQuery = new WP_Query(array(
+       'cat' => 10,
+        'posts_per_page' => -1
+  ));
+  $numPost = count($myQuery->posts);
+  // The Loop
+  if ( $myQuery->have_posts() ):
+    $i = 1;
+    $j = 1;
+  while ( $myQuery->have_posts() ) : $myQuery->the_post();
+  ?>
+  <?php if($i==1): ?>
+  <div class="item<?php if($j==1) : echo ' active'; unset($j); else: echo ''; endif; ?>">
   <div class="row-fluid">
+  <?php endif; ?>
   <div class="span4">
-  <a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
-  <div class="span4">
-  <a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
-  <div class="span4">
-  <a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
+  <a href="<?php the_permalink(); ?>" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
+  <div></div>
+  <?php if($i==3): ?>
   </div><!--/row-fluid-->
   </div><!--/item-->
-  
-  <div class="item">
-  <div class="row-fluid">
-	<div class="span4">
-	<a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
-	<div class="span4">
-	<a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
-	<div class="span4">
-	<a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
-  </div><!--/row-fluid-->
-  </div><!--/item-->
-  
+  <?php endif; ?>
+  <?php
+  $i++;
+  if($i==4):
+    $i = 1;
+  endif;
+  endwhile;
+  endif;
+  // Reset Query
+  wp_reset_query();
+  ?>    
   
   </div><!--/carousel-inner-->
-  
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+
   </div><!--/myCarousel-->
   
   </div><!--/well-->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a> 
+  </div>
+
   </div>
   </div><!-- cierra .EventosDestacados --> 
-  
+  </div>
   <!-- CIERRA CARRUSEL EVENTOS DESTACADOS -->   
-  </div> <!-- CIERRE OCULTAR PROGRAMACIÓN -->
-  
-  
-
   
   <div class="clearfix row-fluid">  
   <div class="span6 calendario"></div>	
