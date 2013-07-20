@@ -162,11 +162,15 @@
 				<div class="navbar">
 					
 						<div class="container-fluid nav-container">
+                        
+                        
 							
                             <nav role="navigation">
 								<a id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>">
                                 <div class="brand"></div>
 								</a>
+                                
+                               
                                
                                <div class="row">
                                 <?php if(qtrans_getLanguage() == 'es'): ?>
@@ -210,7 +214,9 @@
                                     	
                                     </div> 
                                     
-                                	<div class="span3 offset2 buscador">
+                                    
+                                    
+                                	<div class="span3 offset2 buscador visible-desktop">
                                     <?php if(qtrans_getLanguage() == 'es'): ?>
                                     <form action="<?php echo home_url(); ?>" method="get" class="form-stacked">
                                         <fieldset>
@@ -227,11 +233,13 @@
                                   </div>
                                 </div>
 								
-								<div class="nav-collapse">
-									<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
-								</div>
+								
 								
 							</nav>
+                            
+                             <div class="nav-collapse hidden-desktop">
+									<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+								</div>
 							
 							<?php if(of_get_option('search_bar', '1')) {?>
 							<form class="navbar-search pull-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
