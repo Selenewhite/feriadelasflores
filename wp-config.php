@@ -19,10 +19,10 @@
 define('DB_NAME', 'feriadelasflores');
 
 /** Tu nombre de usuario de MySQL */
-define('DB_USER', 'root');
+define('DB_USER', 'userferia');
 
 /** Tu contraseña de MySQL */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'feria');
 
 /** Host de MySQL (es muy probable que no necesites cambiarlo) */
 define('DB_HOST', 'localhost');
