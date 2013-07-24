@@ -33,8 +33,34 @@
 						<section class="post_content clearfix" itemprop="articleBody">
 							
 							<?php the_content(); ?>
-                                                       
 							
+							<!-- Muestra los Campos Personalizados -->
+							<?php $category = get_the_category(); ?>
+							<?php if($category[0]->cat_name === "Eventos"): ?>
+							<?php
+							$horaInicio = get_post_meta($post->ID,'hora_inicio',true);
+							$horaFin = get_post_meta($post->ID,'hora_fin',true);
+							$lugar = get_post_meta($post->ID,'lugar',true);
+							$telefono = get_post_meta($post->ID,'telefono',true);
+
+							$humanHoraInicio = date("g:i a", strtotime($horaInicio));
+
+							if(trim($horaFin) === ""){
+							  $tieneHoraFin = false;
+							}
+							else{
+							  $tieneHoraFin = true;
+							  $humanHoraFin = date("g:i a", strtotime($horaFin));
+							}
+							?>							
+								<ul class="custom-fields">
+								  <li><i class="icon-time"></i> <strong> Hora:</strong> <?php echo $humanHoraInicio ?> <?php echo ($tieneHoraFin) ? " a $humanHoraFin" : "" ?></li>
+								  <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> <?php echo $lugar ?></li>
+								  <li><i class="icon-star"></i> <strong>Teléfono:</strong> <?php echo $telefono ?></li>
+								</ul>								
+							<?php endif ?>
+							<!-- Fin de mostrar los campos Personalizados -->
+
 							<?php wp_link_pages(); ?>
                             
                             <?php 
