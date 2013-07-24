@@ -90,7 +90,7 @@ add_image_size( 'wpbs-featured-home', 970, 311, true);
 add_image_size( 'wpbs-featured-carousel', 970, 400, true);
 add_image_size( 'first-historia', 616, 190, true);
 add_image_size( 'historia', 305, 182, true);
-
+add_image_size( 'carousel-destacados', 250, 250, true);
 /* 
 to add more sizes, simply copy a line from above 
 and change the dimensions & name. As long as you

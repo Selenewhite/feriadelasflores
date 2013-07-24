@@ -27,7 +27,6 @@
   </div><!-- cierra .descargarProgramacion --> 
 
   <!-- CARRUSEL EVENTOS DESTACADOS -->  
-  <div style="display:none">
   <div class="EventosDestacados clearfix">
   <div class="tit">
   <span class="icono"></span>
@@ -72,8 +71,8 @@
   <div class="row-fluid">
   <?php endif; ?>
   <div class="span4">
-  <a href="<?php the_permalink(); ?>" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;" /></a></div>
-  <div></div>
+  <a href="<?php the_permalink(); ?>" class="thumbnail"><?php the_post_thumbnail( 'carousel-destacados' ); ?></a></div>
+  <div><?php the_title() ?></div>
   <?php if($i==3): ?>
   </div><!--/row-fluid-->
   </div><!--/item-->
@@ -101,7 +100,6 @@
   </div>
   </div><!-- cierra .EventosDestacados --> 
   </div>
-</div>
   <!-- CIERRA CARRUSEL EVENTOS DESTACADOS -->   
   
   <div class="clearfix row-fluid">  
