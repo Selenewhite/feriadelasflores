@@ -46,15 +46,6 @@ ul,li {list-style-type:none;}
 	
 }
 
-#menu-main li, .navbar .nav {
-	display:block;
-	float:none;
-	}
-
-.navbar .btn-navbar {
-display: none;
-}
-
 /* fuente */
 
 @font-face{ 
@@ -2070,54 +2061,8 @@ text-shadow: 0 1px 0 #ffffff;
 	background-image:url(images/logosAlcaldia_03.jpg);
 	width:300px;
 	height:118px;
+
 	}
-
-.menu, .menuEn {
-	float:none;
-	width:100%;}
-
-.menuholder, .menuholderEn {
-	width:100%;
-	}
-
-.menuholder li, .menuholderEn li{
-	float:left;
-	margin-bottom:-10px;
-	}
-
-.menuholder a {
-	background:url(images/menu.png);
-	display:block; 
-	height:85px;
-	text-indent:-9000%;
-	}
-
-.menuholderEn a {
-	background:url(images/menuEn.png);
-	display:block; 
-	height:85px;
-	text-indent:-9000%;
-}
-
-/*ESTADO NORMAL*/
-.menu_inicio a {width:60px;}
-.menu_programacion a {width:145px; background-position:-60px 0px;}
-.menu_turistica a {width:116px; background-position:-208px 0px;}
-.menu_historia a {width:111px; background-position:-321px 0px; }
-.menu_saladeprensa a {width:105px; background-position:-436px 0px; margin:0 5px 0 0;}
-.menu_contactenos a {width:114px; background-position:-547px 0px;}
-.menu_envivo a {width:118px; background-position:-660px 0px;}
-
-/*ESTADO ROLLOVER*/
-
-.menu_inicio a:hover {background-position:0px -88px;}
-.menu_programacion a:hover { background-position:-60px -88px;}
-.menu_turistica a:hover {background-position:-208px -88px;}
-.menu_historia a:hover {background-position:-321px -88px;}
-.menu_saladeprensa a:hover {background-position:-436px -88px;}
-.menu_contactenos a:hover {background-position:-547px -88px;}
-.menu_envivo a:hover {background-position:-660px -88px;}
-	
 
 
 /* HISTORIA */
