@@ -170,12 +170,17 @@
                                 <div class="brand"></div>
 								</a>
                                 
-                               
+                                                            
+                                 <div>
+									<?php /* bones_main_nav(); // Adjust using Menus in Wordpress Admin*/?> 
+								</div>
+
+                                <div class="clearfix visible-phone"></div>
                                
                                <div class="row">
                                 <?php if(qtrans_getLanguage() == 'es'): ?>
-                                <ul class="menu menuholder hidden-phone"> 
-                                    <li class="menu_inicio"><a href="<?php echo home_url(); ?>" title="Inicio" class="active">Inicio</a></li>
+                                <ul class="menu menuholder"> 
+                                    <li class="menu_inicio hidden-phone"><a href="<?php echo home_url(); ?>" title="Inicio" class="active">Inicio</a></li>
                                     <li class="menu_programacion"><a href="<?php echo home_url(); ?>/category/programacion/" title="Programación">Programación</a></li>
                                     <li class="menu_turistica"><a href="<?php echo home_url(); ?>/category/infoturistica/" title="Info Turística">Info Turística</a></li>
                                     <li class="menu_historia"><a href="<?php echo home_url(); ?>/category/historia/" title="Historia">Historia</a></li>
@@ -194,15 +199,9 @@
                                     <li class="menu_envivo"><a href="<?php echo home_url(); ?>/en/la-feria-en-vivo/" title="En Vivo">La Feria Live</a></li>
                                 </ul>
                                 <?php endif; ?>
-                                                                
-								<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-							        <span class="icon-bar"></span>
-							        <span class="icon-bar"></span>
-							        <span class="icon-bar"></span>
-								</a>
                                 
-                            
-                                
+                               
+
                                 	<div class="span3 idioma">
                                     
                                     	 <!-- Widget de idioma -->   
@@ -236,10 +235,6 @@
 								
 								
 							</nav>
-                            
-                             <div class="nav-collapse hidden-desktop">
-									<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
-								</div>
 							
 							<?php if(of_get_option('search_bar', '1')) {?>
 							<form class="navbar-search pull-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
@@ -252,6 +247,7 @@
 				</div> <!-- end .navbar -->
 			
 			</div> <!-- end #inner-header -->
+            </div> 
 		
 		</header> <!-- end header -->
 		
