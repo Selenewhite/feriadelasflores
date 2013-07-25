@@ -145,11 +145,12 @@
                
                 <div class="logosAlcaldia">
                 	 <div class="redesAlcaldia">
-                	<ul>
+                	 <ul>
                     	<li><a href="http://www.facebook.com/alcaldiademed" target="_blank" title="Facebook"><img src="<?php bloginfo('template_directory'); ?>/images/Facebook.png" /></a></li>
                         <li><a href="http://twitter.com/alcaldiademed" target="_blank" title="Twitter"><img src="<?php bloginfo('template_directory'); ?>/images/Twitter.png" /></a></li>
                         <li><a href="http://www.youtube.com/alcaldiademed" target="_blank" title="Youtube"><img src="<?php bloginfo('template_directory'); ?>/images/Youtube.png" /></a></li>
                         <li><a href="http://www.flickr.com/photos/90282908@N03/" target="_blank" title="Flickr"><img src="<?php bloginfo('template_directory'); ?>/images/Flickr.png" /></a></li>
+                     </ul>
                         
                 </div>
                 </div>

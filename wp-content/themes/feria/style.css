@@ -2049,13 +2049,12 @@ blockquote.pull-left{
 .navbar .brand {
 background-image: url(images/logoferia.png);
 background-repeat: no-repeat;
-background-position:center;
-width: 200px;
+width: 119px;
 height: 116px;
-float: left;
+float: none;
 display: block;
 padding: 0;
-margin-left: 0px;
+margin: 0px auto;
 text-shadow: 0 1px 0 #ffffff;
 }
 
@@ -2169,16 +2168,25 @@ text-shadow: 0 1px 0 #ffffff;
 	 
 	/* FOOTER */ 
 footer {
-background-image: url(images/backFooter.jpg);
-background-repeat: repeat-x;
 background-color: #FFF;
-height: 350px;
+background-image:none;
+height: 200px;
 width: 100%;
-margin-top: 40px;
-padding: 30px 0 0 0;
+margin-top: 0px;
+padding: 0px 0 0 0;
 
  }
+.noticiaHome img {
+float: none;
+margin: 0 auto;
+text-align:center;
+}
 
+.vermas, .readmore {
+float: none;
+width: 72px;
+clear:both;
+}
  }
 
 @media only screen and (min-width: 768px) {
