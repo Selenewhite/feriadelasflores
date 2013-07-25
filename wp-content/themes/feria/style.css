@@ -763,7 +763,8 @@ span.hoy {
 	font-size:14px;
 	line-height:18px;
 	height:60px;
-	display:table-cell;
+	display:block;
+	/* display:table-cell; */
 	vertical-align:middle;
 	}
 
