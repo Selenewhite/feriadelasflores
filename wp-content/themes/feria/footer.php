@@ -28,6 +28,7 @@
                 <li><a href="http://www.medellinconventionbureau.com/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/buro.jpg" width="117" height="79" /></a> </li>
                 <li><a href="http://www.medellindigital.gov.co/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/medellindigital.jpg" width="117" height="79" /></a></li>
                 <li><a href="http://www.telemedellin.tv/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/telemedellin.jpg" width="124" height="79" /></a></li>
+                 <li><a href="http://www.medellin.gov.co/irj/portal/medellin" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logo200.jpg" width="140" height="79" /></a></li>
                 <li><a href="http://www.medellin.gov.co/irj/portal/medellin" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/alcaldia.jpg" width="124" height="79" /></a></li>
                 </ul>
 		
