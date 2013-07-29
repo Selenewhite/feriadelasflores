@@ -25,11 +25,17 @@
 				<div id="inner-footer">
 		       
                 <ul>
-                <li><a href="http://www.medellinconventionbureau.com/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/buro.jpg" width="117" height="79" /></a> </li>
-                <li><a href="http://www.medellindigital.gov.co/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/medellindigital.jpg" width="117" height="79" /></a></li>
-                <li><a href="http://www.telemedellin.tv/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/telemedellin.jpg" width="124" height="79" /></a></li>
-                 <li><a href="http://www.medellin.gov.co/irj/portal/medellin" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logo200.jpg" width="140" height="79" /></a></li>
-                <li><a href="http://www.medellin.gov.co/irj/portal/medellin" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/alcaldia.jpg" width="124" height="79" /></a></li>
+                 <li><a href="http://www.medellinconventionbureau.com/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/buro.jpg" width="88" height="56" /></a> </li>
+               
+                 <li><a href="http://www.antioquia.gov.co/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logogobernacion.jpg" width="100" height="56" /></a> </li>
+                  <li><a href="http://www.antioquia.gov.co/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logoAntioquia.jpg" width="64" height="56" /></a> </li>
+                  <li><a href="http://www.antioquia.gov.co/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logo200.jpg" width="100" height="56" /></a></li>
+                  <li><a href="http://www.antioquia.gov.co/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logogranferia.jpg"width="100" height="56" /></a></li>
+                   <li><a href="http://www.medellindigital.gov.co/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/medellindigital.jpg" width="83" height="56" /></a></li>
+                <li><a href="http://www.telemedellin.tv/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/telemedellin.jpg" width="88" height="56" /></a></li>
+                 <li><a href="http://www.medellin.gov.co/irj/portal/medellin" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/alcaldia.jpg" width="88" height="56" /></a></li>
+                 
+                
                 </ul>
 		
 				</div> <!-- end #inner-footer -->
