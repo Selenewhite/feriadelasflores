@@ -27,6 +27,7 @@
   </div><!-- cierra .descargarProgramacion --> 
 
   <!-- CARRUSEL EVENTOS DESTACADOS -->  
+  <div style="display:none">
   <div class="EventosDestacados clearfix">
   <div class="tit">
   <span class="icono"></span>
@@ -100,6 +101,7 @@
   </div>
   </div><!-- cierra .EventosDestacados --> 
   </div>
+</div>
   <!-- CIERRA CARRUSEL EVENTOS DESTACADOS -->   
   
   <div class="clearfix row-fluid">  
