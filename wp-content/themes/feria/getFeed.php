@@ -1,7 +1,7 @@
               <?php 
               define('WP_USE_THEMES', false);
               require_once('../../../wp-load.php');              
-              
+
               if(function_exists('fetch_feed')) {
                 include_once(ABSPATH . WPINC . '/feed.php');               // hay que incluir esto
                 $feed = fetch_feed('http://www.medellin.gov.co/irj/servlet/prt/portal/prtmode/rss/prtroot/pcmrssserver.Nav?rid=/guid/e07c8b01-38b3-2f10-fbb3-df3742e451d7&NavigationTarget=navurl://6c8fe23e4fdbf5a6e014e890b7d959c5'); // el feed que queremos mostrar
@@ -49,15 +49,9 @@
                       </a>
                     </span>
                   </div>
-                  <?php if(qtrans_getLanguage() == 'es'): ?>
                   <div class="vermas">
                     <a target="_BLANK" href="<?php echo $item->get_permalink(); ?>" title="<?php echo $item->get_date('j F Y @ G:i'); ?>">Ver más</a>
-                  </div>
-                  <?php else: ?>
-                   <div class="readmore">
-                    <a target="_BLANK" href="<?php echo $item->get_permalink(); ?>" title="<?php echo $item->get_date('j F Y @ G:i'); ?>">Read more</a>
-                  </div>
-                  <?php endif; ?>    
+                  </div>  
                 </div>              
               </div>
               <?php endforeach; ?>  
