@@ -1,5 +1,5 @@
               <?php 
-              define('WP_USE_THEMES', false);
+              @ define('WP_USE_THEMES', false);
               require_once('../../../wp-load.php');              
 
               if(function_exists('fetch_feed')) {
