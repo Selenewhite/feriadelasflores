@@ -84,6 +84,14 @@
       
       return false;
     });
+
+    $.ajax({
+      type: "POST",
+      url: "<?php bloginfo('template_directory'); ?>/getFeed.php",
+      success: function(data){     
+        $("#feed").html(data);
+      }
+    });
   });
   </script>  
       
