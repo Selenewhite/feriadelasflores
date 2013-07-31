@@ -82,7 +82,7 @@
       
       return false;
     });
-
+    <?php if(is_category( '3' ) || is_home()): ?>
     $.ajax({
       type: "POST",
       url: "<?php bloginfo('template_directory'); ?>/getFeed.php",
@@ -90,6 +90,7 @@
         $("#feed").html(data);
       }
     });
+    <?php endif; ?>
   });
   </script>  
       
