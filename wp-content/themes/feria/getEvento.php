@@ -1,14 +1,7 @@
 <?php
-sleep(3);
 define('WP_USE_THEMES', false);
 require_once('../../../wp-load.php');
 
-// The Query
-/*
-$myQuery = new WP_Query(array(
-     'meta_key' => 'fecha_inicio', 
-     'meta_value' => $_POST['fecha']
-));*/
 $myQuery = new WP_Query(array(
      'cat' => 10,
      'posts_per_page' => -1,

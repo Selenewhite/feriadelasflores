@@ -25,8 +25,6 @@
 		<![endif]-->
 		
   		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-        <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/bootstrap-datepicker.js" ></script>
-        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/datepicker.css" type="text/css" />
 
 
 		<!-- wordpress head functions -->
@@ -84,6 +82,15 @@
       
       return false;
     });
+    <?php if(is_category( '3' ) || is_home()): ?>
+    $.ajax({
+      type: "POST",
+      url: "<?php bloginfo('template_directory'); ?>/getFeed.php",
+      success: function(data){     
+        $("#feed").html(data);
+      }
+    });
+    <?php endif; ?>
   });
   </script>  
       

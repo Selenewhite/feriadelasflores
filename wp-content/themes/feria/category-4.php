@@ -41,7 +41,7 @@
   ));
   $numPost = count($myQuery->posts);
   $p = $numPost / 3;  
-  $j = 1;
+  $j = 1; //Comentario
   ?>
               <ol class="carousel-indicators">
                 <?php for($i = 1; $i < $p; $i++): ?>
