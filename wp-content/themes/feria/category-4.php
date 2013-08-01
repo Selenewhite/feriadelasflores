@@ -1,5 +1,21 @@
 <?php get_header(); ?>
 
+<<<<<<< HEAD
+  <!-- CARRUSEL EVENTOS DESTACADOS -->  
+  <div style="display:none">
+  <div class="EventosDestacados clearfix">
+  <div class="tit">
+  <span class="icono"></span>
+  <span>Eventos destacados</span>         
+  </div><!-- cierra .tit --> 
+  <!--
+  <div class="galeriaDestacados">
+  <div class="well">
+  <!--
+  <div id="myCarousel" class="carousel slide">
+  <?php
+    $myQuery = new WP_Query(array(
+=======
 <div id="content" class="clearfix row-fluid">
   <div id="main" class="span8 clearfix" role="main">
     <div class="page-header">
@@ -42,6 +58,7 @@
             <div id="myCarousel" class="carousel slide">
               <?php
    /* $myQuery = new WP_Query(array(
+>>>>>>> b4ca2004baa3e6f736bd0ec064289c13cdf1714e
        'cat' => 10,
         'posts_per_page' => -1
   ));
@@ -49,6 +66,18 @@
   $p = $numPost / 3;  
   $j = 1; //Comentario*/
   ?>
+<<<<<<< HEAD
+  <ol class="carousel-indicators">
+    <?php for($i = 1; $i < $p; $i++): ?>
+    <li data-target="#myCarousel" data-slide-to="<?php echo $i-1 ?>" class="<?php if($j==1): echo "active"; unset($j); endif; ?>"></li>
+    <?php endfor; ?>
+  </ol>
+
+  <!-- Carousel items --
+  <div class="carousel-inner">
+  <?php
+    $myQuery = new WP_Query(array(
+=======
               <ol class="carousel-indicators">
                 <?php //for($i = 1; $i < $p; $i++): ?>
                 <li data-target="#myCarousel" data-slide-to="<?php //echo $i-1 ?>" class="<?php //if($j==1): echo "active"; unset($j); endif; ?>"></li>
@@ -59,6 +88,7 @@
               <div class="carousel-inner">
                 <?php
     /*$myQuery = new WP_Query(array(
+>>>>>>> b4ca2004baa3e6f736bd0ec064289c13cdf1714e
        'cat' => 10,
         'posts_per_page' => -1
   ));
@@ -69,6 +99,21 @@
     $j = 1;
   while ( $myQuery->have_posts() ) : $myQuery->the_post();*/
   ?>
+<<<<<<< HEAD
+  <?php if($i==1): ?>
+  <div class="item<?php if($j==1) : echo ' active'; unset($j); else: echo ''; endif; ?>">
+  <div class="row-fluid">
+  <?php endif; ?>
+  <div class="span4">
+  <a href="<?php the_permalink(); ?>" class="thumbnail"><?php the_post_thumbnail( 'carousel-destacados' ); ?></a></div>
+  <div><?php the_title() ?></div>
+  <?php if($i==3): ?>
+  </div><!--/row-fluid--
+  </div><!--/item--
+  <?php endif; ?>
+  <?php
+  $i++;
+=======
                 <?php //if($i==1): ?>
                 <div class="item<?php //if($j==1) : echo ' active'; unset($j); else: echo ''; endif; ?>">
                   <div class="row-fluid">
@@ -87,12 +132,53 @@
                 <?php //endif; ?>
                 <?php
  /* $i++;
+>>>>>>> b4ca2004baa3e6f736bd0ec064289c13cdf1714e
   if($i==4):
     $i = 1;
   endif;
   endwhile;
   endif;
   // Reset Query
+<<<<<<< HEAD
+  wp_reset_query();
+  ?>    
+  
+  </div><!--/carousel-inner--
+
+  </div><!--/myCarousel--
+  
+  </div><!--/well--
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a> 
+  </div> -->
+
+  <!-- </div> -->
+  </div><!-- cierra .EventosDestacados --> 
+  <!-- </div> -->
+</div>
+  <!-- CIERRA CARRUSEL EVENTOS DESTACADOS -->   
+  
+  <div class="clearfix row-fluid">  
+  <div class="span6 calendario"></div>	
+  </div><!-- cierra .row-fluid --> 
+
+  <div>
+  <section id="options" class="clearfix">
+  
+  <ul id="filters" class="option-set clearfix" data-option-key="filter">
+  <li class="span3"><a href="#filter" data-option-value="*" class="selected">Todos</a></li>
+  <li class="span3"><a href="#filter" data-option-value=".manana">Mañana</a></li>
+  <li class="span3"><a href="#filter" data-option-value=".tarde">Tarde</a></li>
+  <li class="span3"><a href="#filter" data-option-value=".noche">Noche</a></li>
+
+  </ul>
+  
+  
+  </section> <!-- #options -->
+  <center id="loading" style="display:none;"><img src="<?php bloginfo('template_directory'); ?>/images/ajax-loader.gif"/></center>
+  <div id="container" class="clearfix">
+  <?php
+=======
   wp_reset_query();*/
   ?>
               </div>
@@ -130,6 +216,7 @@
       </center>
       <div id="container" class="clearfix">
         <?php
+>>>>>>> b4ca2004baa3e6f736bd0ec064289c13cdf1714e
   $fechaHoy = date("j/n/Y");
   
   $myQuery = new WP_Query(array(

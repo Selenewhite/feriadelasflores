@@ -30,28 +30,8 @@
 
 						<section class="post_content">
 
-							<?php if(qtrans_getLanguage() == 'es'): ?>
                             <?php the_post_thumbnail( 'historia' ); ?>
                             
-                        	<?php else: ?>
-                        	
-                        	<?php if (the_ID() == 33): ?>
-                        	<!-- Arrieros y Trovadores -->
-                            <img src="<?php bloginfo('template_directory'); ?>/images/arrierosEn.png" />
-                        	<?php endif; ?>
-                        	<?php if (the_ID() == 29): ?>
-                        	<!-- Expresiones Paisas -->
-                            <img src="<?php bloginfo('template_directory'); ?>/images/expresionesEn.png" />
-                        	<?php endif; ?>
-                        	<?php if (the_ID() == 25): ?>
-                        	<!-- Los Atuendos de la Feria -->
-                            <img src="<?php bloginfo('template_directory'); ?>/images/atuendosEn.png" />
-                        	<?php endif; ?>
-                        	<?php if (the_ID() == 20): ?>
-                        	<!-- Gastronomía Antioqueña -->
-                            <img src="<?php bloginfo('template_directory'); ?>/images/gastronomiaEn.png" />
-                        	<?php endif; ?>                     	                        	                        	
-                            <?php endif; ?> 
                             <h2><?php the_title(); ?></h2>
 							<?php the_excerpt(); ?>
 					
@@ -62,19 +42,6 @@
 					
 					<?php endwhile; ?>
                     <?php wp_reset_query(); ?>	
-					
-					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
-						
-						<?php page_navi(); // use the page navi function ?>
-
-					<?php } else { // if it is disabled, display regular wp prev & next links ?>
-						<nav class="wp-prev-next">
-							<ul class="clearfix">
-								<li class="prev-link"><?php next_posts_link(_e('&laquo; Older Entries', "bonestheme")) ?></li>
-								<li class="next-link"><?php previous_posts_link(_e('Newer Entries &raquo;', "bonestheme")) ?></li>
-							</ul>
-						</nav>
-					<?php } ?>
 								
 					
 					<?php else : ?>
