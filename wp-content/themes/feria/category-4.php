@@ -21,8 +21,14 @@
       <?php endif; ?>
       <?php } ?>
     </div>
-    <div class="descargarProgramacion"> <a href="<?php bloginfo('template_directory'); ?>/descargables/Programacion.pdf" class="btn" target="_blank">Descarga aquí la programación completa en PDF</a> &nbsp;
-      &nbsp; </div>
+    <div class="descargarProgramacion"> 
+    <a href="<?php bloginfo('template_directory'); ?>/descargables/Programacion.pdf" class="btn" target="_blank">
+    <?php if(qtrans_getLanguage() == 'es'): ?>Descarga aquí la programación completa en PDF
+    <?php else: ?>Download PDF schedule here
+    <?php endif; ?>
+    
+    </a> &nbsp; &nbsp; 
+    </div>
     <!-- cierra .descargarProgramacion --> 
     
     <!-- CARRUSEL EVENTOS DESTACADOS -->
