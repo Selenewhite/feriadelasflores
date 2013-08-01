@@ -33,10 +33,10 @@
   <span class="icono"></span>
   <span>Eventos destacados</span>         
   </div><!-- cierra .tit --> 
-  
+  <!--
   <div class="galeriaDestacados">
   <div class="well">
-  
+  <!--
   <div id="myCarousel" class="carousel slide">
   <?php
     $myQuery = new WP_Query(array(
@@ -53,7 +53,7 @@
     <?php endfor; ?>
   </ol>
 
-  <!-- Carousel items -->
+  <!-- Carousel items --
   <div class="carousel-inner">
   <?php
     $myQuery = new WP_Query(array(
@@ -75,8 +75,8 @@
   <a href="<?php the_permalink(); ?>" class="thumbnail"><?php the_post_thumbnail( 'carousel-destacados' ); ?></a></div>
   <div><?php the_title() ?></div>
   <?php if($i==3): ?>
-  </div><!--/row-fluid-->
-  </div><!--/item-->
+  </div><!--/row-fluid--
+  </div><!--/item--
   <?php endif; ?>
   <?php
   $i++;
@@ -89,18 +89,18 @@
   wp_reset_query();
   ?>    
   
-  </div><!--/carousel-inner-->
+  </div><!--/carousel-inner--
 
-  </div><!--/myCarousel-->
+  </div><!--/myCarousel--
   
-  </div><!--/well-->
+  </div><!--/well--
   <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
   <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a> 
-  </div>
+  </div> -->
 
-  </div>
+  <!-- </div> -->
   </div><!-- cierra .EventosDestacados --> 
-  </div>
+  <!-- </div> -->
 </div>
   <!-- CIERRA CARRUSEL EVENTOS DESTACADOS -->   
   
