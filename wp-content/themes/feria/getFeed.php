@@ -9,7 +9,7 @@
                   $limit = 0;
                 }
                 else {
-                  $limit = $feed->get_item_quantity(2); // especificamos el número de items a mostrar
+                  $limit = $feed->get_item_quantity(3); // especificamos el número de items a mostrar
                   $items = $feed->get_items(0, $limit); // se crea un array con los items
                 }
               }
@@ -69,7 +69,7 @@
                   $limit = 0;
                 }
                 else {
-                  $limit = $feed->get_item_quantity(2); // especificamos el número de items a mostrar
+                  $limit = $feed->get_item_quantity(3); // especificamos el número de items a mostrar
                   $items = $feed->get_items(0, $limit); // se crea un array con los items
                 }
               }
