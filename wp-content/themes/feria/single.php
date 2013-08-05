@@ -38,6 +38,8 @@
 							<?php $category = get_the_category(); ?>
 							<?php if($category[0]->cat_name === "Eventos"): ?>
 							<?php
+							$fechaInicio = get_post_meta($post->ID,'fecha_inicio', true);
+							$fechaFin = get_post_meta($post->ID,'fecha_fin',true);
 							$horaInicio = get_post_meta($post->ID,'hora_inicio',true);
 							$horaFin = get_post_meta($post->ID,'hora_fin',true);
 							$lugar = get_post_meta($post->ID,'lugar',true);
@@ -52,8 +54,15 @@
 							  $tieneHoraFin = true;
 							  $humanHoraFin = date("g:i a", strtotime($horaFin));
 							}
+							if($fechaInicio === $fechaFin){
+								$tienFechaFin = false;
+							}
+							else{
+								$tienFechaFin = true;
+							}
 							?>							
 								<ul class="custom-fields">
+								  <li><i class="icon-calendar"></i> <strong>Fecha:</strong> <?php echo $fechaInicio ?> <?php echo ($tienFechaFin) ? " al $fechaFin" : '' ?></li>
 								  <li><i class="icon-time"></i> <strong> Hora:</strong> <?php echo $humanHoraInicio ?> <?php echo ($tieneHoraFin) ? " a $humanHoraFin" : "" ?></li>
 								  <li><i class="icon-map-marker"></i> <strong>Lugar:</strong> <?php echo $lugar ?></li>
 								  <li><i class="icon-star"></i> <strong>Teléfono:</strong> <?php echo $telefono ?></li>
