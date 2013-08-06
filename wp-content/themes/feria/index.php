@@ -33,10 +33,20 @@ if ($blog_hero){
             <span>Hoy en la feria</span>         
           </div><!-- cierra .titHoy -->  
 
-    <!-- CARRUSEL EVENTOS DESTACADOS -->
+      
+
+          <div class="span4 titManana hidden-phone">
+            <span>No te pierdas mañana...</span>  
+          </div><!-- cierra .titManana --> 
+        </div>
+        <!-- Galerías -->    
+        <div class="clearfix row-fluid">
+          <div class=" span8 galeriaHoy">
+          
+          	 <!-- CARRUSEL EVENTOS DESTACADOS -->
     <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide span7">
+    <div id="myCarousel" class="carousel slide span12">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -115,15 +125,7 @@ if ($blog_hero){
       <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div><!-- /.carousel -->
     
-    <!-- CIERRA CARRUSEL EVENTOS DESTACADOS -->          
-
-          <div class="span4 titManana hidden-phone">
-            <span>No te pierdas mañana...</span>  
-          </div><!-- cierra .titManana --> 
-        </div>
-        <!-- Galerías -->    
-        <div class="clearfix row-fluid">
-          <div class=" span8 galeriaHoy">
+    <!-- CIERRA CARRUSEL EVENTOS DESTACADOS -->       
 
           </div><!-- cierra .galeriaHoy -->   
 
