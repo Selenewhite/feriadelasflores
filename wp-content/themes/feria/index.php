@@ -116,10 +116,6 @@ if ($blog_hero){
     </div><!-- /.carousel -->
     
     <!-- CIERRA CARRUSEL EVENTOS DESTACADOS -->          
-
-          <div class="span4 titManana hidden-phone">
-            <span>No te pierdas mañana...</span>  
-          </div><!-- cierra .titManana --> 
         </div>
         <!-- Galerías -->    
         <div class="clearfix row-fluid">
@@ -128,7 +124,9 @@ if ($blog_hero){
           </div><!-- cierra .galeriaHoy -->   
 
           <div class="span4 galeriaManana">
-
+            <div class="span4 titManana hidden-phone">
+              <span>No te pierdas mañana...</span>  
+            </div><!-- cierra .titManana --> 
           </div><!-- cierra .galeriaHoy -->   
         </div>
       </div><!-- cierra .hoy -->
