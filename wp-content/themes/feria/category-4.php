@@ -32,7 +32,6 @@
     <!-- cierra .descargarProgramacion --> 
     
     <!-- CARRUSEL EVENTOS DESTACADOS -->
-    <div style="display:none">
       <div class="EventosDestacados clearfix">
         <div class="tit"> <span class="icono"></span> <span>Eventos destacados</span> </div>
         <!-- cierra .tit -->
@@ -41,59 +40,56 @@
           <div class="well">
             <div id="myCarousel" class="carousel slide">
               <?php
-   /* $myQuery = new WP_Query(array(
+  $myQuery = new WP_Query(array(
        'cat' => 10,
-        'posts_per_page' => -1
+        'posts_per_page' => 21
   ));
   $numPost = count($myQuery->posts);
   $p = $numPost / 3;  
   $j = 1; //Comentario*/
   ?>
               <ol class="carousel-indicators">
-                <?php //for($i = 1; $i < $p; $i++): ?>
-                <li data-target="#myCarousel" data-slide-to="<?php //echo $i-1 ?>" class="<?php //if($j==1): echo "active"; unset($j); endif; ?>"></li>
-                <?php //endfor; ?>
+                <?php for($i = 1; $i < $p; $i++): ?>
+                <li data-target="#myCarousel" data-slide-to="<?php echo $i-1 ?>" class="<?php if($j==1): echo "active"; unset($j); endif; ?>"></li>
+                <?php endfor; ?>
               </ol>
               
               <!-- Carousel items -->
               <div class="carousel-inner">
                 <?php
-    /*$myQuery = new WP_Query(array(
+  $myQuery = new WP_Query(array(
        'cat' => 10,
-        'posts_per_page' => -1
+        'posts_per_page' => 21
   ));
   $numPost = count($myQuery->posts);
   // The Loop
   if ( $myQuery->have_posts() ):
     $i = 1;
     $j = 1;
-  while ( $myQuery->have_posts() ) : $myQuery->the_post();*/
+  while ( $myQuery->have_posts() ) : $myQuery->the_post();
   ?>
-                <?php //if($i==1): ?>
-                <div class="item<?php //if($j==1) : echo ' active'; unset($j); else: echo ''; endif; ?>">
+                <?php if($i==1): ?>
+                <div class="item<?php if($j==1) : echo ' active'; unset($j); else: echo ''; endif; ?>">
                   <div class="row-fluid">
-                    <?php //endif; ?>
-                    <div class="span4"> <a href="<?php //the_permalink(); ?>" class="thumbnail">
-                      <?php //the_post_thumbnail( 'carousel-destacados' ); ?>
+                    <?php endif; ?>
+                    <div class="span4"> <a href="<?php the_permalink(); ?>" class="thumbnail">
+                      <?php the_post_thumbnail( 'carousel-destacados' ); ?>
                       </a></div>
-                    <div>
-                      <?php //the_title() ?>
-                    </div>
-                    <?php //if($i==3): ?>
+                    <?php if($i==3): ?>
                   </div>
                   <!--/row-fluid--> 
                 </div>
                 <!--/item-->
-                <?php //endif; ?>
+                <?php endif; ?>
                 <?php
- /* $i++;
+  $i++;
   if($i==4):
     $i = 1;
   endif;
   endwhile;
   endif;
   // Reset Query
-  wp_reset_query();*/
+  wp_reset_query();
   ?>
               </div>
               <!--/carousel-inner--> 
@@ -106,7 +102,6 @@
           <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a> <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a> </div>
       </div>
       <!-- cierra .EventosDestacados --> 
-    </div>
     
     <!-- CIERRA CARRUSEL EVENTOS DESTACADOS -->
     

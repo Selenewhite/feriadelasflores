@@ -497,6 +497,10 @@ span.hoy {
 	background-color:#e6e6e5;
 	width:100%;
 	margin-top:20px;}
+
+.textGaleria {
+	font-size:10px;
+	line-height:10px;}
 	
 	
 /* CONTENIDO */
@@ -1097,8 +1101,22 @@ content: "";
 .galeriaArtistas ul li {
 	float:left;
 	margin:0 2px 0 0px;}
+	
+/*.left   {
+	background-image:url(images/flechasIzq.png);
+	width:18px;
+	height:84px;
 
-.flechaIzq a {
+	}
+
+.right  {
+	background-image:url(images/flechasDer.png);
+	width:18px;
+	height:84px;
+	}*/
+
+
+.flechaIzq a   {
 	background-image:url(images/flechasIzq.png);
 	width:18px;
 	height:84px;

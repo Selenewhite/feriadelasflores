@@ -125,12 +125,22 @@ if ($blog_hero){
       <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div><!-- /.carousel -->
     
+<<<<<<< HEAD
     <!-- CIERRA CARRUSEL EVENTOS DESTACADOS -->       
+=======
+    <!-- CIERRA CARRUSEL EVENTOS DESTACADOS -->          
+        </div>
+        <!-- Galerías -->    
+        <div class="clearfix row-fluid">
+          <div class=" span8 galeriaHoy">
+>>>>>>> 3fac2707aef41b6d18b71cad7bc9fc8dda4aa331
 
           </div><!-- cierra .galeriaHoy -->   
 
           <div class="span4 galeriaManana">
-
+            <div class="span4 titManana hidden-phone">
+              <span>No te pierdas mañana...</span>  
+            </div><!-- cierra .titManana --> 
           </div><!-- cierra .galeriaHoy -->   
         </div>
       </div><!-- cierra .hoy -->
