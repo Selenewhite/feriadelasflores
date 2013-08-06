@@ -28,7 +28,7 @@ if ($blog_hero){
       
    
 
-        <div class="hoy">
+        <div class="hoy hidden-phone">
         <!-- Titulos -->
         <div class="clearfix row-fluid">
           <div class="titHoy span8">

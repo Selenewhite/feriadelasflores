@@ -202,6 +202,9 @@ body.admin-bar .navbar-fixed-top{
 .menu_contactenos a:hover {background-position:-547px -88px;}
 .menu_envivo a:hover {background-position:-668px -88px;}
 
+.btn_concurso {max-width:100%; height:50px; background:url(images/btn_concursos.png); display:block; text-indent:-9000%; margin:0 auto; background-repeat:no-repeat;}
+.btn_concurso:hover {background-position:0px -50px;}
+
 .barraInferiorHeader {
 	max-width:970px;
 	margin: 0 auto;
@@ -2130,6 +2133,8 @@ text-shadow: 0 1px 0 #ffffff;
 .menu_saladeprensa a {width:105px; background-position:-436px 0px; margin:0 5px 0 0;}
 .menu_contactenos a {width:114px; background-position:-547px 0px;}
 .menu_envivo a {width:118px; background-position:-660px 0px;}
+
+
 
 /*ESTADO ROLLOVER*/
 

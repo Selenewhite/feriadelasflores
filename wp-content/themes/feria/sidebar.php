@@ -1,4 +1,4 @@
-				<div id="sidebar1" class="fluid-sidebar sidebar span4" role="complementary">
+				<div id="sidebar1" class="fluid-sidebar sidebar span4 hidden-phone" role="complementary">
 				
 					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
                     
@@ -13,6 +13,10 @@
                       </a>
                        <?php endif; ?> 
                       </span>
+                      
+                        <a href="<?php echo home_url(); ?>" title="Concurso" class="btn_concurso">Concurso</a>
+                                   
+                      
 
                             
 							<div class="videoFeria">
