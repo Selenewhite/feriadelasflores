@@ -25,13 +25,97 @@ if ($blog_hero){
         <?php echo get_new_royalslider(1); ?>
       </div><!-- cierra .slider -->
 
-      <div style="display:none" class="hoy">
+      <div class="hoy">
         <!-- Titulos -->
         <div class="clearfix row-fluid">
           <div class="titHoy span8">
             <span class="icono hidden-phone"></span>
             <span>Hoy en la feria</span>         
           </div><!-- cierra .titHoy -->  
+
+    <!-- CARRUSEL EVENTOS DESTACADOS -->
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide span7">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <ul class="thumbnails">
+            <li class="span4">
+              <div class="thumbnail">
+                <img src="http://lorempixel.com/250/250" alt="">
+                <div>XiX encuentro internacional Matancero</div>
+              </div>
+            </li>
+            <li class="span4">
+              <div class="thumbnail">
+                <img src="http://lorempixel.com/250/250" alt="">
+                <div>Temporada Baile Paisa</div>
+              </div>
+            </li>
+            <li class="span4">
+              <div class="thumbnail">
+                <img src="http://lorempixel.com/250/250" alt="">
+                <div>Orquídeas, Pájaros y Flores Feria de Artesanías, XX exposición Feria de las Flores (coctel de inauguración)</div>
+              </div>                            
+            </li>            
+          </ul>
+        </div>
+        <div class="item">
+          <ul class="thumbnails">
+            <li class="span4">
+              <div class="thumbnail">
+                <img src="http://lorempixel.com/250/250" alt="">
+                <div>Tertulias en Torno a la Arriería y Patrimonio de San Cristó- bal</div>
+              </div>
+            </li>
+            <li class="span4">
+              <div class="thumbnail">
+                <img src="http://lorempixel.com/250/250" alt="">
+                <div>Semana Cultural Silletera</div>
+              </div>
+            </li>
+            <li class="span4">
+              <div class="thumbnail">
+                <img src="http://lorempixel.com/250/250" alt="">
+                <div>Primer Festival de la Trova Silletero de oro</div>
+              </div>                            
+            </li>            
+          </ul>
+        </div> 
+        <div class="item">
+          <ul class="thumbnails">
+            <li class="span4">
+              <div class="thumbnail">
+                <img src="http://lorempixel.com/250/250" alt="">
+                <div>Festival Xiii Mamimuti</div>
+              </div>
+            </li>
+            <li class="span4">
+              <div class="thumbnail">
+                <img src="http://lorempixel.com/250/250" alt="">
+                <div>XXv Concurso de Fotografría de Fauna</div>
+              </div>
+            </li>
+            <li class="span4">
+              <div class="thumbnail">
+                <img src="http://lorempixel.com/250/250" alt="">
+                <div>Muestra de Flores, Folclor, Artesanías y Sabores de Piedras Blancas</div>
+              </div>                            
+            </li>            
+          </ul>
+        </div>               
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+    
+    <!-- CIERRA CARRUSEL EVENTOS DESTACADOS -->          
 
           <div class="span4 titManana hidden-phone">
             <span>No te pierdas mañana...</span>  
