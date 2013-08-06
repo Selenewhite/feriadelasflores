@@ -34,6 +34,7 @@
                    <li><a href="http://www.medellindigital.gov.co/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/medellindigital.jpg" width="83" height="56" /></a></li>
                 <li><a href="http://www.telemedellin.tv/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/telemedellin.jpg" width="88" height="56" /></a></li>
                  <li><a href="http://www.medellin.gov.co/irj/portal/medellin" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/alcaldia.jpg" width="88" height="56" /></a></li>
+                    <li><a href="http://www.mincultura.gov.co/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logoprosperidad.jpg" width="88" height="56" /></a></li>
                  
                 
                 </ul>
