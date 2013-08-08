@@ -84,6 +84,11 @@ if ($blog_hero){
                 <?php endif; ?>
                 <div class="textoGaleria"><?php the_title() ?></div>
               </div>
+              <?php if($j==2): ?>
+              <li class="span4">
+
+              </li>              
+              <?php endif; ?>
             </li>  
         <?php if($i==3): ?>
           </ul>        
