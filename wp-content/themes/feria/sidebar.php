@@ -14,7 +14,7 @@
                        <?php endif; ?> 
                       </span>
                       
-                        <a href="<?php echo home_url(); ?>" title="Concurso" class="btn_concurso">Concurso</a>
+                        <a href="<?php echo home_url(); ?>/concurso-feria-de-las-flores/" title="Concurso" class="btn_concurso">Concurso</a>
                                    
                       
 
