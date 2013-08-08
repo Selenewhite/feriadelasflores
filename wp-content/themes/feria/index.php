@@ -47,14 +47,14 @@ if ($blog_hero){
   
           <div class="span8 galeriaHoy">
           
-           	 <!-- CARRUSEL EVENTOS DESTACADOS -->
+           	 <!-- CARRUSEL EVENTOS DESTACADOS --
     <div id="myCarousel" class="carousel slide span12">
       <!-- Indicators -->
      <!-- <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>-->
+      </ol>--
       <div class="carousel-inner">
       <?php 
       $hoy = date("j/n/Y");
