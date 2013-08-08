@@ -56,75 +56,55 @@ if ($blog_hero){
         <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>-->
       <div class="carousel-inner">
-        <div class="item active">
+      <?php 
+      $hoy = date("j/n/Y");
+      $myQuery = new WP_Query(array(
+           'cat' => 10,
+            'posts_per_page' => 3,
+            'meta_key' => 'fecha_inicio', 'meta_value' => "$hoy"
+      ));
+      //var_dump($myQuery);
+      $numPost = count($myQuery->posts);
+      // The Loop
+      if ( $myQuery->have_posts() ):
+        $i = 1;
+        $j = 1;
+      while ( $myQuery->have_posts() ) : $myQuery->the_post();
+      ?>
+        <?php if($i==1): ?>
+        <div class="item<?php if($j==1) : echo ' active'; unset($j); else: echo ''; endif; ?>">
           <ul class="thumbnails">
+        <?php endif; ?>
             <li class="span4">
               <div class="thumbnail">
-                <img src="http://lorempixel.com/250/250" alt="" class="img-rounded">
-                <div class="textoGaleria">XiX encuentro internacional Matancero</div>
+                <?php if( has_post_thumbnail() ): ?>
+                <?php the_post_thumbnail( 'carousel-destacados' ); ?>
+                <?php else: ?>
+                <img src='<?php echo get_template_directory_uri() . "/images/genericaFeed.jpg" ?>' />
+                <?php endif; ?>
+                <div class="textoGaleria"><?php the_title() ?></div>
               </div>
-            </li>
-            <li class="span4">
-              <div class="thumbnail">
-                <img src="http://lorempixel.com/250/250" alt="" class="img-rounded">
-                <div class="textoGaleria">Temporada Baile Paisa</div>
-              </div>
-            </li>
-            <li class="span4">
-              <div class="thumbnail">
-                <img src="http://lorempixel.com/250/250" alt="" class="img-rounded">
-                <div class="textoGaleria">Orquídeas, Pájaros y Flores Feria de Artesanías, XX exposición Feria de las Flores (coctel de inauguración)</div>
-              </div>                            
-            </li>            
-          </ul>
+            </li>  
+        <?php if($i==3): ?>
+          </ul>        
         </div>
-        <div class="item">
-          <ul class="thumbnails">
-            <li class="span4">
-              <div class="thumbnail">
-                <img src="http://lorempixel.com/250/250" alt="" class="img-rounded">
-                <div class="textoGaleria">Tertulias en Torno a la Arriería y Patrimonio de San Cristó- bal</div>
-              </div>
-            </li>
-            <li class="span4">
-              <div class="thumbnail">
-                <img src="http://lorempixel.com/250/250" alt="" class="img-rounded">
-                <div class="textoGaleria">Semana Cultural Silletera</div>
-              </div>
-            </li>
-            <li class="span4">
-              <div class="thumbnail">
-                <img src="http://lorempixel.com/250/250" alt="" class="img-rounded">
-                <div class="textoGaleria">Primer Festival de la Trova Silletero de oro</div>
-              </div>                            
-            </li>            
-          </ul>
-        </div> 
-        <div class="item">
-          <ul class="thumbnails">
-            <li class="span4">
-              <div class="thumbnail">
-                <img src="http://lorempixel.com/250/250" alt="">
-                <div class="textoGaleria">Festival Xiii Mamimuti</div>
-              </div>
-            </li>
-            <li class="span4">
-              <div class="thumbnail">
-                <img src="http://lorempixel.com/250/250" alt="">
-                <div class="textoGaleria">XXv Concurso de Fotografría de Fauna</div>
-              </div>
-            </li>
-            <li class="span4">
-              <div class="thumbnail">
-                <img src="http://lorempixel.com/250/250" alt="">
-                <div class="textoGaleria">Muestra de Flores, Folclor, Artesanías y Sabores de Piedras Blancas</div>
-              </div>                            
-            </li>            
-          </ul>
-        </div>               
+        <?php endif; ?>
+        <?php
+        $i++;
+        if($i==4):
+          $i = 1;
+        endif; 
+        $j++;
+        endwhile;
+        endif;
+        // Reset Query
+        wp_reset_query();
+        ?>                     
       </div>
+      
       <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+
     </div><!-- /.carousel -->
     
     <!-- CIERRA CARRUSEL EVENTOS DESTACADOS -->          
