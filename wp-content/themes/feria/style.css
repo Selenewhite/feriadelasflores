@@ -2228,6 +2228,7 @@ clear:both;
 		margin: 0 auto;
 		padding-left: 20px;
 		padding-right: 20px;
+		text-align:center;
 	}
 	
 
@@ -2252,6 +2253,11 @@ clear:both;
 		margin: 0 auto;
 		padding-left: 20px;
 		padding-right: 20px;
+		text-align:center;
+	}
+	
+	#inner-footer ul li{
+		text-align:center;
 	}
 	
 	#content{
