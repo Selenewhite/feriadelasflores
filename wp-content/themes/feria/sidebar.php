@@ -5,16 +5,7 @@
                     <?php if ( is_home() ) {?>
     						
                              <span class="prensa">
-					   <?php if(qtrans_getLanguage() == 'es'): ?>
-                      <a href="<?php echo home_url(); ?>/acreditacion-de-prensa-para-la-feria-de-las-flores-2013/">Clic aquí para acreditación de prensa</a>
-                       <?php else: ?>
-                      <a href="<?php echo home_url(); ?>/acreditacion-de-prensa-para-la-feria-de-las-flores-2013/">
-                      If you are a journalist, please click here.
-                      </a>
-                       <?php endif; ?> 
                       </span>
-                      
-                        <a href="<?php echo home_url(); ?>/concurso-feria-de-las-flores/" title="Concurso" class="btn_concurso">Concurso</a>
                                    
                       
 
